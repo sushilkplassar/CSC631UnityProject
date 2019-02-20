@@ -4,30 +4,38 @@ using UnityEngine;
 
 public class GrabObject : MonoBehaviour
 {
-    // Camera will act as like a hand to pick up objects.
-    private Camera hand;
-    // Start is called before the first frame update
+    private Vector3 screenPoint;
+    private Vector3 offset;
+
+    private Rigidbody rb;
+
     void Start()
     {
-        hand = GetComponent<Camera>();
+        //to enable proper physical movement of an object
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseUp()
     {
-        // When player clicks left button, try to pick up object.
-        if(Input.GetMouseButtonDown(0))
-        {
-            // Point is pixel of what you are trying to pick up. 
-            Vector3 point = new Vector3(hand.pixelWidth / 2, hand.pixelHeight / 2, 0);
-            Ray ray = hand.ScreenPointToRay(point);
-            RaycastHit objectGrabbed;
-            if (Physics.Raycast(ray, out objectGrabbed))
-            {
-                Debug.Log("Object coordinates to be grabbed " + objectGrabbed.point);
-            }
+        rb.useGravity = true;
+    }
 
-        }
-        
+    void OnMouseDown()
+    {
+        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+    }
+
+    void OnMouseDrag()
+    {
+        Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+
+        // turns gravity off when moving an item around to avoid stutter effect
+        rb.useGravity = false;
+
+        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
+
+        // move object based on cursor
+        rb.MovePosition(cursorPosition);
     }
 }
