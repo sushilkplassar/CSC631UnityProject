@@ -22,6 +22,7 @@ public class GrabObject : MonoBehaviour
 
     void OnMouseDown()
     {
+        // the point of where the mouse clicks an gameobject
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
