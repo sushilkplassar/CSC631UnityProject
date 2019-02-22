@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class GrabObject : MonoBehaviour
 {
-    private Vector3 screenPoint;
-    private Vector3 offset;
+
 
     private Rigidbody rb;
+    public Transform Player;
+    public Transform frontofPlayer;
+    private bool grabObject;
+    private bool inRange;
+    private bool bump;
 
     void Start()
     {
@@ -15,28 +19,50 @@ public class GrabObject : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void OnMouseUp()
+    private void Update()
     {
-        rb.useGravity = true;
+        float dist = Vector3.Distance(gameObject.transform.position, Player.position);
+        if (dist <= 5f)
+        {
+            inRange = true;
+        }
+        else
+        {
+            inRange = false;
+        }
+        
+        if (grabObject)
+        {
+            if (bump)
+            {
+                rb.useGravity = true;
+                transform.parent = null;
+                grabObject = false;
+                bump = false;
+            }
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (grabObject)
+        {
+            bump = true;
+            
+        }
     }
 
-    void OnMouseDown()
+    private void OnMouseDrag()
     {
-        // the point of where the mouse clicks an gameobject
-        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-    }
+        if (inRange )
+        {
+            rb.useGravity = false;
+            transform.parent = frontofPlayer;
+            rb.MovePosition(transform.parent.position);
+            grabObject = true;
+        }
 
-    void OnMouseDrag()
-    {
-        Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-
-        // turns gravity off when moving an item around to avoid stutter effect
-        rb.useGravity = false;
-
-        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
-
-        // move object based on cursor
-        rb.MovePosition(cursorPosition);
     }
 }
+
+
+
