@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : MonoBehaviour
+public class ProjectileMove : MonoBehaviour
 {
     [SerializeField] private GameObject explosionPrefab;
     private GameObject explosionAnimation;
-    [SerializeField] private Transform position;
+
     public float speed = 10.0f;
     // Start is called before the first frame update
     void Start()

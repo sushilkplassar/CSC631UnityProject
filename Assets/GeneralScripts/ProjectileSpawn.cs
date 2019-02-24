@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class ProjectileSpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject projectilePrefab;
+    public GameObject projectilePrefab;
     private GameObject projectile;
     public Transform firepoint;
     // Start is called before the first frame update
