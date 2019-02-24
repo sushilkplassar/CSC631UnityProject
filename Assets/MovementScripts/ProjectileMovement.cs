@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileMove : MonoBehaviour
+public class ProjectileMovement : MonoBehaviour
 {
     [SerializeField] private GameObject explosionPrefab;
     private GameObject explosionAnimation;
