@@ -7767,7 +7767,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8675115943180129431, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
 --- !u!4 &1763596979 stripped
 Transform:
@@ -7792,7 +7793,6 @@ GameObject:
   - component: {fileID: 1767719613}
   - component: {fileID: 1767719614}
   - component: {fileID: 1767719616}
-  - component: {fileID: 1767719615}
   m_Layer: 0
   m_Name: vfx_projectile
   m_TagString: Untagged
@@ -7830,22 +7830,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   fireRate: 2
---- !u!54 &1767719615
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767719612}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &1767719616
 BoxCollider:
   m_ObjectHideFlags: 0
