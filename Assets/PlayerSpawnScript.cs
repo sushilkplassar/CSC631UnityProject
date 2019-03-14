@@ -9,18 +9,22 @@ public class PlayerSpawnScript : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Checks to see if this is another player that doesn belong to the local player. 
+        // Checks to see if this is another player that doesn't belong to the local player. 
         if (isLocalPlayer == false)
         {
             return;
         }
-        // Instantiate(PlayerObjectPrefab);
+       
         CmdSpawnPlayer();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isLocalPlayer == false)
+        {
+            return;
+        }
         
     }
 
@@ -28,6 +32,12 @@ public class PlayerSpawnScript : NetworkBehaviour
     void CmdSpawnPlayer()
     {
         GameObject player = Instantiate(PlayerObjectPrefab);
-        NetworkServer.Spawn(player);
+
+        // Turns off the camera for other players after they spawn in.
+        if (isLocalPlayer == false)
+        {
+            player.GetComponentInChildren<Camera>().enabled = false;
+        }
+        NetworkServer.SpawnWithClientAuthority(player, connectionToClient);
     }
 }
