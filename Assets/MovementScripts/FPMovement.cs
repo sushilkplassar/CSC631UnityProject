@@ -33,7 +33,7 @@ public class FPMovement : NetworkBehaviour
         Vector3 characterMovement = new Vector3(moveSideToSide, 0, moveForwardAndBack);
         characterMovement = Vector3.ClampMagnitude(characterMovement, speed); // Diagonal speed is fixed
 
-       // characterMovement.y = gravity;
+        characterMovement.y = gravity;
         characterMovement *= Time.deltaTime; //frame independent movement
         characterMovement = transform.TransformDirection(characterMovement); // Convert local to global coordinates
 
