@@ -36,6 +36,7 @@ public class PlayerSpawnScript : NetworkBehaviour
         // Turns off the camera for other players after they spawn in.
         if (isLocalPlayer == false)
         {
+            // Camera is a child of the player object.
             player.GetComponentInChildren<Camera>().enabled = false;
         }
         NetworkServer.SpawnWithClientAuthority(player, connectionToClient);
