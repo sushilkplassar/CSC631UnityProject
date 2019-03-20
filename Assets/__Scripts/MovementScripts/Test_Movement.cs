@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Test_Movement : MonoBehaviour
 {
-    public float moveSpeed = 5;
-    public Rigidbody rb;
+    public float speed;
 
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody rb;
+
+    void Start ()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate ()
     {
-        float moveForwardAndBack = Input.GetAxis("Vertical") * moveSpeed; // forward and backward movements is Z axis
-        float moveSideToSide = Input.GetAxis("Horizontal") * moveSpeed; // Moving side to side is X axis
+        float moveHorizontal = Input.GetAxis ("Horizontal");
+        float moveVertical = Input.GetAxis ("Vertical");
+
+        Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+
+        rb.AddForce (movement * speed);
     }
 }
