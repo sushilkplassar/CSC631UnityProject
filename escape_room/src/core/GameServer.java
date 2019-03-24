@@ -84,66 +84,8 @@ public class GameServer {
 	 * Initialize the GameServer by loading a few things into memory.
 	 */
     public final void initialize() {
-        setupSpeciesTypes();
+//        setupSpeciesTypes();
     }
-
-	/**
-	 * Retrieve species from the database and load data into memory.
-	 */
-    public void setupSpeciesTypes() {
-//        try {
-//            Log.println("Loading Plant Types...");
-//
-//            for (PlantType plant : SpeciesDAO.getPlants()) {
-//                plantTypes.put(plant.getID(), plant);
-//                plant.setAvgBiomass(500); // !!!
-//            }
-//        } catch (SQLException ex) {
-//            System.out.println(ex.getMessage());
-//            Log.println_e("Failed to retrieve Plant species.");
-//        }
-//
-//        try {
-//            Log.println("Loading Animal Types...");
-//
-//            for (AnimalType animal : SpeciesDAO.getAnimals()) {
-//                animalTypes.put(animal.getID(), animal);
-//                animal.setAvgBiomass(500); // !!!
-//            }
-//        } catch (SQLException ex) {
-//            Log.println_e("Failed to retrieve Animal species.");
-//        }
-//
-//        // Replace predator identifiers with actual instances
-//        Log.println("Resolving Predators...");
-//        for (PlantType plant : plantTypes.values()) {
-//            for (int predator_id : plant.getPredatorIDs()) {
-//                if (animalTypes.containsKey(predator_id)) {
-//                    plant.resolvePredator(animalTypes.get(predator_id));
-//                }
-//            }
-//        }
-//
-//        for (AnimalType animal : animalTypes.values()) {
-//            for (int predator_id : animal.getPredatorIDs()) {
-//                if (animalTypes.containsKey(predator_id)) {
-//                    animal.resolvePredator(animalTypes.get(predator_id));
-//                }
-//            }
-//        }
-
-//        // Replace prey identifiers with actual instances
-//        Log.println("Resolving Preys...");
-//        for (AnimalType animal : animalTypes.values()) {
-//            for (int prey_id : animal.getPreyIDs()) {
-//                if (animalTypes.containsKey(prey_id)) {
-//                    animal.resolvePrey(animalTypes.get(prey_id));
-//                } else if (plantTypes.containsKey(prey_id)) {
-//                    animal.resolvePrey(plantTypes.get(prey_id));
-//                }
-//            }
-//        }
-   }
 
 	/**
 	 * Run the game server by waiting for incoming connection requests. Establishes
