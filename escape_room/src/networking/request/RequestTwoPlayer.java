@@ -52,6 +52,7 @@ public class RequestTwoPlayer extends GameRequest {
         if(countPlayer == 2) {
         	responseTwoPlayer.setStatus((short)0);
     		responseTwoPlayer.setNumberOfPlayerResponse(success_response);
+    		count=0;
     	}
 //        count=0;
     }
