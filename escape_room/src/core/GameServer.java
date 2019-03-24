@@ -243,20 +243,20 @@ public class GameServer {
 	 */
 	public static void main(String[] args) {
 		try {
-			Log.printf("World of Balance Server v%s is starting...\n", Constants.CLIENT_VERSION);
+			Log.printf("Server v%s is starting...\n", Constants.CLIENT_VERSION);
 
 			gameServer = new GameServer();
 			gameServer.run();
 		} catch (Exception ex) {
-			Log.println_e("Server Crashed!");
-			Log.println_e(ex.getMessage());
+			Log.println("Server Crashed!");
+			Log.println(ex.getMessage());
 
 			try {
 				Thread.sleep(10000);
-				Log.println_e("Server is now restarting...");
+				Log.println("Server is now restarting...");
 				GameServer.main(args);
 			} catch (InterruptedException ex1) {
-				Log.println_e(ex1.getMessage());
+				Log.println(ex1.getMessage());
 			}
 		}
 	}
