@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 
 // Other Imports
 import configuration.GameServerConf;
-import dataAccessLayer.DAO;
+//import dataAccessLayer.DAO;
 //import dataAccessLayer.SpeciesDAO;
 import metadata.Constants;
 import metadata.GameRequestTable;
@@ -54,10 +54,10 @@ public class GameServer {
 		// Initialize tables for global use
 		GameRequestTable.init(); // Contains request codes and classes
 		// Initialize database connection
-		if (DAO.getInstance() == null) {
+		/*if (DAO.getInstance() == null) {
 			Log.println_e("Database Connection Failed!");
 			System.exit(-1);
-		}
+		}*/
 		// Preload world-related objects
 //        initialize();
 		// Thread Pool for Clients

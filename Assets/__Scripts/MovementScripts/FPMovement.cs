@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
-public class FPMovement : NetworkBehaviour
+public class FPMovement : MonoBehaviour
 {
     public float speed = 12.0f;
     float gravity = -9.8f;
@@ -22,10 +22,10 @@ public class FPMovement : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hasAuthority == false)
+        /*if(hasAuthority == false)
         {
             return;
-        }
+        }*/
         float moveForwardAndBack = Input.GetAxis("Vertical") * speed; // forward and backward movements is Z axis
         float moveSideToSide = Input.GetAxis("Horizontal") * speed; // Moving side to side is X axis
 

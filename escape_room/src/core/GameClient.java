@@ -41,6 +41,7 @@ public class GameClient implements Runnable {
     private Player player;
     private int newTestVar = 1000;
     private String userName="";
+    private int userID = 0;
     /**
      * Initialize the GameClient using the client socket and creating both input
      * and output streams.
@@ -245,4 +246,7 @@ public class GameClient implements Runnable {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 }

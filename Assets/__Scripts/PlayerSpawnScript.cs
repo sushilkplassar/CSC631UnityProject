@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayerSpawnScript : NetworkBehaviour
+public class PlayerSpawnScript : MonoBehaviour
 {
     public GameObject PlayerObjectPrefab;
     // Start is called before the first frame update
     void Start()
     {
+        /*NetworkBehavior
         // Checks to see if this is another player that doesn't belong to the local player. 
         if (isLocalPlayer == false)
         {
@@ -16,18 +17,20 @@ public class PlayerSpawnScript : NetworkBehaviour
         }
        
         CmdSpawnPlayer();
+        */
     }
 
     // Update is called once per frame
     void Update()
     {
+        /* NetworkBehavior
         if(isLocalPlayer == false)
         {
             return;
-        }
+        }*/
         
     }
-
+    /* NetworkBehavior
     [Command]
     void CmdSpawnPlayer()
     {
@@ -40,5 +43,5 @@ public class PlayerSpawnScript : NetworkBehaviour
             player.GetComponentInChildren<Camera>().enabled = false;
         }
         NetworkServer.SpawnWithClientAuthority(player, connectionToClient);
-    }
+    }*/
 }

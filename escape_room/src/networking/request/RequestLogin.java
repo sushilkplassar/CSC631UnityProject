@@ -7,7 +7,7 @@ import java.util.List;
 // Other Imports
 import core.GameClient;
 import core.GameServer;
-import dataAccessLayer.UsersDAO;
+//import dataAccessLayer.UsersDAO;
 import metadata.Constants;
 import model.Player;
 import networking.response.ResponseLogin;
@@ -23,7 +23,7 @@ public class RequestLogin extends GameRequest {
 
     // Data
     private String version;
-    private String user_id;
+    private int user_id;
     private String password;
     // Responses
     private ResponseLogin responseLogin;
@@ -35,18 +35,27 @@ public class RequestLogin extends GameRequest {
     @Override
     public void parse() throws IOException {
         version = DataReader.readString(dataInput).trim();
-        user_id = DataReader.readString(dataInput).trim();
+        user_id = DataReader.readInt(dataInput);
 //        password = DataReader.readString(dataInput).trim();
     }
 
     @Override
     public void doBusiness() throws Exception {
         Log.printf("User '%s' is connecting...", user_id);
-//        Player player = null;
-        client.setUserName(user_id);
+
+        client.setUserID(user_id);
+        Player player = new Player(user_id);
         
         responseLogin.setStatus((short)0);
-        responseLogin.setUserName(user_id);
+        responseLogin.setUserID(user_id);
+
+        GameServer.getInstance().setActivePlayer(player);
+                        player.setClient(client);
+                        // Pass Player reference into thread
+                        client.setPlayer(player);
+                        // Set response information
+                        responseLogin.setStatus((short) 0); // Login is a success
+                        responseLogin.setPlayer(player);
         
 //  //       Checks if the connecting client meets the minimum version required
 //        if (version.compareTo(Constants.CLIENT_VERSION) >= 0) {
@@ -76,7 +85,7 @@ public class RequestLogin extends GameRequest {
 //                        // Set response information
 //                        responseLogin.setStatus((short) 0); // Login is a success
 //                        responseLogin.setPlayer(player);
-        				
+
 //                        Log.printf("User '%s' has successfully logged in.", player.getUsername());
 //                    }
 //                }
