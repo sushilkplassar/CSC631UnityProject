@@ -113,6 +113,7 @@ public class GameClient implements Runnable {
                     // If there was no activity for the last moments, exit loop
                     if ((System.currentTimeMillis() - lastActivity) / 1000 >= Constants.TIMEOUT_SECONDS) {
                         isDone = true;
+                        
                     }
                 }
             } catch (Exception ex) {
