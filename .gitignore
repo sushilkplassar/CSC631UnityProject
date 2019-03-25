@@ -7,8 +7,12 @@
 /[Pp]ackages/
 /[Pp]rojectSettings/
 /out
-/.idea/
-
+/.idea/*
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 # Visual Studio 2015 cache directory
 /.vs/
 
