@@ -6,6 +6,7 @@ using System.IO;
 using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Text;
+using UnityEngine.SceneManagement;
 
 public class ConnectionManager : MonoBehaviour {
 	
@@ -13,6 +14,7 @@ public class ConnectionManager : MonoBehaviour {
 	private TcpClient mySocket;
 	private NetworkStream theStream;
 	private bool socketReady = false;
+    private int id = 0;
     ConnectionManager c;
 
 
@@ -23,6 +25,7 @@ public class ConnectionManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         c = GetComponent<ConnectionManager>();
+        
         setupSocket ();
        
 	}
@@ -33,14 +36,14 @@ public class ConnectionManager : MonoBehaviour {
 			return;
 		}
 		try {
-			mySocket = new TcpClient (Constants.REMOTE_HOST, Constants.REMOTE_PORT);
+            mySocket = new TcpClient (Constants.REMOTE_HOST, Constants.REMOTE_PORT);
 			theStream = mySocket.GetStream();
 			socketReady = true;
 			Debug.Log("Connected locally");
 
             // Must be paired with a request to send through the connection
             // manager to send requests to the server
-            c.send(spawnThis(23));
+            c.send(spawnThis(id));
             Debug.Log("Sent request");
 		} catch (Exception e) {
 			Debug.Log("Socket error: " + e);
@@ -73,10 +76,11 @@ public class ConnectionManager : MonoBehaviour {
 	}
 
     // May have do a bunch of these to be able to send correctly
-    public RequestLogin spawnThis(int id)
+    public RequestCreate spawnThis(int id)
     {
-        RequestLogin spawn = new RequestLogin();
+        RequestCreate spawn = new RequestCreate();
         spawn.send(id);
+        id++;
         return spawn;
     }
 

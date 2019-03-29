@@ -2,9 +2,9 @@ using UnityEngine;
 
 using System;
 
-public class RequestLogin : NetworkRequest {
+public class RequestCreate : NetworkRequest {
 
-	public RequestLogin() {
+	public RequestCreate() {
 		request_id = Constants.CMSG_AUTH;
 	}
 	

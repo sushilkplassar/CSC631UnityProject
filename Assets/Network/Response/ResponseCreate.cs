@@ -2,6 +2,7 @@ using UnityEngine;
 
 using System;
 
+
 public class ResponseLoginEventArgs : ExtendedEventArgs {
 		
 	public short status { get; set; }
@@ -50,8 +51,14 @@ public class ResponseLogin : NetworkResponse {
 		//	args.level = level;
 		//	args.last_logout = last_logout;
             Debug.Log("user id is:" + user_id);
+            spawn();
 		}
 
 		return args;
 	}
+
+    public void spawn()
+    {
+        GameObject spawn = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/PlayerObject") as GameObject);
+    }
 }
