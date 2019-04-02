@@ -9,6 +9,10 @@ public class FPMovement : MonoBehaviour
     public float speed = 12.0f;
     float gravity = -9.8f;
 
+    private float verticalVelocity;
+    private float jumpForce = 15.0f;
+    private float gravityJump = 14.0f;
+
     private CharacterController characterControl;
    
     // Start is called before the first frame update
@@ -40,6 +44,22 @@ public class FPMovement : MonoBehaviour
         characterControl.Move(characterMovement);
 
 
+        if (characterControl.isGrounded)
+        {
+            verticalVelocity = -gravityJump * Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                verticalVelocity = jumpForce;
+            }
+        }
+        else
+        {
+            verticalVelocity -= gravityJump * Time.deltaTime;
+        }
+        Vector3 jumpVector = new Vector3(0, verticalVelocity, 0);
+        characterControl.Move(jumpVector * Time.deltaTime);
 
     }
+
 }
+
