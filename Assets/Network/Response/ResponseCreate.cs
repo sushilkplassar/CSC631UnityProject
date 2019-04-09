@@ -1,7 +1,7 @@
 using UnityEngine;
-
 using System;
-
+using System.Collections;
+using UnityEngine.Networking;
 
 public class ResponseLoginEventArgs : ExtendedEventArgs {
 		
@@ -11,6 +11,8 @@ public class ResponseLoginEventArgs : ExtendedEventArgs {
 	public int money { get; set; }
 	public short level { get; set; }
 	public string last_logout { get; set; }
+    public GameObject player { get; set; }
+    
 	
 	public ResponseLoginEventArgs() {
 		event_id = Constants.SMSG_AUTH;
@@ -51,14 +53,12 @@ public class ResponseLogin : NetworkResponse {
 		//	args.level = level;
 		//	args.last_logout = last_logout;
             Debug.Log("user id is:" + user_id);
-            spawn();
-		}
+            args.player = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/PlayerObject")as GameObject);
+            
+        }
 
 		return args;
 	}
 
-    public void spawn()
-    {
-        GameObject spawn = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/PlayerObject") as GameObject);
-    }
+    
 }

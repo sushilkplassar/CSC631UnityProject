@@ -26,12 +26,22 @@ public class FPMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(hasAuthority == false)
+        if(this.gameObject.tag == "Player")
         {
-            return;
-        }*/
-        float moveForwardAndBack = Input.GetAxis("Vertical") * speed; // forward and backward movements is Z axis
-        float moveSideToSide = Input.GetAxis("Horizontal") * speed; // Moving side to side is X axis
+            movePlayer("Vertical", "Horizontal");
+        }
+       else if (this.gameObject.tag == "Player2")
+        {
+            movePlayer("Vertical2", "Horizontal2");
+        }
+        
+
+    }
+
+    public void movePlayer(string vertAxis, string horzAxis)
+    {
+        float moveForwardAndBack = Input.GetAxis(vertAxis) * speed; // forward and backward movements is Z axis
+        float moveSideToSide = Input.GetAxis(horzAxis) * speed; // Moving side to side is X axis
 
         // For moving the character controller
         Vector3 characterMovement = new Vector3(moveSideToSide, 0, moveForwardAndBack);
@@ -44,7 +54,7 @@ public class FPMovement : MonoBehaviour
         characterControl.Move(characterMovement);
 
 
-        if (characterControl.isGrounded)
+       /* if (characterControl.isGrounded)
         {
             verticalVelocity = -gravityJump * Time.deltaTime;
             if (Input.GetKeyDown(KeyCode.Space))
@@ -57,9 +67,13 @@ public class FPMovement : MonoBehaviour
             verticalVelocity -= gravityJump * Time.deltaTime;
         }
         Vector3 jumpVector = new Vector3(0, verticalVelocity, 0);
-        characterControl.Move(jumpVector * Time.deltaTime);
+        characterControl.Move(jumpVector * Time.deltaTime);*/
 
     }
 
+    
 }
+
+
+
 
