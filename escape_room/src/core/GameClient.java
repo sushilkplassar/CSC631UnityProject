@@ -99,11 +99,18 @@ public class GameClient implements Runnable {
                         // Interpret the data
                         request.doBusiness();
                         try {
+                          //This response only sends to the current client, not every client.
+                          for (GameClient client : GameServer.getInstance().getActiveThreads().values()) {
+
                             // Retrieve any responses created by the request object
                             for (GameResponse response : request.getResponses()) {
-                                // Transform the response into bytes and pass it into the output stream
-                                send(response);
+                              // Transform the response into bytes and pass it into the output
+                              outputStream = client.clientSocket.getOutputStream();
+                              send(response);
                             }
+                          }
+
+
                         } catch (IOException ex) {
                             Log.printf_e("Client %s connection lost", session_id);
                             isDone = true;
@@ -128,7 +135,7 @@ public class GameClient implements Runnable {
         }
 
         // Remove this GameClient from the server
-        GameServer.getInstance().deletePlayerThreadOutOfActiveThreads(session_id);
+       // GameServer.getInstance().deletePlayerThreadOutOfActiveThreads(session_id);
 
         Log.printf("Client %s has ended", session_id);
     }
@@ -140,7 +147,7 @@ public class GameClient implements Runnable {
      */
     public void removePlayerData() {
         GameServer.getInstance().removeActivePlayer(player.getID());
-        Log.printf("User '%s' has logged off.", player.getUsername());
+        Log.printf("User '%d' has logged off.", player.getID());
     }
 
     public String getID() {

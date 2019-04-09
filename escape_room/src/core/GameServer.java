@@ -122,6 +122,10 @@ public class GameServer {
 		}
 	}
 
+	//joining will have to return all session ids and connect to the right seesion id thread to communicate correctly
+	// requestgame -> get game to join
+	// return active game names and play should be able to choose which one to connect to.
+
 	public static String createUniqueID() {
 		return UUID.randomUUID().toString();
 	}
