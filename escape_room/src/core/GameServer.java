@@ -21,6 +21,7 @@ import configuration.GameServerConf;
 import metadata.Constants;
 import metadata.GameRequestTable;
 import model.Player;
+import networking.response.GameResponse;
 import utility.ConfFileParser;
 import utility.GamePacket;
 import utility.Log;
@@ -43,6 +44,11 @@ public class GameServer {
 	// Reference Tables
 	private Map<String, GameClient> activeThreads = new HashMap<String, GameClient>(); // Session ID -> Client
 	private Map<Integer, Player> activePlayers = new HashMap<Integer, Player>(); // Player ID -> Player
+
+	// Responses to be sent to each client
+	ArrayList<GameResponse> responses = new ArrayList<>();
+	ArrayList<GameClient> clientSockets = new ArrayList<>();
+
 	
 	/**
 	 * Create the GameServer by setting up the request types and creating a
@@ -108,6 +114,10 @@ public class GameServer {
 					// Create a runnable instance to represent a client that holds the client socket
 					String session_id = createUniqueID();
 					GameClient client = new GameClient(session_id, clientSocket);
+
+					// List of client sockets that are stored and then later sent back to all clients
+					clientSockets.add(client);
+
 					// Keep track of the new client thread
 					addToActiveThreads(client);
 					// Initiate the client
@@ -153,7 +163,28 @@ public class GameServer {
 	}
 
 	public void addToActiveThreads(GameClient client) {
+
 		activeThreads.put(client.getID(), client);
+
+		for(int i = 0; i <  clientSockets.size(); i++)
+		{
+
+				for(int j = 0; j < responses.size(); j++){
+					try
+					{
+						if(i != j){
+							clientSockets.get(i).send(responses.get(j));
+						}
+
+					} catch (IOException e)
+					{
+						e.printStackTrace();
+					}
+				}
+
+
+		}
+
 	}
 
 	public List<Player> getActivePlayers() {
