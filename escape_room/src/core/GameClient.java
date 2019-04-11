@@ -99,16 +99,20 @@ public class GameClient implements Runnable {
                         // Interpret the data
                         request.doBusiness();
                         try {
-                          //This response only sends to the current client, not every client.
-                          for (GameClient client : GameServer.getInstance().getActiveThreads().values()) {
 
-                            // Retrieve any responses created by the request object
-                            for (GameResponse response : request.getResponses()) {
-                              // Transform the response into bytes and pass it into the output
-                              outputStream = client.clientSocket.getOutputStream();
-                              send(response);
-                            }
-                          }
+                                for(GameClient client : GameServer.getInstance().getActiveThreads().values())
+                                {
+                                    // Retrieve any responses created by the request object
+                                    for (GameResponse response : request.getResponses())
+                                    {
+                                        // Transform the response into bytes and pass it into the output
+                                        GameServer.getInstance().responses.add(response);
+                                        outputStream = client.clientSocket.getOutputStream();
+                                        send(response);
+                                    }
+                                }
+
+
 
 
                         } catch (IOException ex) {
@@ -215,6 +219,10 @@ public class GameClient implements Runnable {
         updates.clear();
 
         player = null;
+    }
+
+    public Socket getClientSocket(){
+        return clientSocket;
     }
 
     public int getNewTestVar() {
