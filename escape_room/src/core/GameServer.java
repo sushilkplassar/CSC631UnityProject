@@ -42,14 +42,10 @@ public class GameServer {
 	private ServerSocket serverSocket;
 	private ExecutorService clientThreadPool;
 	// Reference Tables
+	private ArrayList<GameResponse> old_responses = new ArrayList<>();
 	private Map<String, GameClient> activeThreads = new HashMap<String, GameClient>(); // Session ID -> Client
 	private Map<Integer, Player> activePlayers = new HashMap<Integer, Player>(); // Player ID -> Player
 
-	// Responses to be sent to each client
-	ArrayList<GameResponse> responses = new ArrayList<>();
-	ArrayList<GameClient> clientSockets = new ArrayList<>();
-
-	
 	/**
 	 * Create the GameServer by setting up the request types and creating a
 	 * connection with the database.
@@ -115,9 +111,6 @@ public class GameServer {
 					String session_id = createUniqueID();
 					GameClient client = new GameClient(session_id, clientSocket);
 
-					// List of client sockets that are stored and then later sent back to all clients
-					clientSockets.add(client);
-
 					// Keep track of the new client thread
 					addToActiveThreads(client);
 					// Initiate the client
@@ -144,6 +137,15 @@ public class GameServer {
 		return activeThreads;
 	}
 
+	public ArrayList<GameResponse> getOldResponses(){
+		return old_responses;
+	}
+
+	public void addResponses(GameResponse response)
+	{
+		old_responses.add(response);
+	}
+
 	/**
 	 * Get the GameClient thread for the player using the player ID.
 	 *
@@ -165,24 +167,6 @@ public class GameServer {
 	public void addToActiveThreads(GameClient client) {
 
 		activeThreads.put(client.getID(), client);
-
-		// Bad way to spawn two players
-		/*for(int i = 0; i <  clientSockets.size(); i++)
-		{
-				for(int j = 0; j < responses.size(); j++){
-						try
-						{
-							if(i != j){
-								clientSockets.get(i).send(responses.get(j));
-							}
-
-						} catch (IOException e)
-							{
-							e.printStackTrace();
-							}
-					}
-		} */
-
 	}
 
 	public List<Player> getActivePlayers() {

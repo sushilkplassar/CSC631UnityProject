@@ -45,7 +45,8 @@ public class Main : MonoBehaviour {
     // after the request is done processing from the connection manager. 
     public void ResponseCreate(ExtendedEventArgs eventArgs)
     {
-        Debug.Log("Successfully created and joined room.");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //loads scene based off of index scene
+        Debug.Log("Call back to join Alex scene");
     }
 
 	public IEnumerator RequestHeartbeat(float time) {

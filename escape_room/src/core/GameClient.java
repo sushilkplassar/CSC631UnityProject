@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Field;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -103,23 +104,22 @@ public class GameClient implements Runnable {
                           for (GameResponse response : request.getResponses())
                           {
                                 // Transform the response into bytes and pass it into the output
+                                // Sends to current client
                                send(response);
+
+                               // Add response for other online players
+                               // May have to modify in case for updating different responses/request codes
+                               addResponseForAllOnlinePlayers(player.getID(),response);
+
+                               // Add responses from previous online players for new online players
+                               // May have to modify in case for updating different responses/request codes
+                               GameServer.getInstance().addResponses(response);
+
+                               // Send all old responses that is not the current response
+                               // May have to modify in case for updating different responses/request codes,
+                               // meaning this will all previous responses to occur again i.e. spawning again
+                               getResponseFromPreviousPlayers(response);
                           }
-                                  // Bad way to spawn two players, but holding onto it for now.
-                                /*for(GameClient client : GameServer.getInstance().getActiveThreads().values())
-                                {
-                                    // Retrieve any responses created by the request object
-                                    for (GameResponse response : request.getResponses())
-                                    {
-                                        // Transform the response into bytes and pass it into the output
-                                        GameServer.getInstance().responses.add(response);
-                                        outputStream = client.clientSocket.getOutputStream();
-                                        send(response);
-                                    }
-                                }*/
-
-
-
 
                         } catch (IOException ex) {
                             Log.printf_e("Client %s connection lost", session_id);
@@ -184,14 +184,32 @@ public class GameClient implements Runnable {
         return updates.add(response);
     }
 
-    // used fpr
-    public static void addResponseForAllOnlinePlayers(int player_id, GameResponse response) {
-        for (GameClient client : GameServer.getInstance().getActiveThreads().values()) {
-            Player player = client.getPlayer();
+    public void getResponseFromPreviousPlayers(GameResponse response){
 
-        if (player != null && client.getPlayer().getID() != player_id) {
-            client.addResponseForUpdate(response);
-            }
+      for(GameResponse old_responses : GameServer.getInstance().getOldResponses())
+      {
+        if (response != old_responses)
+        {
+          try
+          {
+            send(old_responses);
+          } catch (IOException e)
+          {
+            e.printStackTrace();
+          }
+        }
+      }
+
+    }
+
+    // Send data to all players after they connect
+          public void addResponseForAllOnlinePlayers(int player_id, GameResponse response) {
+            for (GameClient client : GameServer.getInstance().getActiveThreads().values()) {
+              Player player = client.getPlayer();
+
+              if (player != null && client.getPlayer().getID() != player_id) {
+                client.addResponseForUpdate(response);
+              }
         }
     }
 
