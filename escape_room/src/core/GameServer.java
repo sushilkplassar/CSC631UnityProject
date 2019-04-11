@@ -42,7 +42,7 @@ public class GameServer {
 	private ServerSocket serverSocket;
 	private ExecutorService clientThreadPool;
 	// Reference Tables
-	private ArrayList<GameResponse> old_responses = new ArrayList<>();
+	private ArrayList<GameResponse> previousSpawnedClients = new ArrayList<>();
 	private Map<String, GameClient> activeThreads = new HashMap<String, GameClient>(); // Session ID -> Client
 	private Map<Integer, Player> activePlayers = new HashMap<Integer, Player>(); // Player ID -> Player
 
@@ -138,12 +138,12 @@ public class GameServer {
 	}
 
 	public ArrayList<GameResponse> getOldResponses(){
-		return old_responses;
+		return previousSpawnedClients;
 	}
 
 	public void addResponses(GameResponse response)
 	{
-		old_responses.add(response);
+		previousSpawnedClients.add(response);
 	}
 
 	/**

@@ -111,14 +111,18 @@ public class GameClient implements Runnable {
                                // May have to modify in case for updating different responses/request codes
                                addResponseForAllOnlinePlayers(player.getID(),response);
 
-                               // Add responses from previous online players for new online players
-                               // May have to modify in case for updating different responses/request codes
-                               GameServer.getInstance().addResponses(response);
+                               // Only for spawning players
+                                if (requestCode == 101)
+                                {
+                                  // Add responses from previous online players for new online players
+                                  // May have to modify in case for updating different responses/request codes
+                                  GameServer.getInstance().addResponses(response);
 
-                               // Send all old responses that is not the current response
-                               // May have to modify in case for updating different responses/request codes,
-                               // meaning this will all previous responses to occur again i.e. spawning again
-                               getResponseFromPreviousPlayers(response);
+                                  // Send all old responses that is not the current response
+                                  // May have to modify in case for updating different responses/request codes,
+                                  // meaning this will all previous responses to occur again i.e. spawning again
+                                  getResponseFromPreviousPlayers(response);
+                                }
                           }
 
                         } catch (IOException ex) {
@@ -186,13 +190,13 @@ public class GameClient implements Runnable {
 
     public void getResponseFromPreviousPlayers(GameResponse response){
 
-      for(GameResponse old_responses : GameServer.getInstance().getOldResponses())
+      for(GameResponse previousSpawns : GameServer.getInstance().getOldResponses())
       {
-        if (response != old_responses)
+        if (response != previousSpawns)
         {
           try
           {
-            send(old_responses);
+            send(previousSpawns);
           } catch (IOException e)
           {
             e.printStackTrace();
