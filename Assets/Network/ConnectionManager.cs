@@ -22,7 +22,7 @@ public class ConnectionManager : MonoBehaviour {
 
 
     void Awake() {
-		mainObject = GameObject.Find("MainObject");
+		mainObject = GameObject.Find("Heartbeat");
 	}
 	
 	// Use this for initialization
@@ -85,15 +85,10 @@ public class ConnectionManager : MonoBehaviour {
                         response.dataStream = dataStream;
                         response.parse();
                         ExtendedEventArgs args = response.process();
-                        if (response_id == 201)
-                        {
-                            ResponseLoginEventArgs c = args as ResponseLoginEventArgs;
-                            players.Add(c.player);
-                        }
-                        /*if (args != null) {
+                        if (args != null) {
                             MessageQueue msgQueue = mainObject.GetComponent<MessageQueue>();
                             msgQueue.AddMessage(args.event_id, args);
-                        }*/
+                        }
                     }
                 }
             }

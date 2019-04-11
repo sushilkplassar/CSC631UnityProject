@@ -166,24 +166,22 @@ public class GameServer {
 
 		activeThreads.put(client.getID(), client);
 
-		for(int i = 0; i <  clientSockets.size(); i++)
+		// Bad way to spawn two players
+		/*for(int i = 0; i <  clientSockets.size(); i++)
 		{
-
 				for(int j = 0; j < responses.size(); j++){
-					try
-					{
-						if(i != j){
-							clientSockets.get(i).send(responses.get(j));
-						}
+						try
+						{
+							if(i != j){
+								clientSockets.get(i).send(responses.get(j));
+							}
 
-					} catch (IOException e)
-					{
-						e.printStackTrace();
+						} catch (IOException e)
+							{
+							e.printStackTrace();
+							}
 					}
-				}
-
-
-		}
+		} */
 
 	}
 

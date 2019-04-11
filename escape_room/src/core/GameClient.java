@@ -99,8 +99,14 @@ public class GameClient implements Runnable {
                         // Interpret the data
                         request.doBusiness();
                         try {
-
-                                for(GameClient client : GameServer.getInstance().getActiveThreads().values())
+                          // Retrieve any responses created by the request object
+                          for (GameResponse response : request.getResponses())
+                          {
+                                // Transform the response into bytes and pass it into the output
+                               send(response);
+                          }
+                                  // Bad way to spawn two players, but holding onto it for now.
+                                /*for(GameClient client : GameServer.getInstance().getActiveThreads().values())
                                 {
                                     // Retrieve any responses created by the request object
                                     for (GameResponse response : request.getResponses())
@@ -110,7 +116,7 @@ public class GameClient implements Runnable {
                                         outputStream = client.clientSocket.getOutputStream();
                                         send(response);
                                     }
-                                }
+                                }*/
 
 
 
@@ -176,6 +182,17 @@ public class GameClient implements Runnable {
 
     public boolean addResponseForUpdate(GameResponse response) {
         return updates.add(response);
+    }
+
+    // used fpr
+    public static void addResponseForAllOnlinePlayers(int player_id, GameResponse response) {
+        for (GameClient client : GameServer.getInstance().getActiveThreads().values()) {
+            Player player = client.getPlayer();
+
+        if (player != null && client.getPlayer().getID() != player_id) {
+            client.addResponseForUpdate(response);
+            }
+        }
     }
 
     public void send(GameResponse response) throws IOException {
