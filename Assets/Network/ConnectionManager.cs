@@ -13,7 +13,6 @@ public class ConnectionManager : MonoBehaviour {
 	
 	private GameObject mainObject;
 	private TcpClient mySocket;
-    public List<GameObject> players = new List<GameObject>();
 	private NetworkStream theStream;
 	private bool socketReady = false;
     private List<TcpClient> sockets = new List<TcpClient>();

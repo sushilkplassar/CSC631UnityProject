@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Main : MonoBehaviour {
     ConnectionManager cManager;
     MessageQueue msgQueue;
+    List<GameObject> players = new List<GameObject>();
 
     void Awake() {
         //DontDestroyOnLoad(gameObject);
@@ -22,9 +23,9 @@ public class Main : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+
         
-        
-		cManager = gameObject.GetComponent<ConnectionManager>();
+        cManager = gameObject.GetComponent<ConnectionManager>();
         msgQueue = gameObject.GetComponent<MessageQueue>();
         msgQueue.AddCallback(Constants.SMSG_AUTH, ResponseCreate);
         //msgQueue.AddCallback(Constants.SMSG_PLAYERS, responsePlayers);
@@ -45,8 +46,32 @@ public class Main : MonoBehaviour {
     // after the request is done processing from the connection manager. 
     public void ResponseCreate(ExtendedEventArgs eventArgs)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //loads scene based off of index scene
-        Debug.Log("Call back to join Alex scene");
+        GameObject player = Instantiate(Resources.Load<GameObject>("Prefabs/PlayerObject"));
+        players.Add(player);
+        if (players.Count == 1)
+        {  
+            Debug.Log("Added first player in list.");
+        }
+        
+        if(players.Count > 1)
+        {
+            Debug.Log("Adding subsequent players that join.");
+            players.Add(player);
+            
+            // Turn off all children associated with the new player object that joins.
+            for (int i = 0; i < player.transform.childCount; i++)
+            {
+                GameObject child = player.transform.GetChild(i).gameObject;
+                if (child != null)
+                    child.SetActive(false);
+            }
+            // Turn off all movement and camera objects so that one input doesn't move both player objects.
+            player.GetComponent<FPMovement>().enabled = false;
+            player.GetComponent<CharacterController>().enabled = false;
+            player.GetComponent<MouseLook>().enabled = false;
+           
+        }
+        Debug.Log("Successfully created player in callback function.");
     }
 
 	public IEnumerator RequestHeartbeat(float time) {

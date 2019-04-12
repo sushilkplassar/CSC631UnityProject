@@ -53,7 +53,7 @@ public class ResponseLogin : NetworkResponse {
 		//	args.level = level;
 		//	args.last_logout = last_logout;
             Debug.Log("user id is:" + user_id);
-            args.player = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/PlayerObject")as GameObject);
+          //  args.player = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/PlayerObject")as GameObject);
             
         }
 
