@@ -70,7 +70,6 @@ public class FPMovement : MonoBehaviour
         characterControl.Move(jumpVector * Time.deltaTime);*/
 
     }
-
     
 }
 
