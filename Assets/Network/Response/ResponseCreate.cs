@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine.Networking;
 
-public class ResponseLoginEventArgs : ExtendedEventArgs {
+public class ResponseCreateEventArgs : ExtendedEventArgs {
 		
 	public short status { get; set; }
 	public int user_id { get; set; }
@@ -14,12 +14,12 @@ public class ResponseLoginEventArgs : ExtendedEventArgs {
     public GameObject player { get; set; }
     
 	
-	public ResponseLoginEventArgs() {
+	public ResponseCreateEventArgs() {
 		event_id = Constants.SMSG_AUTH;
 	}
 }
 
-public class ResponseLogin : NetworkResponse {
+public class ResponseCreate : NetworkResponse {
 	
 	private short status;
 	private int user_id;
@@ -28,7 +28,7 @@ public class ResponseLogin : NetworkResponse {
 	private short level;
 	private string last_logout;
 
-	public ResponseLogin() {
+	public ResponseCreate() {
 	}
 	
 	public override void parse() {
@@ -43,9 +43,9 @@ public class ResponseLogin : NetworkResponse {
 	}
 	
 	public override ExtendedEventArgs process() {
-		ResponseLoginEventArgs args = null;
+		ResponseCreateEventArgs args = null;
 		if (status == 0) {
-			args = new ResponseLoginEventArgs();
+			args = new ResponseCreateEventArgs();
 		//	args.status = status;
 			args.user_id = user_id;
 		//	args.username = username;

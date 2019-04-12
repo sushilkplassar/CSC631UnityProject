@@ -9,7 +9,7 @@ public class NetworkResponseTable {
 	
 	public static void init() {
 		responseTable = new Dictionary<short, Type>();
-		add(Constants.SMSG_AUTH, "ResponseLogin");//201
+		add(Constants.SMSG_AUTH, "ResponseCreate");//201
 		add(Constants.SMSG_PLAYERS, "ResponsePlayers");//203
 		add(Constants.SMSG_TEST, "ResponseTest");//204
 	}

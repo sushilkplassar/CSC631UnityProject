@@ -46,6 +46,7 @@ public class Main : MonoBehaviour {
     // after the request is done processing from the connection manager. 
     public void ResponseCreate(ExtendedEventArgs eventArgs)
     {
+        // if eventArgs.playertag == 1 or eventArgs.playertag == 2 to tell them to spawn in different areas
         GameObject player = Instantiate(Resources.Load<GameObject>("Prefabs/PlayerObject"));
         players.Add(player);
         if (players.Count == 1)
