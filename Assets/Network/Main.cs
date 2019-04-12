@@ -56,7 +56,7 @@ public class Main : MonoBehaviour {
         if(players.Count > 1)
         {
             Debug.Log("Adding subsequent players that join.");
-            players.Add(player);
+            
             
             // Turn off all children associated with the new player object that joins.
             for (int i = 0; i < player.transform.childCount; i++)
