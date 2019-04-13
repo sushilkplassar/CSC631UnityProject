@@ -8,6 +8,7 @@ public class Main : MonoBehaviour {
     ConnectionManager cManager;
     MessageQueue msgQueue;
     List<GameObject> players = new List<GameObject>();
+    private GameObject player;
 
     void Awake() {
         //DontDestroyOnLoad(gameObject);
@@ -47,7 +48,8 @@ public class Main : MonoBehaviour {
     public void ResponseCreate(ExtendedEventArgs eventArgs)
     {
         // if eventArgs.playertag == 1 or eventArgs.playertag == 2 to tell them to spawn in different areas
-        GameObject player = Instantiate(Resources.Load<GameObject>("Prefabs/PlayerObject"));
+        player = spawnHere(eventArgs);
+
         players.Add(player);
         if (players.Count == 1)
         {  
@@ -57,25 +59,48 @@ public class Main : MonoBehaviour {
         if(players.Count > 1)
         {
             Debug.Log("Adding subsequent players that join.");
-            
-            
+
+            // Player Object is a child of the Player Spawn Game Object.
+            GameObject playerObject = player.transform.GetChild(0).gameObject;
             // Turn off all children associated with the new player object that joins.
-            for (int i = 0; i < player.transform.childCount; i++)
+            for (int i = 0; i < playerObject.transform.childCount; i++)
             {
-                GameObject child = player.transform.GetChild(i).gameObject;
+                // The rest of the children is within this player. 
+                GameObject child = playerObject.transform.GetChild(i).gameObject;
+
+                // Turning off children of player. 
                 if (child != null)
                     child.SetActive(false);
             }
             // Turn off all movement and camera objects so that one input doesn't move both player objects.
-            player.GetComponent<FPMovement>().enabled = false;
-            player.GetComponent<CharacterController>().enabled = false;
-            player.GetComponent<MouseLook>().enabled = false;
+            
+            playerObject.GetComponent<FPMovement>().enabled = false;
+            playerObject.GetComponent<CharacterController>().enabled = false;
+            playerObject.GetComponent<MouseLook>().enabled = false;
            
         }
         Debug.Log("Successfully created player in callback function.");
     }
 
-	public IEnumerator RequestHeartbeat(float time) {
+    // Spawn players in different areas of the room based on their tag.
+    public GameObject spawnHere(ExtendedEventArgs eventArgs)
+    {
+        GameObject spawn = null;
+        // if eventArgs.playertag == 1 or eventArgs.playertag == 2 to tell them to spawn in different areas
+        ResponseCreateEventArgs argID = eventArgs as ResponseCreateEventArgs;
+        if (argID.user_id == 1)
+        {
+            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player1Spawn"));
+            
+        }
+        if (argID.user_id == 2)
+        {
+            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player2Spawn"));
+        }
+        return spawn;
+    }
+
+    public IEnumerator RequestHeartbeat(float time) {
 
         Debug.Log("In Coroutine");
 		ConnectionManager cManager = gameObject.GetComponent<ConnectionManager>();

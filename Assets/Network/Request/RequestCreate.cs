@@ -8,10 +8,10 @@ public class RequestCreate : NetworkRequest {
 		request_id = Constants.CMSG_AUTH;
 	}
 	
-	public void send(int id) {
+	public void send() {
 	    packet = new GamePacket(request_id);
 		packet.addString(Constants.CLIENT_VERSION);
-		packet.addInt32(id);
+		//packet.addInt32(id);
 		//packet.addString(password);
 	}
 }

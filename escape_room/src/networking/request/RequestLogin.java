@@ -35,19 +35,17 @@ public class RequestLogin extends GameRequest {
   @Override
   public void parse() throws IOException {
     version = DataReader.readString(dataInput).trim();
-    user_id = DataReader.readInt(dataInput);
+    //user_id = DataReader.readInt(dataInput);
 //        password = DataReader.readString(dataInput).trim();
   }
 
   @Override
   public void doBusiness() throws Exception {
-    Log.printf("User '%s' is connecting...", user_id);
+    Player player = new Player();
+    Log.printf("User '%s' is connecting...", player.getID());
 
-    client.setUserID(user_id);
-    Player player = new Player(user_id);
-
-    responseLogin.setStatus((short)0);
-    responseLogin.setUserID(user_id);
+    client.setUserID(player.getID());
+    responseLogin.setUserID(player.getID());
 
     GameServer.getInstance().setActivePlayer(player);
     player.setClient(client);

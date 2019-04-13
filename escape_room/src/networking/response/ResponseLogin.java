@@ -29,7 +29,7 @@ public class ResponseLogin extends GameResponse {
 //            packet.addString(player.getUsername());
 //            packet.addInt32(player.getMoney());
 //            packet.addShort16(player.getLevel());
-        	System.out.println(player.getID());
+        	System.out.println("Player ID is: " + player.getID());
         	//packet.addString(userName);
           packet.addInt32(player.getID());
         }

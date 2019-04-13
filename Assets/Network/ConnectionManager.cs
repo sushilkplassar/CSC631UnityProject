@@ -27,7 +27,7 @@ public class ConnectionManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         c = GetComponent<ConnectionManager>();
-        id = UnityEngine.Random.Range(0, 100);
+        //id = 0;
         setupSocket();
 
     }
@@ -49,7 +49,7 @@ public class ConnectionManager : MonoBehaviour {
             // Must be paired with a request to send through the connection
             // manager to send requests to the server
             
-            c.send(spawnThis(id));
+            c.send(spawnThis());
             
 
             Debug.Log("Sent request");
@@ -100,10 +100,10 @@ public class ConnectionManager : MonoBehaviour {
 	}
 
     // May have do a bunch of these to be able to send correctly
-    public RequestCreate spawnThis(int id)
+    public RequestCreate spawnThis()
     {
         RequestCreate spawn = new RequestCreate();
-        spawn.send(id);
+        spawn.send();
         return spawn;
     }
 
