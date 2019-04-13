@@ -30,9 +30,6 @@ public class Lerp_Tile : MonoBehaviour
     // Follows the target position like with a spring
     void Update()
     {
-
-        if (steppedOn == true)
-        {
             // Distance moved = time * speed.
             float distCovered = (Time.time - startTime) * speed;
 
@@ -41,16 +38,6 @@ public class Lerp_Tile : MonoBehaviour
 
             // Set our position as a fraction of the distance between the markers.
             transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
-        }
-    }
-        
 
-    // Destroy everything that enters the trigger
-    void OnTriggerEnter(Collider target)
-    {
-        if (target.tag == "Player")
-        {
-            steppedOn = true;
-        }
     }
 }
