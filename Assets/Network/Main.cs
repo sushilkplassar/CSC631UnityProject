@@ -29,6 +29,7 @@ public class Main : MonoBehaviour {
         cManager = gameObject.GetComponent<ConnectionManager>();
         msgQueue = gameObject.GetComponent<MessageQueue>();
         msgQueue.AddCallback(Constants.SMSG_AUTH, ResponseCreate);
+        msgQueue.AddCallback(Constants.SMSG_MOVE, ResponseMove);
         //msgQueue.AddCallback(Constants.SMSG_PLAYERS, responsePlayers);
         //msgQueue.AddCallback(Constants.SMSG_TEST, responseTest);
 
@@ -47,12 +48,14 @@ public class Main : MonoBehaviour {
     // after the request is done processing from the connection manager. 
     public void ResponseCreate(ExtendedEventArgs eventArgs)
     {
+        ResponseCreateEventArgs argID = eventArgs as ResponseCreateEventArgs;
         // if eventArgs.playertag == 1 or eventArgs.playertag == 2 to tell them to spawn in different areas
         player = spawnHere(eventArgs);
-
+        player.tag = argID.user_id.ToString();
         players.Add(player);
         if (players.Count == 1)
-        {  
+        {
+            
             Debug.Log("Added first player in list.");
         }
         
@@ -100,6 +103,22 @@ public class Main : MonoBehaviour {
         return spawn;
     }
 
+    public void ResponseMove(ExtendedEventArgs eventArgs)
+    {
+        
+        ResponseMoveEventArgs argTag = eventArgs as ResponseMoveEventArgs;
+
+        foreach (GameObject eachPlayer in players)
+        {
+            if(eachPlayer.tag == argTag.clientTag.ToString())
+            {
+                eachPlayer.transform.position = new Vector3(argTag.posX, 2, argTag.posZ);
+            }
+        }
+
+        Debug.Log("Call back for moving.");
+       // Fplayer.GetComponent<FPMovement>.move
+    }
     public IEnumerator RequestHeartbeat(float time) {
 
         Debug.Log("In Coroutine");

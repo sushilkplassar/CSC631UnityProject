@@ -107,13 +107,15 @@ public class GameClient implements Runnable {
                                 // Sends to current client
                                send(response);
 
-                               // Add response for other online players
-                               // May have to modify in case for updating different responses/request codes
-                               addResponseForAllOnlinePlayers(player.getID(),response);
+
 
                                // Only for spawning players
                                 if (requestCode == 101)
                                 {
+                                    // Add response for other online players
+                                    // May have to modify in case for updating different responses/request codes
+                                    addResponseForAllOnlinePlayers(player.getID(),response);
+
                                   // Add responses from previous online players for new online players
                                   // May have to modify in case for updating different responses/request codes
                                   GameServer.getInstance().addResponses(response);
@@ -122,6 +124,14 @@ public class GameClient implements Runnable {
                                   // May have to modify in case for updating different responses/request codes,
                                   // meaning this will all previous responses to occur again i.e. spawning again
                                   getResponseFromPreviousPlayers(response);
+                                } else {
+                                    for (GameClient client : GameServer.getInstance().getActiveThreads().values())
+                                    {
+                                        OutputStream out = outputStream;
+                                        outputStream = client.getOutputStream();
+                                        client.send(response);
+                                        outputStream = out;
+                                    }
                                 }
                           }
 

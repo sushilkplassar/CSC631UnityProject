@@ -24,6 +24,9 @@ public class Constants {
     public final static short CMSG_PLAYER_JOIN = 107;
     public final static short SMSG_PLAYER_JOIN = 207;
 
+    public final static short CMSG_MOVE = 131;
+    public final static short SMSG_MOVE = 231;
+
     // Organism Type
     public static final short ORGANISM_TYPE_ANIMAL = 0;
     public static final short ORGANISM_TYPE_PLANT = 1;

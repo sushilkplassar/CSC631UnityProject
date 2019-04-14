@@ -17,6 +17,8 @@ public class Player {
     private short level;
     private int money;
     private GameClient client; // References GameClient instance
+    private static float posX;
+    private static float posZ;
 
     public Player() {
         this.player_id = ++static_id;
@@ -68,6 +70,16 @@ public class Player {
 
     public void setMoney(int money) {
         this.money = money;
+    }
+
+    public void setPosX(float posX)
+    {
+        this.posX= posX;
+    }
+
+    public void setPosZ(float posZ)
+    {
+        this.posX= posZ;
     }
 
     public GameClient getClient() {

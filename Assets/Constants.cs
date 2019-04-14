@@ -14,9 +14,11 @@ public class Constants {
 	public static readonly short SMSG_PLAYERS = 203;
 	public static readonly short CMSG_TEST = 104;
 	public static readonly short SMSG_TEST = 204;
-	
-	// Other
-	public static readonly string IMAGE_RESOURCES_PATH = "Images/";
+    public static readonly short CMSG_MOVE = 131;
+    public static readonly short SMSG_MOVE = 231;
+
+    // Other
+    public static readonly string IMAGE_RESOURCES_PATH = "Images/";
 	public static readonly string PREFAB_RESOURCES_PATH = "Prefabs/";
 	public static readonly string TEXTURE_RESOURCES_PATH = "Textures/";
 	
