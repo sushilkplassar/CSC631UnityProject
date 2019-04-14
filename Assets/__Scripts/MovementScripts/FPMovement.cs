@@ -46,7 +46,7 @@ public class FPMovement : MonoBehaviour
         // They both work similarly but need to find which one is better.
         // anyKeyDown seems instant.
         // anyKey shows every step of the way of it moving.
-        if (Input.anyKeyDown)
+        if (Input.anyKey)
         {
             
             if (gameObject.transform.localPosition.x != 0 && gameObject.transform.localPosition.x != 0)

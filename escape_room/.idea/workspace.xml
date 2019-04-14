@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/MovementScripts/FPMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/MovementScripts/FPMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/GameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/GameClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metadata/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metadata/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metadata/GameRequestTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metadata/GameRequestTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Player.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/networking/request/RequestMove.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
+            <state relative-caret-position="342">
               <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -39,29 +38,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/core/GameClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1277">
-              <caret line="106" column="52" selection-start-line="106" selection-start-column="52" selection-end-line="106" selection-end-column="52" />
+            <state relative-caret-position="67">
+              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7830#7831#0" expanded="true" />
-                <element signature="e#7884#7885#0" expanded="true" />
-                <element signature="e#7973#7974#0" expanded="true" />
-                <element signature="e#8035#8036#0" expanded="true" />
-                <element signature="e#8124#8125#0" expanded="true" />
-                <element signature="e#8234#8235#0" expanded="true" />
-                <element signature="e#9724#9725#0" expanded="true" />
-                <element signature="e#9855#9856#0" expanded="true" />
-                <element signature="e#9953#9954#0" expanded="true" />
+                <element signature="e#7304#7305#0" expanded="true" />
+                <element signature="e#7358#7359#0" expanded="true" />
+                <element signature="e#7447#7448#0" expanded="true" />
+                <element signature="e#7509#7510#0" expanded="true" />
+                <element signature="e#7598#7599#0" expanded="true" />
+                <element signature="e#7708#7709#0" expanded="true" />
+                <element signature="e#9198#9199#0" expanded="true" />
+                <element signature="e#9329#9330#0" expanded="true" />
+                <element signature="e#9427#9428#0" expanded="true" />
                 <element signature="e#9767#9768#0" expanded="true" />
                 <element signature="e#9802#9803#0" expanded="true" />
-                <element signature="e#10234#10235#0" expanded="true" />
-                <element signature="e#10327#10328#0" expanded="true" />
-                <element signature="e#10868#10869#0" expanded="true" />
-                <element signature="e#10944#10945#0" expanded="true" />
-                <element signature="e#11020#11021#0" expanded="true" />
+                <element signature="e#9708#9709#0" expanded="true" />
+                <element signature="e#9801#9802#0" expanded="true" />
+                <element signature="e#10342#10343#0" expanded="true" />
+                <element signature="e#10418#10419#0" expanded="true" />
+                <element signature="e#10494#10495#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/networking/request/RequestLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="262">
+              <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -227,7 +226,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555231144624" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555232555489" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -290,7 +289,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17700455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -660,18 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#133#134#0" expanded="true" />
-            <element signature="e#193#194#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/networking/request/RequestHeartbeat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -702,38 +688,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/GameClient.java">
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1277">
-          <caret line="106" column="52" selection-start-line="106" selection-start-column="52" selection-end-line="106" selection-end-column="52" />
+        <state relative-caret-position="262">
+          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7830#7831#0" expanded="true" />
-            <element signature="e#7884#7885#0" expanded="true" />
-            <element signature="e#7973#7974#0" expanded="true" />
-            <element signature="e#8035#8036#0" expanded="true" />
-            <element signature="e#8124#8125#0" expanded="true" />
-            <element signature="e#8234#8235#0" expanded="true" />
-            <element signature="e#9724#9725#0" expanded="true" />
-            <element signature="e#9855#9856#0" expanded="true" />
-            <element signature="e#9953#9954#0" expanded="true" />
-            <element signature="e#9767#9768#0" expanded="true" />
-            <element signature="e#9802#9803#0" expanded="true" />
-            <element signature="e#10234#10235#0" expanded="true" />
-            <element signature="e#10327#10328#0" expanded="true" />
-            <element signature="e#10868#10869#0" expanded="true" />
-            <element signature="e#10944#10945#0" expanded="true" />
-            <element signature="e#11020#11021#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestLogin.java">
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestMove.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        <state relative-caret-position="342">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#133#134#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/GameClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7304#7305#0" expanded="true" />
+            <element signature="e#7358#7359#0" expanded="true" />
+            <element signature="e#7447#7448#0" expanded="true" />
+            <element signature="e#7509#7510#0" expanded="true" />
+            <element signature="e#7598#7599#0" expanded="true" />
+            <element signature="e#7708#7709#0" expanded="true" />
+            <element signature="e#9198#9199#0" expanded="true" />
+            <element signature="e#9329#9330#0" expanded="true" />
+            <element signature="e#9427#9428#0" expanded="true" />
+            <element signature="e#9767#9768#0" expanded="true" />
+            <element signature="e#9802#9803#0" expanded="true" />
+            <element signature="e#9708#9709#0" expanded="true" />
+            <element signature="e#9801#9802#0" expanded="true" />
+            <element signature="e#10342#10343#0" expanded="true" />
+            <element signature="e#10418#10419#0" expanded="true" />
+            <element signature="e#10494#10495#0" expanded="true" />
           </folding>
         </state>
       </provider>
