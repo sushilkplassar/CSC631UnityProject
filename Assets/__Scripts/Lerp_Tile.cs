@@ -16,7 +16,8 @@ public class Lerp_Tile : MonoBehaviour
 
     // Total distance between the markers.
     private float journeyLength;
-    private bool steppedOn = false;
+    public bool steppedOn = false;
+    public bool stopWall = false;
 
     void Start()
     {
@@ -30,7 +31,9 @@ public class Lerp_Tile : MonoBehaviour
     // Follows the target position like with a spring
     void Update()
     {
-            // Distance moved = time * speed.
+        if (steppedOn == true)
+        {
+             // Distance moved = time * speed.
             float distCovered = (Time.time - startTime) * speed;
 
             // Fraction of journey completed = current distance divided by total distance.
@@ -38,6 +41,11 @@ public class Lerp_Tile : MonoBehaviour
 
             // Set our position as a fraction of the distance between the markers.
             transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
-
+            if(stopWall == true)
+            {
+                endMarker.position = startMarker.position;
+            }
+            
+        }
     }
 }

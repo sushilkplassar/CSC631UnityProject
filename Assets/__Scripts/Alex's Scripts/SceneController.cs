@@ -44,6 +44,16 @@ public class SceneController : MonoBehaviour {
             }
         }
     }
+    
+    public Lerp_Tile stopDeathWall;
+    void Update()
+    {
+        
+        if (_score == 4)
+        {
+             stopDeathWall.stopWall = true;
+        }
+    }
 
     private int[] ShuffleArray(int[] numbers)
     {
@@ -63,7 +73,7 @@ public class SceneController : MonoBehaviour {
     private MainCard _firstRevealed;
     private MainCard _secondRevealed;
 
-    //private int _score = 0;
+    private int _score = 0;
     //[SerializeField] private TextMesh scoreLabel;
 
     public bool canReveal
@@ -88,8 +98,7 @@ public class SceneController : MonoBehaviour {
     {
         if(_firstRevealed.id == _secondRevealed.id)
         {
-            //_score++;
-            //scoreLabel.text = "Score: " + _score;
+            _score++;
         }
         else
         {
