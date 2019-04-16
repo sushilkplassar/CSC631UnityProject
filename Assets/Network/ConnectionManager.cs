@@ -40,11 +40,12 @@ public class ConnectionManager : MonoBehaviour {
 		try {
             mySocket = new TcpClient (Constants.REMOTE_HOST, Constants.REMOTE_PORT);
             sockets.Add(mySocket);
+            Debug.Log("IP: " + Constants.REMOTE_HOST);
 			theStream = mySocket.GetStream();
 			socketReady = true;
             //Thread newThread = new Thread(Update);
             //newThread.Start();
-            Debug.Log("Connected locally");
+           // Debug.Log("Connected locally");
 
             // Must be paired with a request to send through the connection
             // manager to send requests to the server

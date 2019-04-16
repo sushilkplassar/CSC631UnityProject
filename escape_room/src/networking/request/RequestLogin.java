@@ -27,6 +27,7 @@ public class RequestLogin extends GameRequest {
   private String password;
   // Responses
   private ResponseLogin responseLogin;
+  private static int count = 0;
 
   public RequestLogin() {
     responses.add(responseLogin = new ResponseLogin());
@@ -54,6 +55,9 @@ public class RequestLogin extends GameRequest {
     // Set response information
     responseLogin.setStatus((short) 0); // Login is a success
     responseLogin.setPlayer(player);
+    ++count;
+
+
 
 //  //       Checks if the connecting client meets the minimum version required
 //        if (version.compareTo(Constants.CLIENT_VERSION) >= 0) {

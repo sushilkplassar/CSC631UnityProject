@@ -125,6 +125,19 @@ public class Main : MonoBehaviour {
         Debug.Log("Call back for moving.");
        
     }
+
+    public void ResponseReady(ExtendedEventArgs eventArgs)
+    {
+        // show that both players are ready by turning on both ready buttons/text
+    }
+    public void ResponseStart(ExtendedEventArgs eventArgs)
+    {
+        // if eventargs returns 1
+        foreach(GameObject player in players)
+        {
+            player.GetComponent<StartPlayerComponents>().gameStarted();
+        }
+    }
     public IEnumerator RequestHeartbeat(float time) {
 
         Debug.Log("In Coroutine");
