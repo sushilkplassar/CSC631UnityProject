@@ -49,7 +49,7 @@ public class Main : MonoBehaviour {
     public void ResponseCreate(ExtendedEventArgs eventArgs)
     {
         ResponseCreateEventArgs argID = eventArgs as ResponseCreateEventArgs;
-        // if eventArgs.playertag == 1 or eventArgs.playertag == 2 to tell them to spawn in different areas
+        
         player = spawnHere(eventArgs);
         player.tag = argID.user_id.ToString();
         players.Add(player);
@@ -115,7 +115,7 @@ public class Main : MonoBehaviour {
                 // Previous player position
                 Transform previous = eachPlayer.transform;
 
-               
+               // Lerp for smoother player movement from the server.
                 eachPlayer.transform.position = Vector3.Lerp(previous.position, 
                                                 eachPlayer.transform.position = new Vector3(argTag.posX, 2, argTag.posZ), 
                                                 Time.deltaTime * 12);
@@ -123,7 +123,7 @@ public class Main : MonoBehaviour {
         }
 
         Debug.Log("Call back for moving.");
-       // Fplayer.GetComponent<FPMovement>.move
+       
     }
     public IEnumerator RequestHeartbeat(float time) {
 
