@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Assets/Network/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Network/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/PotentialLobbyScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/PotentialLobbyScreen.unity" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/core/GameServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-748">
-              <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+            <state relative-caret-position="289">
+              <caret line="106" column="55" lean-forward="true" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4563#4564#0" expanded="true" />
@@ -153,7 +152,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="215" />
     <option name="y" value="155" />
     <option name="width" value="918" />
@@ -738,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/GameServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748">
-          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+        <state relative-caret-position="289">
+          <caret line="106" column="55" lean-forward="true" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4563#4564#0" expanded="true" />
