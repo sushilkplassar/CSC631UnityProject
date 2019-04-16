@@ -22,6 +22,11 @@ public class Player {
 
     public Player() {
         this.player_id = ++static_id;
+        if (static_id == 2)
+        {
+            static_id = 0;
+        }
+
     }
 
     public Player(int player_id, String username, String password, short level, int money) {
