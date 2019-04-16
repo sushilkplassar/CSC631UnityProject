@@ -112,7 +112,13 @@ public class Main : MonoBehaviour {
         {
             if(eachPlayer.tag == argTag.clientTag.ToString())
             {
-                eachPlayer.transform.position = new Vector3(argTag.posX, 2, argTag.posZ);
+                // Previous player position
+                Transform previous = eachPlayer.transform;
+
+               
+                eachPlayer.transform.position = Vector3.Lerp(previous.position, 
+                                                eachPlayer.transform.position = new Vector3(argTag.posX, 2, argTag.posZ), 
+                                                Time.deltaTime * 12);
             }
         }
 
