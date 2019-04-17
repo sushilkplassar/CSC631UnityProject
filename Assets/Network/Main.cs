@@ -49,7 +49,11 @@ public class Main : MonoBehaviour {
     public void ResponseCreate(ExtendedEventArgs eventArgs)
     {
         ResponseCreateEventArgs argID = eventArgs as ResponseCreateEventArgs;
-        
+        if (players.Count == 2)
+        {
+            players.Clear();
+
+        }
         player = spawnHere(eventArgs);
         player.tag = argID.user_id.ToString();
         players.Add(player);
@@ -75,6 +79,8 @@ public class Main : MonoBehaviour {
                 if (child != null)
                     child.SetActive(false);
             }
+
+        
             // Turn off all movement and camera objects so that one input doesn't move both player objects.
             
             playerObject.GetComponent<FPMovement>().enabled = false;
