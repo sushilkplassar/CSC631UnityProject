@@ -5,17 +5,22 @@ using UnityEngine.UI;
 
 public class FadeText : MonoBehaviour
 {
-    /// can ignore the update, it's just to make the coroutines get called for example
+    
+    public bool stepOn = false;
+    public bool stepOff = false;
+    public int stopText = 0;
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (stepOn == true)
         {
             StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<Text>()));
         }
-        if (Input.GetKeyDown(KeyCode.E))
+
+        if(stepOff == true)
         {
             StartCoroutine(FadeTextToZeroAlpha(1f, GetComponent<Text>()));
-        }
+        } 
     }
  
  
@@ -38,5 +43,6 @@ public class FadeText : MonoBehaviour
             i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
             yield return null;
         }
+        stepOff = false;
     }
 }

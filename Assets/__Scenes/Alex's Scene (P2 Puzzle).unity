@@ -1852,6 +1852,7 @@ GameObject:
   - component: {fileID: 137583446}
   - component: {fileID: 137583443}
   - component: {fileID: 137583452}
+  - component: {fileID: 137583453}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -1987,7 +1988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137583442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.135, y: 1.348, z: -20.832}
+  m_LocalPosition: {x: 5.135, y: 1.348, z: -24.01}
   m_LocalScale: {x: 1, y: 0.794, z: 1}
   m_Children:
   - {fileID: 1187006986}
@@ -2025,6 +2026,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lerpWall: {fileID: 1641213363}
+--- !u!114 &137583453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137583442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae327edbb23b2a42b16bc5127d5d2d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeText: {fileID: 1819160299}
 --- !u!1001 &138310926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2756,7 +2770,7 @@ GameObject:
   - component: {fileID: 189849769}
   m_Layer: 0
   m_Name: Default_Floor (6)
-  m_TagString: Untagged
+  m_TagString: P1_Complete_Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3090,7 +3104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &210139851
@@ -8967,6 +8981,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1567346889, guid: 2d4f08da577b5834e998f08744a0d817, type: 3}
+      propertyPath: m_TagString
+      value: P1_Complete_Text
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d4f08da577b5834e998f08744a0d817, type: 3}
 --- !u!1 &654997794
@@ -14314,10 +14332,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -21670,7 +21688,7 @@ GameObject:
   - component: {fileID: 1819160297}
   - component: {fileID: 1819160299}
   m_Layer: 5
-  m_Name: Clue_puzzle1
+  m_Name: Note_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21693,7 +21711,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 512.4, y: 43}
+  m_SizeDelta: {x: 154.6, y: 23.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1819160297
 MonoBehaviour:
@@ -21708,7 +21726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -21717,10 +21735,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: fae067962e5934395be31c8aba4a3455, type: 3}
-    m_FontSize: 26
+    m_FontSize: 16
     m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
+    m_BestFit: 1
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -21728,7 +21746,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Take things one step at a time
+  m_Text: PUZZLE 1 BEGIN
 --- !u!222 &1819160298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21749,6 +21767,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0a029f34e40754e803c3aa899610f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stepOn: 0
+  stepOff: 0
+  stopText: 0
 --- !u!4 &1823041167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4131706337141988, guid: 38d22e3b415a2574e920b8037167468a,
@@ -22233,7 +22254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844251075}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.255, y: 0.11, z: -0.0081540905}
+  m_LocalPosition: {x: -2.242, y: 0.11, z: -0.0081540905}
   m_LocalScale: {x: 0.086746246, y: 0.24990423, z: 0.12113877}
   m_Children: []
   m_Father: {fileID: 1641213367}
