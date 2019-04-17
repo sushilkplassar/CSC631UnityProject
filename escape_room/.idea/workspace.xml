@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/networking/request/RequestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/networking/request/RequestLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metadata/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metadata/Constants.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -148,7 +147,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/networking/request/RequestLogin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
@@ -163,8 +162,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/metadata/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="187">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -196,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/core/NetworkManager.java" />
         <option value="$PROJECT_DIR$/src/core/GameServer.java" />
         <option value="$PROJECT_DIR$/src/networking/response/ResponseLogin.java" />
-        <option value="$PROJECT_DIR$/src/metadata/Constants.java" />
         <option value="$PROJECT_DIR$/src/metadata/GameRequestTable.java" />
         <option value="$PROJECT_DIR$/src/utility/DataReader.java" />
         <option value="$PROJECT_DIR$/src/networking/request/RequestMove.java" />
@@ -204,10 +202,11 @@
         <option value="$PROJECT_DIR$/src/core/GameClient.java" />
         <option value="$PROJECT_DIR$/src/networking/request/RequestLogin.java" />
         <option value="$PROJECT_DIR$/src/model/Player.java" />
+        <option value="$PROJECT_DIR$/src/metadata/Constants.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="215" />
     <option name="y" value="155" />
     <option name="width" value="918" />
@@ -364,7 +363,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3420622" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3420622" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -685,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/metadata/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-222">
@@ -787,16 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -816,6 +798,23 @@
             <element signature="e#1857#1858#0" expanded="true" />
             <element signature="e#1923#1924#0" expanded="true" />
             <element signature="e#2020#2021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metadata/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

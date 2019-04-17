@@ -27,7 +27,7 @@ Transform:
   m_LocalPosition: {x: 14.239863, y: 0, z: 2.3367233}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1343777235967450216}
+  - {fileID: 1343777235967450581}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -108,13 +108,17 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 50, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a9dd43ef47f86e4b8cd9c714a5fb35f, type: 2}
     - target: {fileID: 80, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
---- !u!4 &1343777235967450216 stripped
+--- !u!4 &1343777235967450581 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 40, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5,
     type: 3}

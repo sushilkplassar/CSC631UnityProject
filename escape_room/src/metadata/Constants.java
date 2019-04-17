@@ -6,8 +6,13 @@ package metadata;
 public class Constants {
 
     // Request (1xx) + Response (2xx)
+
+    // RequestLogin should be renamed to RequestCreate
     public final static short CMSG_AUTH = 101;
     public final static short SMSG_AUTH = 201;
+
+
+
     public final static short CMSG_HEARTBEAT = 102;
     public final static short SMSG_HEARTBEAT = 202;
     public final static short CMSG_PLAYERS = 103;

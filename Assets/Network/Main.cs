@@ -55,7 +55,7 @@ public class Main : MonoBehaviour {
         players.Add(player);
         if (players.Count == 1)
         {
-            
+           
             Debug.Log("Added first player in list.");
         }
         
