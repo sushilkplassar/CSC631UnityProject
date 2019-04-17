@@ -143,7 +143,12 @@ public class GameServer {
 
 	public void addResponses(GameResponse response)
 	{
+		if(previousSpawnedClients.size() >= 2)
+		{
+			previousSpawnedClients = new ArrayList<>();
+		}
 		previousSpawnedClients.add(response);
+
 	}
 
 	/**

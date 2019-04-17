@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Main : MonoBehaviour {
     ConnectionManager cManager;
     MessageQueue msgQueue;
-    List<GameObject> players = new List<GameObject>();
+    public List<GameObject> players = new List<GameObject>();
     private GameObject player;
 
     void Awake() {
@@ -49,9 +49,13 @@ public class Main : MonoBehaviour {
     public void ResponseCreate(ExtendedEventArgs eventArgs)
     {
         ResponseCreateEventArgs argID = eventArgs as ResponseCreateEventArgs;
-        if (players.Count == 2)
+        if (players.Count >= 2)
         {
-            players.Clear();
+           foreach(GameObject player in players)
+            {
+                Destroy(player);
+            }
+            players = new List<GameObject>();
 
         }
         player = spawnHere(eventArgs);
