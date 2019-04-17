@@ -4,35 +4,38 @@ using UnityEngine;
 
 public class Respawn_P1 : MonoBehaviour
 {
-    [SerializeField] private GameObject respawn;
+    [SerializeField] private Transform respawn;
+    [SerializeField] private Transform player;
 
-    private FPMovement stopMovement;
-    public Rigidbody rb;
+    private FPMovement changeSpeed;
     public Animator animator;
+    private bool isDeath = false;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        GameObject g = GameObject.Find("Player");
-        stopMovement = g.GetComponent<FPMovement> ();
+        GameObject g = GameObject.Find("Player2");
+        changeSpeed = g.GetComponent<FPMovement> ();
     }
 
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    void FixedUpdate()
     {
-        if (hit.gameObject.tag == "Respawn")
+        if(isDeath == true)
+        {
+            changeSpeed.speed = 0.5f;
+        } 
+    }
+
+    IEnumerator OnControllerColliderHit(ControllerColliderHit hit)
+    {
+         if (hit.gameObject.tag == "Respawn")
         {   
-            //animator.SetTrigger("FadeOut");
-            stopMovement.speed = .5f;
-            StartCoroutine(ExecuteAfterTime(.5f));
             
+            isDeath = true;
+            player.transform.position = respawn.position;
+            yield return new WaitForSeconds(0.5f);
+            changeSpeed.speed = 4f;
+            isDeath = false;
+            //animator.SetTrigger("FadeOut");
         }
-    }
-
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-        transform.position = respawn.transform.position;
-        //animator.SetTrigger("FadeIn");
-        stopMovement.speed = 5;
     }
 }
