@@ -12,6 +12,7 @@ public class TriggerText : MonoBehaviour
         {   
             if (fadeText.stopText == 0){
                 fadeText.stepOn = true;
+                fadeText.stopText = 1;
                 StartCoroutine(TurnTextOff());
             }
         }
@@ -20,8 +21,7 @@ public class TriggerText : MonoBehaviour
     IEnumerator TurnTextOff()
     {
         yield return new WaitForSeconds(2f);
-        fadeText.stepOff = true;
         fadeText.stepOn = false;
-        fadeText.stopText = 1;
+        fadeText.stepOff = true;
     }
 }

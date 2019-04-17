@@ -33,6 +33,7 @@ public class FadeText : MonoBehaviour
             i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a + (Time.deltaTime / t));
             yield return null;
         }
+        
     }
  
     public IEnumerator FadeTextToZeroAlpha(float t, Text i)
