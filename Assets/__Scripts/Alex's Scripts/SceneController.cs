@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour {
 
     public const int gridRows = 2;
-    public const int gridCols = 4;
+    public const int gridCols = 6;
     public const float offsetX = 1f;
     public const float offsetY = 1.5f;
 
@@ -17,8 +17,8 @@ public class SceneController : MonoBehaviour {
     {
         Vector3 startPos = originalCard.transform.position; //The position of the first card. All other cards are offset from here.
 
-        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3};
-        numbers = ShuffleArray(numbers); //This is a function we will create in a minute!
+        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5};
+        numbers = ShuffleArray(numbers);
 
         for(int i = 0; i < gridCols; i++)
         {
@@ -49,7 +49,7 @@ public class SceneController : MonoBehaviour {
     void Update()
     {
         
-        if (_score == 4)
+        if (_score == 6)
         {
              stopDeathWall.stopWall = true;
         }
