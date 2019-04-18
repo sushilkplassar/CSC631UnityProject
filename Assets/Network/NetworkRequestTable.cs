@@ -14,6 +14,7 @@ public class NetworkRequestTable {
 		add(Constants.CMSG_PLAYERS, "RequestPlayers");
 		add(Constants.CMSG_TEST, "RequestTest");
         add(Constants.CMSG_MOVE, "RequestMove");
+        add(Constants.CMSG_READY, "RequestReady");
     }
 	
 	public static void add(short request_id, string name) {

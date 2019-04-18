@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Main : MonoBehaviour {
     ConnectionManager cManager;
@@ -30,7 +31,7 @@ public class Main : MonoBehaviour {
         msgQueue = gameObject.GetComponent<MessageQueue>();
         msgQueue.AddCallback(Constants.SMSG_AUTH, ResponseCreate);
         msgQueue.AddCallback(Constants.SMSG_MOVE, ResponseMove);
-        //msgQueue.AddCallback(Constants.SMSG_PLAYERS, responsePlayers);
+        msgQueue.AddCallback(Constants.SMSG_READY, ResponseReady);
         //msgQueue.AddCallback(Constants.SMSG_TEST, responseTest);
 
         Debug.Log("Starting Coroutine");
@@ -61,9 +62,10 @@ public class Main : MonoBehaviour {
         player = spawnHere(eventArgs);
         player.tag = argID.user_id.ToString();
         players.Add(player);
+            
         if (players.Count == 1)
         {
-           
+            player.transform.GetChild(1).gameObject.SetActive(true);
             Debug.Log("Added first player in list.");
         }
         
@@ -137,9 +139,25 @@ public class Main : MonoBehaviour {
        
     }
 
+    public void RequestReady()
+    {
+        RequestReady ready = new RequestReady();
+        ready.send();
+        cManager.send(ready);
+    }
+
+
     public void ResponseReady(ExtendedEventArgs eventArgs)
     {
+        ResponseReadyEventArgs args = eventArgs as ResponseReadyEventArgs;
         // show that both players are ready by turning on both ready buttons/text
+        // First player that was added into the list is the actual client
+        player = players[0];
+        GameObject playerObject = player.transform.GetChild(0).gameObject;
+        player.transform.GetChild(1).gameObject.SetActive(true);
+        Canvas readyScreen;
+       
+        
     }
     public void ResponseStart(ExtendedEventArgs eventArgs)
     {
