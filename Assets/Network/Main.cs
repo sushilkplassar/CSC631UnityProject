@@ -90,7 +90,8 @@ public class Main : MonoBehaviour {
             playerObject.GetComponent<FPMovement>().enabled = false;
             playerObject.GetComponent<CharacterController>().enabled = false;
             playerObject.GetComponent<MouseLook>().enabled = false;
-           
+            
+
         }
         Debug.Log("Successfully created player in callback function.");
     }

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6150861117117500413}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 14.239863, y: 0, z: 2.3367233}
+  m_LocalPosition: {x: 14.239863, y: 1.8, z: 2.3367233}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1343777235967450581}
@@ -48,7 +48,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 40, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 40, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -100,14 +100,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 55, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 55, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 50, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -115,6 +107,14 @@ PrefabInstance:
     - target: {fileID: 80, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 55, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
