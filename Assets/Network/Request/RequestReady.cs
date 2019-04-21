@@ -10,11 +10,11 @@ public class RequestReady : NetworkRequest
         request_id = Constants.CMSG_READY;
     }
 
-    public void send()
+    public void send(int playerNumber)
     {
         packet = new GamePacket(request_id);
         // Send 1 to indicate that player is ready
-        packet.addInt32(1);
+        packet.addInt32(playerNumber);
         //packet.addInt32(id);
         //packet.addString(password);
     }

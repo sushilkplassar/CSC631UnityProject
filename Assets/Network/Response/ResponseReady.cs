@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResponseReadyEventArgs : ExtendedEventArgs
 {
-    public int ready { get; set; }
+    public int readyPlayer { get; set; }
 
     public ResponseReadyEventArgs()
     {
@@ -14,7 +14,7 @@ public class ResponseReadyEventArgs : ExtendedEventArgs
 
 public class ResponseReady : NetworkResponse
 {
-    private int ready;
+    private int readyPlayer;
 
     // May not need to implement?
     public ResponseReady()
@@ -23,15 +23,14 @@ public class ResponseReady : NetworkResponse
 
     public override void parse()
     {
-        ready = DataReader.ReadInt(dataStream);
+        readyPlayer = DataReader.ReadInt(dataStream);
     }
 
     public override ExtendedEventArgs process()
     {
         ResponseReadyEventArgs args = null;
         args = new ResponseReadyEventArgs();
-        // Player position
-        args.ready = ready;
+        args.readyPlayer = readyPlayer;
         Debug.Log("Player is ready.");
         return args;
     }

@@ -5,8 +5,7 @@ using UnityEngine;
 public class StartPlayerComponents : MonoBehaviour
 {
     private GameObject player;
-    public Canvas readyScreen1;
-    public Canvas readyScreen2;
+    public Canvas readyScreen;
     public int gameStart = 0;
 
     public void activateComponents()
@@ -26,7 +25,6 @@ public class StartPlayerComponents : MonoBehaviour
     {
         gameStart = 1;
         activateComponents();
-        readyScreen1.enabled = false;
-        readyScreen2.enabled = false;
+        readyScreen.enabled = false;
     }
 }

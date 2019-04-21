@@ -15,12 +15,6 @@ public class Main : MonoBehaviour {
         //DontDestroyOnLoad(gameObject);
         NetworkRequestTable.init();
         NetworkResponseTable.init();
-
-        
-        gameObject.AddComponent<MessageQueue>();
-		gameObject.AddComponent<ConnectionManager>();
-		
-		
 	}
 	
 	// Use this for initialization
@@ -65,16 +59,25 @@ public class Main : MonoBehaviour {
             
         if (players.Count == 1)
         {
-            player.transform.GetChild(1).gameObject.SetActive(true);
+            // Activates the ready screen for player
+            GameObject readyScreen = player.transform.GetChild(1).gameObject;
+            readyScreen.transform.GetChild(3).gameObject.SetActive(true);
+            readyScreen.transform.GetChild(4).gameObject.SetActive(true);
+
             Debug.Log("Added first player in list.");
         }
         
+        // Turning off components and game objects for the other player. 
         if(players.Count > 1)
         {
             Debug.Log("Adding subsequent players that join.");
 
             // Player Object is a child of the Player Spawn Game Object.
             GameObject playerObject = player.transform.GetChild(0).gameObject;
+
+            // Turn off canvas of other player
+            player.transform.GetChild(1).gameObject.SetActive(false);
+
             // Turn off all children associated with the new player object that joins.
             for (int i = 0; i < playerObject.transform.childCount; i++)
             {
@@ -88,7 +91,6 @@ public class Main : MonoBehaviour {
 
         
             // Turn off all movement and camera objects so that one input doesn't move both player objects.
-            
             playerObject.GetComponent<FPMovement>().enabled = false;
             playerObject.GetComponent<CharacterController>().enabled = false;
             playerObject.GetComponent<MouseLook>().enabled = false;
@@ -139,33 +141,67 @@ public class Main : MonoBehaviour {
        
     }
 
+    
     public void RequestReady()
     {
+        player = players[0];
+        int readyPlayer = int.Parse(player.tag);
+        
+
         RequestReady ready = new RequestReady();
-        ready.send();
+        ready.send(readyPlayer);
         cManager.send(ready);
+        Debug.Log("Sent ready request");
+
+        
+       // Ready screen 
+       Debug.Log("Dummy test for server response if player is ready");
+       GameObject readyScreen = player.transform.GetChild(1).gameObject;
+       // Will activate the other players ready screen.
+       if (player.tag == "1")
+       {
+           Debug.Log("Activating player 2's player 1 ready button");
+           readyScreen.transform.GetChild(5).gameObject.GetComponent<Toggle>().isOn = true;
+
+       }
+       else if (player.tag == "2")
+       {
+           Debug.Log("Activating player 1's player 2 ready button");
+           readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = true;
+       }
+       
+
     }
 
 
     public void ResponseReady(ExtendedEventArgs eventArgs)
     {
         ResponseReadyEventArgs args = eventArgs as ResponseReadyEventArgs;
-        // show that both players are ready by turning on both ready buttons/text
-        // First player that was added into the list is the actual client
         player = players[0];
-        GameObject playerObject = player.transform.GetChild(0).gameObject;
-        player.transform.GetChild(1).gameObject.SetActive(true);
-        Canvas readyScreen;
-       
-        
+
+        // Ready screen 
+        GameObject readyScreen = player.transform.GetChild(1).gameObject;
+
+        if (args.readyPlayer == 1)
+        {
+            Debug.Log("Activating player 1 ready button");
+            readyScreen.transform.GetChild(5).gameObject.GetComponent<Toggle>().isOn = true;
+            // If both players ready then make start button interactive for player 1.
+        }
+        else if(args.readyPlayer == 2)
+        {
+            Debug.Log("Activating player 2 ready button");
+            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = true;
+        }
+
     }
     public void ResponseStart(ExtendedEventArgs eventArgs)
     {
+        // Used for movement to to begin for both players. 
         // if eventargs returns 1
-        foreach(GameObject player in players)
-        {
-            player.GetComponent<StartPlayerComponents>().gameStarted();
-        }
+        player = players[0];
+        GameObject playerObject = player.transform.GetChild(0).gameObject;
+        playerObject.GetComponent<StartPlayerComponents>().gameStarted();
     }
     public IEnumerator RequestHeartbeat(float time) {
 

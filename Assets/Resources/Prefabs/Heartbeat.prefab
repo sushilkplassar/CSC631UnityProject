@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5180988402411106320}
   - component: {fileID: 5180988402411106319}
+  - component: {fileID: 6595586023190425702}
+  - component: {fileID: 8777931078458522606}
   m_Layer: 0
   m_Name: Heartbeat
   m_TagString: Untagged
@@ -41,5 +43,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adf76e840a06f13479035e57cb524ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players: []
+--- !u!114 &6595586023190425702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5180988402411106318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4375321ca9d415ebc7107cbf79cb80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8777931078458522606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5180988402411106318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72915b2d031c1ba408118e0184e165df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
