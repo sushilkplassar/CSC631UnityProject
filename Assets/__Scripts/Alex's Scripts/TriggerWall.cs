@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerDeathWall : MonoBehaviour
+public class TriggerWall : MonoBehaviour
 {
     public Lerp_Tile lerpWall;
     public SlideWall[] slideWall;
@@ -14,11 +14,16 @@ public class TriggerDeathWall : MonoBehaviour
             lerpWall.steppedOn = true;
         }
 
-        if (hit.gameObject.tag == "WallSlide")
+        if (hit.gameObject.tag == "WallSlideL")
         {
             slideWall[0].tileStepped = true;
             slideWall[1].tileStepped = true;
+        }
+
+        if (hit.gameObject.tag == "WallSlideR")
+        {
             slideWall[2].tileStepped = true;
+            slideWall[3].tileStepped = true;
         }
     }
 }
