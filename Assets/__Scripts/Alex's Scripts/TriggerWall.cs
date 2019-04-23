@@ -7,6 +7,7 @@ public class TriggerWall : MonoBehaviour
     public Lerp_Tile lerpWall;
     public SlideWall[] slideWall;
 
+    // tiles that are stepped on
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.tag == "Trigger")
@@ -24,6 +25,9 @@ public class TriggerWall : MonoBehaviour
         {
             slideWall[2].tileStepped = true;
             slideWall[3].tileStepped = true;
+            // puzzle 2 wall test
+            slideWall[4].tileStepped = true;
+            slideWall[5].tileStepped = true;
         }
     }
 }

@@ -10,9 +10,9 @@ public class SceneController : MonoBehaviour {
     public const float offsetX = 1f;
     public const float offsetY = 1.5f;
 
-    [SerializeField] private MainCard originalCard;
-    [SerializeField] private Sprite[] images;
-
+    //[SerializeField] private MainCard originalCard;
+    //[SerializeField] private Sprite[] images;
+    /* 
     private void Start()
     {
         Vector3 startPos = originalCard.transform.position; //The position of the first card. All other cards are offset from here.
@@ -66,7 +66,7 @@ public class SceneController : MonoBehaviour {
             newArray[r] = tmp;
         }
         return newArray;
-    }
+    }*/
 
     //-------------------------------------------------------------------------------------------------------------------------------------------
 
