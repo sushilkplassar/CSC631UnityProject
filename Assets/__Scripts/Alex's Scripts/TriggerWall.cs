@@ -25,7 +25,12 @@ public class TriggerWall : MonoBehaviour
         {
             slideWall[2].tileStepped = true;
             slideWall[3].tileStepped = true;
-            // puzzle 2 wall test
+        }
+
+        
+        // player 2 puzzle 2 walls
+        if (hit.gameObject.tag == "P2WallSlideD")
+        {
             slideWall[4].tileStepped = true;
             slideWall[5].tileStepped = true;
         }
