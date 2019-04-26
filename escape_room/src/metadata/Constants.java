@@ -31,6 +31,9 @@ public class Constants {
 
     public final static short CMSG_MOVE = 131;
     public final static short SMSG_MOVE = 231;
+    
+    public final static short CMSG_READY = 141;
+    public final static short SMSG_READY = 241;
 
     // Organism Type
     public static final short ORGANISM_TYPE_ANIMAL = 0;
