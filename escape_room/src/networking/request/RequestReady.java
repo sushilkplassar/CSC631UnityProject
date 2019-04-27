@@ -6,23 +6,23 @@ import java.io.IOException;
 // Other Imports
 //import core.GameServer;
 import model.Player;
-import networking.response.ResponseRoom;
+import networking.response.ResponseReady;
 //import utility.DataReader;
 import utility.DataReader;
 import utility.Log;
 
-public class RequestRoom extends GameRequest {
+public class RequestReady extends GameRequest {
 
 	// Data
 //  private String version;
 
 	// Responses
-	private ResponseRoom responseRoom;
+	private ResponseReady responseRoom;
 	private static int count = 0;
 	private int ready;
 
-	public RequestRoom() {
-		responses.add(responseRoom = new ResponseRoom());
+	public RequestReady() {
+		responses.add(responseRoom = new ResponseReady());
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class RequestRoom extends GameRequest {
 		responseRoom.setPlayerReady(ready);
 		/*
 		Player player = new Player();
-		Log.printf("********In RequestRoom ******** User '%s' is connecting...", player.getID());
+		Log.printf("********In RequestReady ******** User '%s' is connecting...", player.getID());
 
 		client.setUserID(player.getID());
 

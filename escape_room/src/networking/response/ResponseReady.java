@@ -9,13 +9,13 @@ import utility.GamePacket;
  * The ResponseLogin class contains information about the authentication
  * process.
  */
-public class ResponseRoom extends GameResponse {
+public class ResponseReady extends GameResponse {
 
     private short status;
     int playerReady;
     private Player player;
 
-    public ResponseRoom() {
+    public ResponseReady() {
         responseCode = Constants.SMSG_READY;
     }
 

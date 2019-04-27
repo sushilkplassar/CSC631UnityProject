@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Assets/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Network/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Network/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Network/NetworkResponseTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Network/NetworkResponseTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Logs/Packages-Update.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metadata/GameRequestTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metadata/GameRequestTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/networking/request/RequestRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/networking/request/RequestRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/networking/response/ResponseRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/networking/response/ResponseRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/networking/response/ResponseRoom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/networking/response/ResponseRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/networking/response/ResponseReady.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,12 +17,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/networking/request/RequestRoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="391">
+              <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#419#420#0" expanded="true" />
                 <element signature="e#474#475#0" expanded="true" />
               </folding>
@@ -32,12 +31,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseRoom.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/networking/request/RequestPlayers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+            <state relative-caret-position="68">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseReady.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#346#347#0" expanded="true" />
                 <element signature="e#397#398#0" expanded="true" />
                 <element signature="e#746#747#0" expanded="true" />
@@ -45,6 +54,15 @@
                 <element signature="e#719#720#0" expanded="true" />
                 <element signature="e#759#760#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/metadata/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -68,15 +86,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/networking/response/GameResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -124,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/metadata/GameRequestTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="136">
+              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,7 +200,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/core/NetworkManager.java" />
         <option value="$PROJECT_DIR$/src/networking/response/ResponseLogin.java" />
-        <option value="$PROJECT_DIR$/src/metadata/GameRequestTable.java" />
         <option value="$PROJECT_DIR$/src/utility/DataReader.java" />
         <option value="$PROJECT_DIR$/src/networking/request/RequestMove.java" />
         <option value="$PROJECT_DIR$/src/networking/response/ResponseMove.java" />
@@ -200,12 +208,15 @@
         <option value="$PROJECT_DIR$/src/model/Player.java" />
         <option value="$PROJECT_DIR$/src/metadata/Constants.java" />
         <option value="$PROJECT_DIR$/src/core/GameServer.java" />
-        <option value="$PROJECT_DIR$/src/networking/request/RequestRoom.java" />
+        <option value="$PROJECT_DIR$/src/networking/request/RequestReady.java" />
+        <option value="$PROJECT_DIR$/src/metadata/GameRequestTable.java" />
         <option value="$PROJECT_DIR$/src/networking/response/ResponseRoom.java" />
+        <option value="$PROJECT_DIR$/src/networking/response/ResponseReady.java" />
+        <option value="$PROJECT_DIR$/src/networking/request/RequestRoom.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="215" />
     <option name="y" value="155" />
     <option name="width" value="918" />
@@ -239,7 +250,7 @@
               <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
               <item name="escape_room" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="metadata" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
@@ -269,7 +280,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555233730887" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556335681501" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -343,8 +354,8 @@
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3420622" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3420622" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -579,20 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestPlayers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metadata/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -695,16 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/metadata/GameRequestTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utility/DataReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -800,28 +787,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestRoom.java">
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestPlayers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metadata/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metadata/GameRequestTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
           <folding>
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseRoom.java">
+    <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseReady.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+        <state relative-caret-position="104">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#346#347#0" expanded="true" />
             <element signature="e#397#398#0" expanded="true" />
             <element signature="e#746#747#0" expanded="true" />
             <element signature="e#782#783#0" expanded="true" />
             <element signature="e#719#720#0" expanded="true" />
             <element signature="e#759#760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
           </folding>
         </state>
       </provider>
