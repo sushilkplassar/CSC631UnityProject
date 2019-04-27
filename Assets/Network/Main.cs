@@ -30,6 +30,7 @@ public class Main : MonoBehaviour {
         msgQueue.AddCallback(Constants.SMSG_MOVE, ResponseMove);
         msgQueue.AddCallback(Constants.SMSG_READY, ResponseReady);
         msgQueue.AddCallback(Constants.SMSG_START, ResponseStart);
+        msgQueue.AddCallback(Constants.SMSG_UNREADY, ResponseUnready);
         //msgQueue.AddCallback(Constants.SMSG_TEST, responseTest);
 
         Debug.Log("Starting Coroutine");
@@ -181,6 +182,45 @@ public class Main : MonoBehaviour {
         if (player1Ready == true && player2Ready == true)
         {
             readyScreen.transform.GetChild(2).gameObject.GetComponent<Button>().interactable = true;
+        }
+
+    }
+
+    public void RequestUnready()
+    {
+        player = players[0];
+        int unreadyPlayer = int.Parse(player.tag);
+        RequestUnready unready = new RequestUnready();
+        unready.send(unreadyPlayer);
+        cManager.send(unready);
+        Debug.Log("Sent unready request");
+    }
+
+    public void ResponseUnready(ExtendedEventArgs eventArgs)
+    {
+        ResponseUnreadyEventArgs args = eventArgs as ResponseUnreadyEventArgs;
+        // player[0] represents the the current client
+        player = players[0];
+        // Ready screen 
+        GameObject readyScreen = player.transform.GetChild(1).gameObject;
+
+        if (args.unreadyPlayer == 1)
+        {
+            Debug.Log("Deactivating player 1 ready button");
+            readyScreen.transform.GetChild(5).gameObject.GetComponent<Toggle>().isOn = false;
+            player1Ready = false;
+            
+        }
+        else if (args.unreadyPlayer == 2)
+        {
+            Debug.Log("Deactivating player 2 ready button");
+            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = false;
+            player2Ready = false;
+        }
+
+        if (player1Ready == false || player2Ready == false)
+        {
+            readyScreen.transform.GetChild(2).gameObject.GetComponent<Button>().interactable = false;
         }
 
     }

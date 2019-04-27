@@ -21,6 +21,8 @@ public class Constants {
     public static readonly short SMSG_READY = 241;
     public static readonly short CMSG_START = 142;
     public static readonly short SMSG_START = 242;
+    public static readonly short CMSG_UNREADY = 143;
+    public static readonly short SMSG_UNREADY = 243;
 
 
     // Other

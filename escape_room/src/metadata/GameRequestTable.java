@@ -31,6 +31,7 @@ public class GameRequestTable {
         add(Constants.CMSG_MOVE,"RequestMove");
         add(Constants.CMSG_READY,"RequestReady");
         add(Constants.CMSG_START,"RequestStart");
+        add(Constants.CMSG_UNREADY,"RequestUnready");
         }
 
     /**

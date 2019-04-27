@@ -21,6 +21,12 @@ public class LobbyOptions : MonoBehaviour
         manager.RequestReady();
     }
 
+    public void notReady()
+    {
+
+        manager.RequestUnready();
+    }
+
     public void checkReady()
     {
         
@@ -29,9 +35,9 @@ public class LobbyOptions : MonoBehaviour
         {
             readyUp();
         }
-        else if(this.gameObject.GetComponent<Toggle>().isOn == false)
+        else if(!this.gameObject.GetComponent<Toggle>().isOn)
         {
-            Debug.Log("Unready");
+            notReady();
         }
     }
 

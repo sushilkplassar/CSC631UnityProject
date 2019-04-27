@@ -15,6 +15,8 @@ public class NetworkResponseTable {
         add(Constants.SMSG_MOVE, "ResponseMove");//231
         add(Constants.SMSG_READY, "ResponseReady");//241
         add(Constants.SMSG_START, "ResponseStart");//242
+        add(Constants.SMSG_UNREADY, "ResponseUnready");//243
+
     }
 	
 	public static void add(short response_id, string name) {
