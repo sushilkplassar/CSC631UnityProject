@@ -75,12 +75,10 @@ public class Main : MonoBehaviour {
             // Player Object is a child of the Player Spawn Game Object.
             GameObject playerObject = player.transform.GetChild(0).gameObject;
 
-            // Turn off canvas of other player
-            player.transform.GetChild(1).gameObject.SetActive(false);
-
             // Turn off all children associated with the new player object that joins.
             for (int i = 0; i < playerObject.transform.childCount; i++)
             {
+                Debug.Log("Turning off camera");
                 // The rest of the children is within this player. 
                 GameObject child = playerObject.transform.GetChild(i).gameObject;
 
@@ -88,6 +86,11 @@ public class Main : MonoBehaviour {
                 if (child != null)
                     child.SetActive(false);
             }
+
+            // Turn off canvas of other player
+            player.transform.GetChild(1).gameObject.SetActive(false);
+
+            
 
         
             // Turn off all movement and camera objects so that one input doesn't move both player objects.
@@ -108,12 +111,12 @@ public class Main : MonoBehaviour {
         ResponseCreateEventArgs argID = eventArgs as ResponseCreateEventArgs;
         if (argID.user_id == 1)
         {
-            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player1Spawn"));
+            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/P1 Puzzle/AlexP1Spawn"));
             
         }
         if (argID.user_id == 2)
         {
-            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player2Spawn"));
+            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/P1 Puzzle/AlexP2Spawn"));
         }
         return spawn;
     }

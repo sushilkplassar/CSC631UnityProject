@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Assets/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Network/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Network/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Network/Response/ResponseReady.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Network/Response/ResponseReady.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Heartbeat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Heartbeat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Player1Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Player1Spawn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Player2Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Player2Spawn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Sunny Ready Screen/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Sunny Ready Screen/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Sunny Ready Screen/Ready Screen 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Sunny Ready Screen/Ready Screen 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Sunny Ready Screen/Ready Screen 2 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Sunny Ready Screen/Ready Screen 2 Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/ReadyScreenTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/ReadyScreenTesting.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Logs/Packages-Update.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/networking/request/RequestTwoPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
+            <state relative-caret-position="153">
               <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
@@ -56,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseTwoPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="340">
+              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -65,7 +56,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/networking/request/RequestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="255">
               <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -124,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,6 +156,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -235,7 +226,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18154311" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18381241" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -245,7 +236,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3420622" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3420622" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -674,21 +665,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/networking/request/RequestTwoPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
+        <state relative-caret-position="153">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseTwoPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="340">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/networking/request/RequestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="255">
           <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
