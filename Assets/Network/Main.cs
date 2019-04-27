@@ -153,7 +153,7 @@ public class Main : MonoBehaviour {
         cManager.send(ready);
         Debug.Log("Sent ready request");
 
-        
+        /*
        // Ready screen 
        Debug.Log("Dummy test for server response if player is ready");
        GameObject readyScreen = player.transform.GetChild(1).gameObject;
@@ -168,7 +168,7 @@ public class Main : MonoBehaviour {
        {
            Debug.Log("Activating player 1's player 2 ready button");
            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = true;
-       }
+       }*/
        
 
     }

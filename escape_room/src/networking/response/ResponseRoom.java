@@ -12,6 +12,7 @@ import utility.GamePacket;
 public class ResponseRoom extends GameResponse {
 
     private short status;
+    int playerReady;
     private Player player;
 
     public ResponseRoom() {
@@ -21,11 +22,10 @@ public class ResponseRoom extends GameResponse {
     @Override
     public byte[] constructResponseInBytes() {
         GamePacket packet = new GamePacket(responseCode);
-        packet.addShort16(status);
-        if (status == 0) {
-        	System.out.println("Player ID is: " + player.getID());
-          packet.addInt32(player.getID());
-        }
+
+
+        	System.out.println("Player that is ready is: Player " + playerReady);
+          packet.addInt32(playerReady);
         return packet.getBytes();
     }
 
@@ -33,8 +33,8 @@ public class ResponseRoom extends GameResponse {
         this.status = status;
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
+    public void setPlayerReady(int ready) {
+        this.playerReady = ready;
     }
 
 }
