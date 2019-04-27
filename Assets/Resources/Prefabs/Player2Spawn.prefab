@@ -113,19 +113,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5751765528301057206, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7425965231043319021, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 77, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751765528301057206, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3a9dd43ef47f86e4b8cd9c714a5fb35f, type: 2}
     - target: {fileID: 80, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 55, guid: 74a35766b0bdf2a49bd6c7fb71eb65b5, type: 3}
       propertyPath: m_IsKinematic
@@ -164,11 +164,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6150861117117500412}
     m_Modifications:
-    - target: {fileID: 2740598470722462560, guid: f597c3b00db005c4a85c94acf3a994c7,
-        type: 3}
-      propertyPath: m_Name
-      value: Ready Screen 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2740598470722462572, guid: f597c3b00db005c4a85c94acf3a994c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -273,6 +268,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740598470722462560, guid: f597c3b00db005c4a85c94acf3a994c7,
+        type: 3}
+      propertyPath: m_Name
+      value: Ready Screen 1
       objectReference: {fileID: 0}
     - target: {fileID: 2740598470622283949, guid: f597c3b00db005c4a85c94acf3a994c7,
         type: 3}

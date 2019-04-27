@@ -30,6 +30,7 @@ public class GameRequestTable {
         add(Constants.CMSG_PLAYER_JOIN,"RequestTwoPlayer");
         add(Constants.CMSG_MOVE,"RequestMove");
         add(Constants.CMSG_READY,"RequestReady");
+        add(Constants.CMSG_START,"RequestStart");
         }
 
     /**

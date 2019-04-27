@@ -4,32 +4,36 @@ package networking.request;
 import java.io.IOException;
 
 // Other Imports
-import networking.response.ResponseReady;
+//import core.GameServer;
+import model.Player;
+import networking.response.ResponseStart;
+//import utility.DataReader;
 import utility.DataReader;
+import utility.Log;
 
-public class RequestReady extends GameRequest {
+public class RequestStart extends GameRequest {
 
-	// Data
+  // Data
 //  private String version;
 
-	// Responses
-	private ResponseReady responseRoom;
-	private static int count = 0;
-	private int ready;
+  // Responses
+  private ResponseStart startResponse;
+  private static int count = 0;
+  private int start;
 
-	public RequestReady() {
-		responses.add(responseRoom = new ResponseReady());
-	}
+  public RequestStart() {
+    responses.add(startResponse = new ResponseStart());
+  }
 
-	@Override
-	public void parse() throws IOException {
-			ready = DataReader.readInt(dataInput);
-	}
+  @Override
+  public void parse() throws IOException {
+    start = DataReader.readInt(dataInput);
+  }
 
-	@Override
-	public void doBusiness() throws Exception {
+  @Override
+  public void doBusiness() throws Exception {
 
-		responseRoom.setPlayerReady(ready);
+    startResponse.setStart(start);
 		/*
 		Player player = new Player();
 		Log.printf("********In RequestReady ******** User '%s' is connecting...", player.getID());
@@ -45,5 +49,5 @@ public class RequestReady extends GameRequest {
 		System.out.println("****************Count: " + count);
 		System.out.println("****************: " + player);
 		++count;*/
-	}
+  }
 }

@@ -11,6 +11,9 @@ public class Main : MonoBehaviour {
     public List<GameObject> players = new List<GameObject>();
     private GameObject player;
 
+    bool player1Ready = false;
+    bool player2Ready = false;
+
     void Awake() {
         //DontDestroyOnLoad(gameObject);
         NetworkRequestTable.init();
@@ -26,6 +29,7 @@ public class Main : MonoBehaviour {
         msgQueue.AddCallback(Constants.SMSG_AUTH, ResponseCreate);
         msgQueue.AddCallback(Constants.SMSG_MOVE, ResponseMove);
         msgQueue.AddCallback(Constants.SMSG_READY, ResponseReady);
+        msgQueue.AddCallback(Constants.SMSG_START, ResponseStart);
         //msgQueue.AddCallback(Constants.SMSG_TEST, responseTest);
 
         Debug.Log("Starting Coroutine");
@@ -146,39 +150,17 @@ public class Main : MonoBehaviour {
     {
         player = players[0];
         int readyPlayer = int.Parse(player.tag);
-        
-
         RequestReady ready = new RequestReady();
         ready.send(readyPlayer);
         cManager.send(ready);
         Debug.Log("Sent ready request");
-
-        /*
-       // Ready screen 
-       Debug.Log("Dummy test for server response if player is ready");
-       GameObject readyScreen = player.transform.GetChild(1).gameObject;
-       // Will activate the other players ready screen.
-       if (player.tag == "1")
-       {
-           Debug.Log("Activating player 2's player 1 ready button");
-           readyScreen.transform.GetChild(5).gameObject.GetComponent<Toggle>().isOn = true;
-
-       }
-       else if (player.tag == "2")
-       {
-           Debug.Log("Activating player 1's player 2 ready button");
-           readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = true;
-       }*/
-       
-
     }
-
 
     public void ResponseReady(ExtendedEventArgs eventArgs)
     {
         ResponseReadyEventArgs args = eventArgs as ResponseReadyEventArgs;
+        // player[0] represents the the current client
         player = players[0];
-
         // Ready screen 
         GameObject readyScreen = player.transform.GetChild(1).gameObject;
 
@@ -186,14 +168,30 @@ public class Main : MonoBehaviour {
         {
             Debug.Log("Activating player 1 ready button");
             readyScreen.transform.GetChild(5).gameObject.GetComponent<Toggle>().isOn = true;
+            player1Ready = true;
             // If both players ready then make start button interactive for player 1.
         }
         else if(args.readyPlayer == 2)
         {
             Debug.Log("Activating player 2 ready button");
             readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = true;
+            player2Ready = true;
         }
 
+        if (player1Ready == true && player2Ready == true)
+        {
+            readyScreen.transform.GetChild(2).gameObject.GetComponent<Button>().interactable = true;
+        }
+
+    }
+
+    public void RequestStart ()
+    {
+        player = players[0];
+        RequestStart start = new RequestStart();
+        start.send(1);
+        cManager.send(start);
+        Debug.Log("Sent start request");
     }
     public void ResponseStart(ExtendedEventArgs eventArgs)
     {
@@ -202,6 +200,7 @@ public class Main : MonoBehaviour {
         player = players[0];
         GameObject playerObject = player.transform.GetChild(0).gameObject;
         playerObject.GetComponent<StartPlayerComponents>().gameStarted();
+        Debug.Log("Players Activated");
     }
     public IEnumerator RequestHeartbeat(float time) {
 

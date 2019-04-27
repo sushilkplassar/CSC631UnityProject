@@ -9,10 +9,15 @@ public class LobbyOptions : MonoBehaviour
     //public GameObject readyButton;
     Main manager;
 
-    public void readyUp()
+    private void Awake()
     {
         main = GameObject.Find("Heartbeat");
         manager = main.GetComponent<Main>();
+    }
+
+    public void readyUp()
+    {
+        
         manager.RequestReady();
     }
 
@@ -24,6 +29,15 @@ public class LobbyOptions : MonoBehaviour
         {
             readyUp();
         }
+        else if(this.gameObject.GetComponent<Toggle>().isOn == false)
+        {
+            Debug.Log("Unready");
+        }
+    }
+
+    public void startGame()
+    {
+        manager.RequestStart();
     }
 
     /* Player 2 clicks ready
