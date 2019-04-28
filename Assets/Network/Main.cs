@@ -18,7 +18,7 @@ public class Main : MonoBehaviour {
         //DontDestroyOnLoad(gameObject);
         NetworkRequestTable.init();
         NetworkResponseTable.init();
-	}
+    }
 	
 	// Use this for initialization
 	void Start () {
@@ -66,8 +66,8 @@ public class Main : MonoBehaviour {
         {
             // Activates the ready screen for player
             GameObject readyScreen = player.transform.GetChild(1).gameObject;
-            readyScreen.transform.GetChild(3).gameObject.SetActive(true);
             readyScreen.transform.GetChild(4).gameObject.SetActive(true);
+            readyScreen.transform.GetChild(5).gameObject.SetActive(true);
 
             Debug.Log("Added first player in list.");
         }
@@ -117,11 +117,13 @@ public class Main : MonoBehaviour {
         if (argID.user_id == 1)
         {
             spawn = Instantiate(Resources.Load<GameObject>("Prefabs/P1 Puzzle/AlexP1Spawn"));
-            
+            //spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player1Spawn"));
+
         }
         if (argID.user_id == 2)
         {
             spawn = Instantiate(Resources.Load<GameObject>("Prefabs/P1 Puzzle/AlexP2Spawn"));
+            //spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player2Spawn"));
         }
         return spawn;
     }
@@ -171,20 +173,20 @@ public class Main : MonoBehaviour {
         if (args.readyPlayer == 1)
         {
             Debug.Log("Activating player 1 ready button");
-            readyScreen.transform.GetChild(5).gameObject.GetComponent<Toggle>().isOn = true;
+            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = true;
             player1Ready = true;
             // If both players ready then make start button interactive for player 1.
         }
         else if(args.readyPlayer == 2)
         {
             Debug.Log("Activating player 2 ready button");
-            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = true;
+            readyScreen.transform.GetChild(7).gameObject.GetComponent<Toggle>().isOn = true;
             player2Ready = true;
         }
 
         if (player1Ready == true && player2Ready == true)
         {
-            readyScreen.transform.GetChild(2).gameObject.GetComponent<Button>().interactable = true;
+            readyScreen.transform.GetChild(3).gameObject.GetComponent<Button>().interactable = true;
         }
 
     }
@@ -210,20 +212,20 @@ public class Main : MonoBehaviour {
         if (args.unreadyPlayer == 1)
         {
             Debug.Log("Deactivating player 1 ready button");
-            readyScreen.transform.GetChild(5).gameObject.GetComponent<Toggle>().isOn = false;
+            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = false;
             player1Ready = false;
             
         }
         else if (args.unreadyPlayer == 2)
         {
             Debug.Log("Deactivating player 2 ready button");
-            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = false;
+            readyScreen.transform.GetChild(7).gameObject.GetComponent<Toggle>().isOn = false;
             player2Ready = false;
         }
 
         if (player1Ready == false || player2Ready == false)
         {
-            readyScreen.transform.GetChild(2).gameObject.GetComponent<Button>().interactable = false;
+            readyScreen.transform.GetChild(3).gameObject.GetComponent<Button>().interactable = false;
         }
 
     }
@@ -241,8 +243,10 @@ public class Main : MonoBehaviour {
         // Used for movement to to begin for both players. 
         // if eventargs returns 1
         player = players[0];
+        GameObject readyScreen = player.transform.GetChild(1).gameObject;
         GameObject playerObject = player.transform.GetChild(0).gameObject;
         playerObject.GetComponent<StartPlayerComponents>().gameStarted();
+        readyScreen.GetComponent<Animation>().Play();
         Debug.Log("Players Activated");
     }
     public IEnumerator RequestHeartbeat(float time) {

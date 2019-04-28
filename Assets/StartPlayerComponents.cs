@@ -25,6 +25,6 @@ public class StartPlayerComponents : MonoBehaviour
     {
         gameStart = 1;
         activateComponents();
-        readyScreen.enabled = false;
+        //readyScreen.enabled = false;
     }
 }
