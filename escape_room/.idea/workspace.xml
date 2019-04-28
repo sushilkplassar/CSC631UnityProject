@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7212da74-5c86-4521-9e6a-a6b3cf35ac04" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Assets/LobbyOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/LobbyOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Network/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Network/Main.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP2Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP2Spawn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Player1Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Player1Spawn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Player2Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Player2Spawn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Scene (P2 Puzzle).unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Scene (P2 Puzzle).unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerWall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/StartPlayerComponents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/StartPlayerComponents.cs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../../../Unity Server Stuff/Test/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="215" />
     <option name="y" value="155" />
     <option name="width" value="918" />
@@ -78,7 +72,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556415567099" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556416059522" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
