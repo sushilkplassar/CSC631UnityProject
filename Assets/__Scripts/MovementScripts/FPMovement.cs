@@ -4,28 +4,78 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
-public class FPMovement : NetworkBehaviour
+public class FPMovement : MonoBehaviour
 {
     public float speed = 12.0f;
     float gravity = -9.8f;
 
+    private float verticalVelocity;
+    private float jumpForce = 15.0f;
+    private float gravityJump = 14.0f;
+    private GameObject heartbeat;
+    ConnectionManager manager;
+
     private CharacterController characterControl;
-   
+
+    private void Awake()
+    {
+        heartbeat= GameObject.Find("Heartbeat");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         // Access character controller component on same object this file is attatched on
         characterControl = GetComponent<CharacterController>();
-        
+        manager = heartbeat.GetComponent<ConnectionManager>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(hasAuthority == false)
+        if(this.gameObject.tag == "Player")
         {
-            return;
+
+            //  movePlayer("Vertical", "Horizontal");
+            movePlayer();
         }
+
+        // Need testing with either Input.anyKeyDown or Input.anyKey
+        // They both work similarly but need to find which one is better.
+        // anyKeyDown seems instant.
+        // anyKey shows every step of the way of it moving.
+        if (Input.anyKey)
+        {
+            
+            if (gameObject.transform.localPosition.x != 0 && gameObject.transform.localPosition.x != 0)
+            {
+                manager.send(moving(gameObject.transform.position.x, gameObject.transform.position.z));
+            }
+
+            // Request movement after moving in Unity?
+            Debug.Log("Sending request to move.");
+        }
+        /*
+       else if (this.gameObject.tag == "Player2")
+        {
+            movePlayer("Vertical2", "Horizontal2");
+        }
+        */
+        
+
+    }
+
+    
+    public RequestMove moving(float posX, float posZ)
+    {
+        RequestMove move = new RequestMove();
+        move.send(posX, posZ);
+        return move;
+    }
+    public void movePlayer()
+    {
         float moveForwardAndBack = Input.GetAxis("Vertical") * speed; // forward and backward movements is Z axis
         float moveSideToSide = Input.GetAxis("Horizontal") * speed; // Moving side to side is X axis
 
@@ -39,7 +89,26 @@ public class FPMovement : NetworkBehaviour
 
         characterControl.Move(characterMovement);
 
-
+        /* if (characterControl.isGrounded)
+         {
+             verticalVelocity = -gravityJump * Time.deltaTime;
+             if (Input.GetKeyDown(KeyCode.Space))
+             {
+                 verticalVelocity = jumpForce;
+             }
+         }
+         else
+         {
+             verticalVelocity -= gravityJump * Time.deltaTime;
+         }
+         Vector3 jumpVector = new Vector3(0, verticalVelocity, 0);
+         characterControl.Move(jumpVector * Time.deltaTime);*/
 
     }
+
+    
 }
+
+
+
+
