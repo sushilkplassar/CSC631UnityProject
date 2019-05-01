@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerWall : MonoBehaviour
 {
-    public Lerp_Tile lerpWall;
+    //public Lerp_Tile lerpWall;
     public SlideWall[] slideWall;
 
     // tiles that are stepped on
@@ -12,7 +12,7 @@ public class TriggerWall : MonoBehaviour
     {
         if (hit.gameObject.tag == "Trigger")
         {   
-            lerpWall.steppedOn = true;
+            //lerpWall.steppedOn = true;
         }
 
         if (hit.gameObject.tag == "WallSlideL")
