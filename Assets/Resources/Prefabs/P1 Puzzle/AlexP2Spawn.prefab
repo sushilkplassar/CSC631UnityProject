@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 700124430795219228}
   - component: {fileID: 3430158230987482299}
   - component: {fileID: 1130905931629584136}
+  - component: {fileID: 8634371912744275246}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -190,6 +191,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   readyScreen: {fileID: 3577666477829264363}
   gameStart: 0
+--- !u!114 &8634371912744275246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2825093442117896328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e61b3a266821b34cbba0aab911ae2fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpWall: {fileID: 0}
+  slideWall:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4539313748246614718
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,11 +420,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1636166624913932755}
     m_Modifications:
-    - target: {fileID: 3875950246538391403, guid: e4ad10b10ade5b443af1e35e2e579ce3,
-        type: 3}
-      propertyPath: m_Name
-      value: Ready Screen p2
-      objectReference: {fileID: 0}
     - target: {fileID: 1156179666793033083, guid: e4ad10b10ade5b443af1e35e2e579ce3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -510,6 +524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875950246538391403, guid: e4ad10b10ade5b443af1e35e2e579ce3,
+        type: 3}
+      propertyPath: m_Name
+      value: Ready Screen p2
       objectReference: {fileID: 0}
     - target: {fileID: 2125644753435279922, guid: e4ad10b10ade5b443af1e35e2e579ce3,
         type: 3}
