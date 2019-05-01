@@ -14,12 +14,12 @@ public class FadeText : MonoBehaviour
     {
         if (stepOn == true)
         {
-            StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<Text>()));
+            StartCoroutine(FadeTextToFullAlpha(.3f, GetComponent<Text>()));
         }
 
         if(stepOff == true)
         {
-            StartCoroutine(FadeTextToZeroAlpha(1f, GetComponent<Text>()));
+            StartCoroutine(FadeTextToZeroAlpha(.3f, GetComponent<Text>()));
         } 
     }
  
@@ -27,6 +27,8 @@ public class FadeText : MonoBehaviour
  
     public IEnumerator FadeTextToFullAlpha(float t, Text i)
     {
+        
+        stepOn = false;
         i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
         while (i.color.a < 1.0f)
         {
