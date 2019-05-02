@@ -23,6 +23,8 @@ public class Constants {
     public static readonly short SMSG_START = 242;
     public static readonly short CMSG_UNREADY = 143;
     public static readonly short SMSG_UNREADY = 243;
+    public static readonly short CMSG_CHAT = 333;
+    public static readonly short SMSG_CHAT = 433;
 
 
     // Other

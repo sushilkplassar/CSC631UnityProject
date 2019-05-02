@@ -17,6 +17,7 @@ public class NetworkRequestTable {
         add(Constants.CMSG_READY, "RequestReady");
         add(Constants.CMSG_START, "RequestStart");
         add(Constants.CMSG_UNREADY, "RequestUnready");
+        add(Constants.CMSG_CHAT, "RequestChat");
     }
 	
 	public static void add(short request_id, string name) {

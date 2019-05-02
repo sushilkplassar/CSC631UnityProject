@@ -41,6 +41,9 @@ public class Constants {
     public final static short CMSG_UNREADY = 143;
     public final static short SMSG_UNREADY = 243;
 
+    public final static short CMSG_CHAT = 333;
+    public final static short SMSG_CHAT = 433;
+
     // Organism Type
     public static final short ORGANISM_TYPE_ANIMAL = 0;
     public static final short ORGANISM_TYPE_PLANT = 1;
