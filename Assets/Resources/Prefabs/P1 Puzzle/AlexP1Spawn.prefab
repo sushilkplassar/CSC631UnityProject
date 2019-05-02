@@ -95,7 +95,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687726062727249529}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -179,6 +179,8 @@ MonoBehaviour:
   slideWall:
   - {fileID: 3950443123565213715, guid: 266006a527d24804fa7f8e87d0ee7aeb, type: 3}
   - {fileID: 2886460466082561735, guid: 49c25e0f81665894abbfdc582f4e34c3, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
 --- !u!114 &2083211227191959815
