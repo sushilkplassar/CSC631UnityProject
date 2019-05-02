@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class TriggerWall : MonoBehaviour
 {
-
-    
-    public Lerp_Tile lerpWall;
     public SlideWall[] slideWall;
     private void Awake()
     {
@@ -21,7 +18,7 @@ public class TriggerWall : MonoBehaviour
     {
         if (hit.gameObject.tag == "Trigger")
         {   
-            lerpWall.steppedOn = true;
+            //lerpWall.steppedOn = true;
         }
 
         if (hit.gameObject.tag == "WallSlideL")

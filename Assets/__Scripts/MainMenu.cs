@@ -7,6 +7,13 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        StartCoroutine(LoadingScene());
+    }
+
+    
+    IEnumerator LoadingScene()
+    {
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
