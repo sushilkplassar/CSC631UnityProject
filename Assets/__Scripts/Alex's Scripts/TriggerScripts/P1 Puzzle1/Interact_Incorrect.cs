@@ -6,8 +6,11 @@ public class Interact_Incorrect : MonoBehaviour
 {
     // Object that is to be slide/moved
     public DestroyTorch interact;
-    public FadeText text;
-    
+    private FadeText text;
+    // Player Object is a child of the Player Spawn Game Object.
+
+
+
     void Update()
     {
         if (interact.inZone == true)
@@ -22,7 +25,7 @@ public class Interact_Incorrect : MonoBehaviour
 
     void OnTriggerEnter (Collider col)
     {
-        if (col.gameObject.name == "Player 2")
+        if (col.gameObject.tag == "Player")
         {
             interact.inZone = true;
             text.stepOn = true;
