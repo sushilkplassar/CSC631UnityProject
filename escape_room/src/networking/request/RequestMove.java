@@ -9,6 +9,7 @@ public class RequestMove extends GameRequest
 {
   private ResponseMove responseMove;
   private float posX;
+  private float posY;
   private float posZ;
   //private Player player;
 
@@ -20,8 +21,9 @@ public class RequestMove extends GameRequest
   {
     // Reading data from move request.
       this.posX = DataReader.readInt(dataInput);
+      this.posY = DataReader.readInt(dataInput);
       this.posZ = DataReader.readInt(dataInput);
-    System.out.printf("Data read to move successfully. X: " + posX + " Z: " + posZ + "\n");
+    System.out.printf("Data read to move successfully. X: " + posX + " Y: " + posY + " Z: " + posZ + "\n");
   }
 
   @Override
@@ -33,6 +35,7 @@ public class RequestMove extends GameRequest
  //   player.setPosZ(posZ);
     responseMove.setClient(client);
     responseMove.setPosX(posX);
+    responseMove.setPosY(posY);
     responseMove.setPosZ(posZ);
     System.out.println("Move request executed");
   }

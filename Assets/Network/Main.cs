@@ -100,7 +100,7 @@ public class Main : MonoBehaviour {
         
             // Turn off all movement and camera objects so that one input doesn't move both player objects.
             playerObject.GetComponent<FPMovement>().enabled = false;
-            playerObject.GetComponent<CharacterController>().enabled = false;
+            //playerObject.GetComponent<CharacterController>().enabled = false;
             playerObject.GetComponent<MouseLook>().enabled = false;
             
 
@@ -142,7 +142,7 @@ public class Main : MonoBehaviour {
 
                // Lerp for smoother player movement from the server.
                 eachPlayer.transform.position = Vector3.Lerp(previous.position, 
-                                                eachPlayer.transform.position = new Vector3(argTag.posX, 2, argTag.posZ), 
+                                                eachPlayer.transform.position = new Vector3(argTag.posX, argTag.posY, argTag.posZ), 
                                                 Time.deltaTime * 12);
             }
         }

@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7212da74-5c86-4521-9e6a-a6b3cf35ac04" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Assets/Animations.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP2Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP2Spawn.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Scene (P2 Puzzle).unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Scene (P2 Puzzle).unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Scene (P2 Puzzle).unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Scene (P2 Puzzle).unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/SlideWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/SlideWall.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/TriggerWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/TriggerWall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/networking/request/RequestMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/networking/request/RequestMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/networking/response/ResponseMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/networking/response/ResponseMove.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../../../Unity Server Stuff/Test/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +20,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/GameServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -27,10 +29,48 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/networking/request/RequestMove.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utility/DataReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseMove.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/networking/response/ResponseMove.java" />
+        <option value="$PROJECT_DIR$/src/networking/request/RequestMove.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="215" />
@@ -64,7 +104,21 @@
               <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
               <item name="escape_room" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="networking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
+              <item name="escape_room" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="networking" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
+              <item name="escape_room" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="networking" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -75,7 +129,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556750476069" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556772638459" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -165,6 +219,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/request/GameRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-366">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utility/DataReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
         </state>
       </provider>
     </entry>

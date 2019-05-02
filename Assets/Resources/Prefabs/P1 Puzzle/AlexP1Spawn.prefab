@@ -35,7 +35,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687726062727249529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -46.29, y: 0.88, z: 53.29}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 0.794, z: 1}
   m_Children:
   - {fileID: 3584066072512410857}
@@ -164,7 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawn: {fileID: 8940634904510716857, guid: e5b4e7a67b73be2428a00f16574a4b5d, type: 3}
   player: {fileID: 7266214470569917909}
-  animator: {fileID: 0}
 --- !u!114 &8192154802910744481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,8 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e61b3a266821b34cbba0aab911ae2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lerpWall: {fileID: 5660734300395414570, guid: b47d9c16b01fb004f949583cd3c2d815,
-    type: 3}
   slideWall:
   - {fileID: 3950443123565213715, guid: 266006a527d24804fa7f8e87d0ee7aeb, type: 3}
   - {fileID: 2886460466082561735, guid: 49c25e0f81665894abbfdc582f4e34c3, type: 3}
@@ -361,7 +358,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4950860501559080207}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3ec1fc57ca1d1d43b7aa4eacacce05c, type: 3}
   m_Name: 
@@ -420,7 +417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8976437112205263748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 21.49, y: 0, z: -19.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7266214470569917909}
@@ -435,10 +432,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4038357023975536418}
     m_Modifications:
-    - target: {fileID: 2827697139359192380, guid: c7817e96f4ca0d5498e1517ae045e944,
+    - target: {fileID: 5731204950626326947, guid: c7817e96f4ca0d5498e1517ae045e944,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_Name
+      value: Ready Screen p1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731204950626326947, guid: c7817e96f4ca0d5498e1517ae045e944,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2827697139359192320, guid: c7817e96f4ca0d5498e1517ae045e944,
         type: 3}
@@ -545,14 +547,9 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5731204950626326947, guid: c7817e96f4ca0d5498e1517ae045e944,
+    - target: {fileID: 2827697139359192380, guid: c7817e96f4ca0d5498e1517ae045e944,
         type: 3}
-      propertyPath: m_Name
-      value: Ready Screen p1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5731204950626326947, guid: c7817e96f4ca0d5498e1517ae045e944,
-        type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4296329440436572477, guid: c7817e96f4ca0d5498e1517ae045e944,

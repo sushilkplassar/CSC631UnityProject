@@ -29,6 +29,11 @@ public class SlideWall : MonoBehaviour
         
     }
 
+    public bool getIsStepped()
+    {
+        return tileStepped;
+    }
+
     IEnumerator revert ()
     {
         yield return new WaitForSeconds(0.2f);
