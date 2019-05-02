@@ -23,19 +23,21 @@ public class Interact_Incorrect : MonoBehaviour
         }
     } 
 
+
     void OnTriggerEnter (Collider col)
     {
         if (col.gameObject.tag == "Player")
         {
             interact.inZone = true;
-            text.stepOn = true;
+           // text.stepOn = true;
         }
     }
 
+    /*
     void OnTriggerExit()
     {
         text.stepOff = true;
-    }
+    }*/
 
     
 }
