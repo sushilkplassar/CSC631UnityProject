@@ -6,8 +6,6 @@ public class DestroyTorch : MonoBehaviour
 {
     public FindTorch spotlights;
 
-    public bool inZone = false;
-
     public int x1 = 0;
 
     public void destroyTorch()

@@ -758,6 +758,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 24428932}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &26003329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076673520683690, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 226624727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &26003331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26003329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6494e3721403c4183abc71d50dce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongFloor: {fileID: 1257471893}
+  speed: 100
 --- !u!4 &27025497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4131706337141988, guid: 38d22e3b415a2574e920b8037167468a,
@@ -3904,7 +3924,7 @@ GameObject:
   - component: {fileID: 121876708}
   - component: {fileID: 121876711}
   m_Layer: 0
-  m_Name: Floor (X2)
+  m_Name: Floor (2314)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3997,6 +4017,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact: {fileID: 304034585}
   text: {fileID: 137752634}
+  inZone: 0
+  ePressed: 0
 --- !u!1001 &124106536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4315,7 +4337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137583442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.7, y: 1.071, z: -0.2}
+  m_LocalPosition: {x: 22.35, y: 1.071, z: -16.61}
   m_LocalScale: {x: 1, y: 0.794, z: 1}
   m_Children:
   - {fileID: 1187006986}
@@ -5441,7 +5463,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1871249481155514, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_Name
-      value: Lever (1)
+      value: Lever (Correct)
       objectReference: {fileID: 0}
     - target: {fileID: 4979104123431344, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7147,7 +7169,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1871249481155514, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_Name
-      value: Lever (6)
+      value: Lever (2143)
       objectReference: {fileID: 0}
     - target: {fileID: 4979104123431344, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9335,7 +9357,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spotlights: {fileID: 1499668381}
-  inZone: 0
   x1: 0
 --- !u!1 &304793026
 GameObject:
@@ -13493,7 +13514,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1871249481155514, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_Name
-      value: Lever (8)
+      value: Lever (2341)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871249481155514, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4979104123431344, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13538,6 +13563,52 @@ PrefabInstance:
     - target: {fileID: 4979104123431344, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973542564380964, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973542564380964, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 95673977512378232, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd9aa0db68668144cb200a40679b0d5d, type: 2}
+    - target: {fileID: 95673977512378232, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376718488440332, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664457377893640, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.953717
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664457377893640, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000017858684
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664457377893640, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000005630822
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664457377893640, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.30070582
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664457377893640, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 145
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664457377893640, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.000015258789
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
@@ -15117,7 +15188,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1871249481155514, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_Name
-      value: Lever (4)
+      value: Lever (2413)
       objectReference: {fileID: 0}
     - target: {fileID: 4979104123431344, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16792,6 +16863,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1668485765}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &570781437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076673520683690, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 477924757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &570781439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570781437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6494e3721403c4183abc71d50dce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongFloor: {fileID: 632325201}
+  speed: 100
 --- !u!1001 &573534335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17381,6 +17472,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593749944}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &595008155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076673520683690, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1725843303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &595008157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595008155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6494e3721403c4183abc71d50dce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongFloor: {fileID: 789804945}
+  speed: 100
 --- !u!1001 &598051973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18285,7 +18396,7 @@ GameObject:
   - component: {fileID: 632325198}
   - component: {fileID: 632325201}
   m_Layer: 0
-  m_Name: Floor (X3)
+  m_Name: Floor (2341)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18378,6 +18489,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact: {fileID: 304034585}
   text: {fileID: 137752634}
+  inZone: 0
+  ePressed: 0
 --- !u!1 &633111244
 GameObject:
   m_ObjectHideFlags: 0
@@ -18577,7 +18690,7 @@ Transform:
   - {fileID: 290789478}
   - {fileID: 153408045}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &637486961
 PrefabInstance:
@@ -18912,7 +19025,7 @@ Light:
   m_GameObject: {fileID: 641084557}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 0
+  m_Type: 2
   m_Color: {r: 0.8308824, g: 0.43701378, b: 0.13440742, a: 1}
   m_Intensity: 3
   m_Range: 4
@@ -19038,6 +19151,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645866712}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &648384818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076673520683690, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 863116584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &648384820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648384818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6494e3721403c4183abc71d50dce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongFloor: {fileID: 1176305065}
+  speed: 100
 --- !u!1001 &649077521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19728,7 +19861,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1871249481155514, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_Name
-      value: Lever (5)
+      value: Lever (2133)
       objectReference: {fileID: 0}
     - target: {fileID: 4979104123431344, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20591,6 +20724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slideStay: {fileID: 1552178426}
+  ePressed: 0
   text: {fileID: 137752634}
 --- !u!4 &691052850 stripped
 Transform:
@@ -22631,7 +22765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4464557402042544, guid: 9c82ed7fbe3225c4d9eab9be75c73098, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4464557402042544, guid: 9c82ed7fbe3225c4d9eab9be75c73098, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23752,7 +23886,7 @@ GameObject:
   - component: {fileID: 789804942}
   - component: {fileID: 789804945}
   m_Layer: 0
-  m_Name: Floor (X1)
+  m_Name: Floor (2431)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23845,6 +23979,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact: {fileID: 304034585}
   text: {fileID: 137752634}
+  inZone: 0
+  ePressed: 0
 --- !u!4 &789969406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4134798303402136, guid: 5c865efb4a00ba74aab8f5697deb402b,
@@ -25427,7 +25563,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1871249481155514, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_Name
-      value: Lever (3)
+      value: Lever (2414)
       objectReference: {fileID: 0}
     - target: {fileID: 4979104123431344, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28337,7 +28473,7 @@ GameObject:
   - component: {fileID: 959493271}
   - component: {fileID: 959493274}
   m_Layer: 0
-  m_Name: Floor (X6)
+  m_Name: Floor (2413)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28430,6 +28566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact: {fileID: 304034585}
   text: {fileID: 137752634}
+  inZone: 0
+  ePressed: 0
 --- !u!1001 &961235141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29436,7 +29574,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1871249481155514, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_Name
-      value: Lever (7)
+      value: Lever (2314)
       objectReference: {fileID: 0}
     - target: {fileID: 4979104123431344, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33346,6 +33484,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142082070}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1143071341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076673520683690, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 188568329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1143071343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143071341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e6440c493c1f1446b626ef36e840cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctFloor: {fileID: 687532364}
+  speed: 30
 --- !u!4 &1144301214 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4391580482903592, guid: 4939b99595880c542a7a8adbfd17b505,
@@ -34743,7 +34901,7 @@ GameObject:
   - component: {fileID: 1176305062}
   - component: {fileID: 1176305065}
   m_Layer: 0
-  m_Name: Floor (X5)
+  m_Name: Floor (2414)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34836,6 +34994,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact: {fileID: 304034585}
   text: {fileID: 137752634}
+  inZone: 0
+  ePressed: 0
 --- !u!1001 &1178574336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36348,6 +36508,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 631692593}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218985412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076673520683690, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 659290156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1218985414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218985412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6494e3721403c4183abc71d50dce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongFloor: {fileID: 2059874905}
+  speed: 100
 --- !u!1001 &1221080801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37509,7 +37689,7 @@ GameObject:
   - component: {fileID: 1257471890}
   - component: {fileID: 1257471893}
   m_Layer: 0
-  m_Name: Floor (X4)
+  m_Name: Floor (2143)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37602,6 +37782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact: {fileID: 304034585}
   text: {fileID: 137752634}
+  inZone: 0
+  ePressed: 0
 --- !u!1001 &1258060555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40036,6 +40218,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340000150}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1340486593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076673520683690, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 991976803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1340486595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340486593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6494e3721403c4183abc71d50dce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongFloor: {fileID: 121876711}
+  speed: 100
 --- !u!1001 &1349104345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49670,6 +49872,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1693447068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076673520683690, guid: 8c92f0378a07a134c9e0799c0a2ef6c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 516038644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1693447070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693447068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6494e3721403c4183abc71d50dce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongFloor: {fileID: 959493274}
+  speed: 100
 --- !u!1001 &1694888824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50935,7 +51157,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1871249481155514, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_Name
-      value: Lever (2)
+      value: Lever (2431)
       objectReference: {fileID: 0}
     - target: {fileID: 4979104123431344, guid: 8c92f0378a07a134c9e0799c0a2ef6c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61744,7 +61966,7 @@ GameObject:
   - component: {fileID: 2059874902}
   - component: {fileID: 2059874905}
   m_Layer: 0
-  m_Name: Floor (X7)
+  m_Name: Floor (2133)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61837,6 +62059,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact: {fileID: 304034585}
   text: {fileID: 137752634}
+  inZone: 0
+  ePressed: 0
 --- !u!1 &2063400272
 GameObject:
   m_ObjectHideFlags: 0

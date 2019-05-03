@@ -8,14 +8,19 @@ public class Interact_Incorrect : MonoBehaviour
     public DestroyTorch interact;
     public FadeText text;
     
+
+    public bool inZone = false;
+    public bool ePressed = false;
+    
     void Update()
     {
-        if (interact.inZone == true)
+        if (inZone == true)
         {
             if (Input.GetKeyDown("e"))
             {
+                ePressed = true;
                 interact.destroyTorch();
-                interact.inZone = false;
+                inZone = false;
             }
         }
     } 
@@ -24,7 +29,7 @@ public class Interact_Incorrect : MonoBehaviour
     {
         if (col.gameObject.name == "Player 2")
         {
-            interact.inZone = true;
+            inZone = true;
             text.stepOn = true;
         }
     }
