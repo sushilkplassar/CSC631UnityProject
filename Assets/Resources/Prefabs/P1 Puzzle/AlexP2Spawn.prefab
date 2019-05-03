@@ -110,7 +110,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2825093442117896328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3ec1fc57ca1d1d43b7aa4eacacce05c, type: 3}
   m_Name: 
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2825093442117896328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f110a7ea005e9c4587863dcdc18d6a1, type: 3}
   m_Name: 
@@ -223,7 +223,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0264f6bb7a0520a48aba4075fa317c69, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7641212000561480702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3ec1fc57ca1d1d43b7aa4eacacce05c, type: 3}
   m_Name: 
@@ -532,6 +532,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1636166624913932755}
     m_Modifications:
+    - target: {fileID: 1156179666793033076, guid: e4ad10b10ade5b443af1e35e2e579ce3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1156179666793033083, guid: e4ad10b10ade5b443af1e35e2e579ce3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -645,7 +650,7 @@ PrefabInstance:
     - target: {fileID: 3875950246538391403, guid: e4ad10b10ade5b443af1e35e2e579ce3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2125644753435279922, guid: e4ad10b10ade5b443af1e35e2e579ce3,
         type: 3}
@@ -677,6 +682,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ChatWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769034548496480146, guid: 1794887e74cdbb940b4f98c5b7775ff1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4769034548496480150, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -811,7 +821,7 @@ PrefabInstance:
     - target: {fileID: 4769034549918574838, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 114.179985
+      value: 114.18
       objectReference: {fileID: 0}
     - target: {fileID: 4769034549775557365, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -856,6 +866,11 @@ PrefabInstance:
     - target: {fileID: 4769034549500601867, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769034549500601867, guid: 1794887e74cdbb940b4f98c5b7775ff1,
+        type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4769034549999970146, guid: 1794887e74cdbb940b4f98c5b7775ff1,

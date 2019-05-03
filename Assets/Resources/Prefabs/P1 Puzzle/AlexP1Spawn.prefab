@@ -109,7 +109,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687726062727249529}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3ec1fc57ca1d1d43b7aa4eacacce05c, type: 3}
   m_Name: 
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687726062727249529}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f110a7ea005e9c4587863dcdc18d6a1, type: 3}
   m_Name: 
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4950860501559080207}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3ec1fc57ca1d1d43b7aa4eacacce05c, type: 3}
   m_Name: 
@@ -440,6 +440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ChatWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769034548496480146, guid: 1794887e74cdbb940b4f98c5b7775ff1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4769034548496480150, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -569,12 +574,17 @@ PrefabInstance:
     - target: {fileID: 4769034549918574838, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 34.98001
+      value: 34.97998
       objectReference: {fileID: 0}
     - target: {fileID: 4769034549918574838, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 114.17999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769034549775557367, guid: 1794887e74cdbb940b4f98c5b7775ff1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4769034549775557365, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -609,7 +619,7 @@ PrefabInstance:
     - target: {fileID: 4769034548845263821, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_Size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4769034549500601867, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -726,6 +736,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2827697139359192380, guid: c7817e96f4ca0d5498e1517ae045e944,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2827697139359192320, guid: c7817e96f4ca0d5498e1517ae045e944,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -839,7 +854,7 @@ PrefabInstance:
     - target: {fileID: 5731204950626326947, guid: c7817e96f4ca0d5498e1517ae045e944,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4296329440436572477, guid: c7817e96f4ca0d5498e1517ae045e944,
         type: 3}
