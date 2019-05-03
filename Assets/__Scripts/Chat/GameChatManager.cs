@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿//UI reference taken from https://www.youtube.com/watch?v=IRAeJgGkjHk&t=898s
+using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
@@ -55,15 +56,6 @@ public class GameChatManager : MonoBehaviour
             if (!chatBox.isFocused && Input.GetKeyDown(KeyCode.Return))
                 chatBox.ActivateInputField();
         }
-
-        if (!chatBox.isFocused)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                SendMessagetoChat("You pressed the space bar", Message.MessageType.info);
-                Debug.Log("Space");
-            }
-        }
     }
 
     public void SendMessagetoChat(String text, Message.MessageType messageType)
@@ -83,7 +75,7 @@ public class GameChatManager : MonoBehaviour
         newMessage.textObject.color = MessageTypeColor(messageType);
          messageList.Add(newMessage);
         RequestChat requestChat = new RequestChat();
-        requestChat.send(1, newMessage.text);
+        requestChat.send(2, newMessage.text);
         cManager.send(requestChat);
         //cManager.send(ChatProtocol.Prepare(1, newMessage.text));
     }
@@ -157,8 +149,6 @@ public class Message
     public enum MessageType
     {
         playerMessage,
-        info,
-        //lootInfo
     }
 
 }
