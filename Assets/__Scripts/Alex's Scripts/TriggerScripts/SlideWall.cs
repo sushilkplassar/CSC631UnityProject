@@ -12,6 +12,7 @@ public class SlideWall : MonoBehaviour
     public float speed = 1.0F;
 
     public bool tileStepped = false;
+    public bool playSound = false;
     
     void Update()
     {
@@ -31,13 +32,18 @@ public class SlideWall : MonoBehaviour
 
     IEnumerator revert ()
     {
+        playSound = true;
         yield return new WaitForSeconds(0.2f);
         transform.position = Vector3.MoveTowards(wallPos.transform.position, originMarker.position, speed * Time.deltaTime);
+        playSound = false;
     }
 
     IEnumerator delay()
     {
+        playSound = true;
         yield return new WaitForSeconds(0.2f);
         transform.position = Vector3.MoveTowards(wallPos.transform.position, endMarker.position, speed * Time.deltaTime);
+        playSound = false;
+
     }
 }

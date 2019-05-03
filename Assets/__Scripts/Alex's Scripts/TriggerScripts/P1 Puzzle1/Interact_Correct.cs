@@ -8,6 +8,8 @@ public class Interact_Correct : MonoBehaviour
     public SlideObject_Stay slideStay;
     bool inZone = false;
     
+    public bool ePressed = false;
+    
     public FadeText text;
     
     void Update()
@@ -16,6 +18,7 @@ public class Interact_Correct : MonoBehaviour
         {
             if (Input.GetKeyDown("e"))
             {
+                ePressed = true;
                 slideStay.tileStepped = true;
                 inZone = false;
             }
@@ -34,5 +37,6 @@ public class Interact_Correct : MonoBehaviour
     void OnTriggerExit()
     {
         text.stepOff = true;
+        inZone = false;
     }
 }

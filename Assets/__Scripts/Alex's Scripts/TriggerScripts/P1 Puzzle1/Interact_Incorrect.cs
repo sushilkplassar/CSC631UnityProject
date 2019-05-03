@@ -6,19 +6,21 @@ public class Interact_Incorrect : MonoBehaviour
 {
     // Object that is to be slide/moved
     public DestroyTorch interact;
-    private FadeText text;
-    // Player Object is a child of the Player Spawn Game Object.
+    public FadeText text;
+    
 
-
-
+    public bool inZone = false;
+    public bool ePressed = false;
+    
     void Update()
     {
-        if (interact.inZone == true)
+        if (inZone == true)
         {
             if (Input.GetKeyDown("e"))
             {
+                ePressed = true;
                 interact.destroyTorch();
-                interact.inZone = false;
+                inZone = false;
             }
         }
     } 
@@ -28,15 +30,16 @@ public class Interact_Incorrect : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            interact.inZone = true;
-           // text.stepOn = true;
+            inZone = true;
+            text.stepOn = true;
         }
     }
 
-    /*
+    /* 
     void OnTriggerExit()
     {
         text.stepOff = true;
+        inZone = false;
     }*/
 
     
