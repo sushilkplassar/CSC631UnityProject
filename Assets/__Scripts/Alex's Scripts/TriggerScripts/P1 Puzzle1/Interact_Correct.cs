@@ -37,5 +37,6 @@ public class Interact_Correct : MonoBehaviour
     void OnTriggerExit()
     {
         text.stepOff = true;
+        inZone = false;
     }
 }

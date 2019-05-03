@@ -13,6 +13,8 @@ public class LeverAnimation : MonoBehaviour
             if (transform.rotation.x > 0)
             {
                 transform.Rotate(Vector3.left * speed * Time.deltaTime);
+            } else {
+                correctFloor.ePressed = false;
             }
         }
     }
