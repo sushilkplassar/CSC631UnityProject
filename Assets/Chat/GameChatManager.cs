@@ -56,14 +56,7 @@ public class GameChatManager : MonoBehaviour
                 chatBox.ActivateInputField();
         }
 
-        if (!chatBox.isFocused)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                SendMessagetoChat("You pressed the space bar", Message.MessageType.info);
-                Debug.Log("Space");
-            }
-        }
+
     }
 
     public void SendMessagetoChat(String text, Message.MessageType messageType)
