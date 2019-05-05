@@ -6,7 +6,7 @@ using UnityEngine;
 public class SlideObject_Stay : MonoBehaviour
 {
     // Transforms to act as start and end markers for the journey.
-    public Transform originMarker;
+    //public Transform originMarker;
     public Transform endMarker;
     public GameObject wallPos;
     
