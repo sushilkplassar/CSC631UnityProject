@@ -55,7 +55,8 @@ public class Main : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                SendMessagetoChat(username + ": " + chatBox.text, Message.MessageType.playerMessage);
+                //SendMessagetoChat(username + ": " + chatBox.text, Message.MessageType.playerMessage);
+                SendMessagetoChat(chatBox.text, Message.MessageType.playerMessage);
                 chatBox.text = "";
             }
         }
