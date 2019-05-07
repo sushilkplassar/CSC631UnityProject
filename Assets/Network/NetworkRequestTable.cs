@@ -11,6 +11,7 @@ public class NetworkRequestTable {
 		requestTable = new Dictionary<short, Type>();
 		add(Constants.CMSG_AUTH, "RequestCreate");
 		add(Constants.CMSG_HEARTBEAT, "RequestHeartbeat");
+		add(Constants.CMSG_LOGIN, "RequestLogin");
 		add(Constants.CMSG_PLAYERS, "RequestPlayers");
 		add(Constants.CMSG_TEST, "RequestTest");
         add(Constants.CMSG_MOVE, "RequestMove");

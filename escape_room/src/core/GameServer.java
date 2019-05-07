@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 
 // Other Imports
 import configuration.GameServerConf;
-//import dataAccessLayer.DAO;
+import dataAccessLayer.DAO;
 //import dataAccessLayer.SpeciesDAO;
 import metadata.Constants;
 import metadata.GameRequestTable;
@@ -52,18 +52,18 @@ public class GameServer {
 	 */
 	public GameServer() {
 		// Load configuration file
-		//configure();
-		// Initialize tables for global use
-		GameRequestTable.init(); // Contains request codes and classes
-		// Initialize database connection
-		/*if (DAO.getInstance() == null) {
-			Log.println_e("Database Connection Failed!");
-			System.exit(-1);
-		}*/
-		// Preload world-related objects
-//        initialize();
-		// Thread Pool for Clients
-		clientThreadPool = Executors.newCachedThreadPool();
+        configure();
+        // Initialize tables for global use
+        GameRequestTable.init(); // Contains request codes and classes
+        // Initialize database connection
+        if (DAO.getInstance() == null) {
+            Log.println_e("Database Connection Failed!");
+            System.exit(-1);
+        }
+        // Preload world-related objects
+        initialize();
+        // Thread Pool for Clients
+        clientThreadPool = Executors.newCachedThreadPool();
 	}
 
 	public static GameServer getInstance() {
@@ -78,7 +78,7 @@ public class GameServer {
 	 */
 	public final void configure() {
 		configuration = new GameServerConf();
-		ConfFileParser confFileParser = new ConfFileParser("core/gameServer.conf");
+		ConfFileParser confFileParser = new ConfFileParser("conf/gameServer.conf");
 		configuration.setConfRecords(confFileParser.parse());
 	}
 

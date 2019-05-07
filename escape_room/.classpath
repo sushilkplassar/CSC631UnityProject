@@ -13,7 +13,7 @@
 	<classpathentry exported="true" kind="lib" path="lib/jaxrpc.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/json_simple-1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/mail.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/mysql-connector-java-5.1.22-bin.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/saaj.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.47-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
