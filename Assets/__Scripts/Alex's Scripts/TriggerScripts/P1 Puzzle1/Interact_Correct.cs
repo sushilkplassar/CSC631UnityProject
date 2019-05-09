@@ -10,7 +10,7 @@ public class Interact_Correct : MonoBehaviour
     
     public bool ePressed = false;
     
-    public FadeText text;
+    //public FadeText text;
     
     void Update()
     {
@@ -30,13 +30,13 @@ public class Interact_Correct : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             inZone = true;
-            text.stepOn = true;
+            //text.stepOn = true;
         }
     }
 
     void OnTriggerExit()
     {
-        text.stepOff = true;
+        //text.stepOff = true;
         inZone = false;
     }
 }
