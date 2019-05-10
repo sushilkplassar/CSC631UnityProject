@@ -41,6 +41,7 @@ public class Main : MonoBehaviour {
         msgQueue.AddCallback(Constants.SMSG_START, ResponseStart);
         msgQueue.AddCallback(Constants.SMSG_UNREADY, ResponseUnready);
         msgQueue.AddCallback(Constants.SMSG_CHAT, ResponseChat);
+        msgQueue.AddCallback(Constants.SMSG_LIGHT, ResponseLight);
 
         Debug.Log("Starting Coroutine");
 		StartCoroutine(RequestHeartbeat(1f));
@@ -255,6 +256,34 @@ public class Main : MonoBehaviour {
 
     }
 
+    public void RequestLight(string lightColor)
+    {
+        RequestLight light = new RequestLight();
+        light.send(lightColor);
+        cManager.send(light);
+        Debug.Log("Sent light color request: " + lightColor);
+    }
+    // Turn on and off lights/wall mesh renderers
+    public void ResponseLight(ExtendedEventArgs eventArgs)
+    {
+        ResponseLightEventArgs args = eventArgs as ResponseLightEventArgs;
+        GameObject lightTrigger = GameObject.FindGameObjectWithTag(args.light);
+        // Grab all lights to render from the game object
+        EnableLight[] light = lightTrigger.GetComponent<ActivateLight>().lights;
+        // Grab all walls to render from the game object
+        EnableRender[] wall = lightTrigger.GetComponent<ActivateRender>().rend;
+
+        // Turn on all the lights for this color
+        for(int i = 0; i < light.Length; i++)
+        {
+            light[i].myLight.enabled = !light[i].myLight.enabled;
+        }
+        // Flip walls to be rendered for this color
+        for (int i = 0; i < wall.Length; i++)
+        {
+            wall[i].renderObject.enabled = !wall[i].renderObject.enabled;
+        }
+    }
     public void RequestStart ()
     {
         player = players[0];

@@ -2,8 +2,8 @@ public class Constants {
 	
 	// Constants
 	public static readonly string CLIENT_VERSION = "1.00";
-	//public static readonly string REMOTE_HOST = "localhost";
-    public static readonly string REMOTE_HOST = "54.183.172.28";
+	public static readonly string REMOTE_HOST = "localhost";
+   // public static readonly string REMOTE_HOST = "54.183.172.28";
     public static readonly int REMOTE_PORT = 9252;
 	
 	// Request (1xx) + Response (2xx)
@@ -25,6 +25,8 @@ public class Constants {
     public static readonly short SMSG_UNREADY = 243;
     public static readonly short CMSG_CHAT = 333;
     public static readonly short SMSG_CHAT = 433;
+    public static readonly short CMSG_LIGHT = 144;
+    public static readonly short SMSG_LIGHT= 244;
 
 
     // Other
