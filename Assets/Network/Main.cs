@@ -336,7 +336,14 @@ public class Main : MonoBehaviour {
         } else if(args.trigger == 2)
         {
             // Open both walls to continue to puzzle 3 for both players
+            GameObject trigger = GameObject.FindGameObjectWithTag("Puzzle2Finish");
+            Interact_Correct[] puzzle2Walls = trigger.GetComponents<Interact_Correct>();
 
+            for(int i = 0; i < puzzle2Walls.Length; i++)
+            {
+                puzzle2Walls[i].ePressed = true;
+                puzzle2Walls[i].slideStay.tileStepped = true;
+            }
         }
     }
 
