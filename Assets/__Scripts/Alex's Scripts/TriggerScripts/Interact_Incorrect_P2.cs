@@ -25,7 +25,8 @@ public class Interact_Incorrect_P2 : MonoBehaviour
                 moveWall.tileStepped = true;
                 //interact.destroyTorch();
                 inZone = false;
-                
+                // P2 meaning Puzzle 2 triggers in this case, not the player
+                //manager.RequestP2Incorrect(1);
             }
         }
     } 

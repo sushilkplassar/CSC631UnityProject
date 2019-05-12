@@ -42,7 +42,7 @@ public class Main : MonoBehaviour {
         msgQueue.AddCallback(Constants.SMSG_UNREADY, ResponseUnready);
         msgQueue.AddCallback(Constants.SMSG_CHAT, ResponseChat);
         msgQueue.AddCallback(Constants.SMSG_LIGHT, ResponseLight);
-        msgQueue.AddCallback(Constants.SMSG_P2TRIGGERS, ResponseP2Triggers);
+        msgQueue.AddCallback(Constants.SMSG_P2CORRECT, ResponseP2Correct);
 
         Debug.Log("Starting Coroutine");
 		StartCoroutine(RequestHeartbeat(1f));
@@ -307,17 +307,17 @@ public class Main : MonoBehaviour {
         Debug.Log("Players Activated");
     }
 
-    public void RequestP2Triggers(int value)
+    public void RequestP2Correct(int value)
     {
-        RequestP2Triggers trigger = new RequestP2Triggers();
+        RequestP2Correct trigger = new RequestP2Correct();
         trigger.send(value);
         cManager.send(trigger);
         Debug.Log("Puzzle 2 trigger value request: " + value);
     }
 
-    public void ResponseP2Triggers(ExtendedEventArgs eventArgs)
+    public void ResponseP2Correct(ExtendedEventArgs eventArgs)
     {
-        ResponseP2TriggersEventArgs args = eventArgs as ResponseP2TriggersEventArgs;
+        ResponseP2CorrectEventArgs args = eventArgs as ResponseP2CorrectEventArgs;
         Debug.Log("Value is: " + args.trigger);
         if(args.trigger == 1)
         {

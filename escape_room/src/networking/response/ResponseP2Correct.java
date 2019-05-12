@@ -8,12 +8,12 @@ import utility.GamePacket;
  * The ResponseLogin class contains information about the authentication
  * process.
  */
-public class ResponseP2Triggers extends GameResponse {
+public class ResponseP2Correct extends GameResponse {
 
   private int value;
 
-  public ResponseP2Triggers() {
-    responseCode = Constants.SMSG_P2TRIGGERS;
+  public ResponseP2Correct() {
+    responseCode = Constants.SMSG_P2CORRECT;
   }
 
   @Override

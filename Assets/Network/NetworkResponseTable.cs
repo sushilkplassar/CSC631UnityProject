@@ -18,7 +18,7 @@ public class NetworkResponseTable {
         add(Constants.SMSG_UNREADY, "ResponseUnready");//243
         add(Constants.SMSG_CHAT, "ResponseChat");//433
         add(Constants.SMSG_LIGHT, "ResponseLight");//244
-        add(Constants.SMSG_P2TRIGGERS, "ResponseP2Triggers");//245
+        add(Constants.SMSG_P2CORRECT, "ResponseP2Correct");//245
 
     }
 	

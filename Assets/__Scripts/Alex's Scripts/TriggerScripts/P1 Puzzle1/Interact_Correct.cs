@@ -31,11 +31,11 @@ public class Interact_Correct : MonoBehaviour
                 // Half way done
                 if(this.gameObject.tag == "Puzzle2")
                 {
-                    manager.RequestP2Triggers(1);
+                    manager.RequestP2Correct(1);
                 }
                 else if (this.gameObject.tag == "Puzzle2Finish")
                 {
-                    manager.RequestP2Triggers(2);
+                    manager.RequestP2Correct(2);
                 }
 
             }

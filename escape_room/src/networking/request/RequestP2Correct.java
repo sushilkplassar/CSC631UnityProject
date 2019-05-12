@@ -4,20 +4,20 @@ package networking.request;
 import java.io.IOException;
 
 // Other Imports
-import networking.response.ResponseP2Triggers;
+import networking.response.ResponseP2Correct;
 import utility.DataReader;
 
-public class RequestP2Triggers extends GameRequest {
+public class RequestP2Correct extends GameRequest {
 
   // Data
 //  private String version;
 
   // Responses
-  private ResponseP2Triggers responseP2Triggers;
+  private ResponseP2Correct responseP2Triggers;
   private int value;
 
-  public RequestP2Triggers() {
-    responses.add(responseP2Triggers = new ResponseP2Triggers());
+  public RequestP2Correct() {
+    responses.add(responseP2Triggers = new ResponseP2Correct());
   }
 
   @Override

@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResponseP2TriggersEventArgs : ExtendedEventArgs
+public class ResponseP2CorrectEventArgs : ExtendedEventArgs
 {
     public int trigger { get; set; }
 
-    public ResponseP2TriggersEventArgs()
+    public ResponseP2CorrectEventArgs()
     {
-        event_id = Constants.SMSG_P2TRIGGERS;
+        event_id = Constants.SMSG_P2CORRECT;
     }
 }
 
-public class ResponseP2Triggers : NetworkResponse
+public class ResponseP2Correct : NetworkResponse
 {
     private int trigger;
 
     // May not need to implement?
-    public ResponseP2Triggers()
+    public ResponseP2Correct()
     {
     }
 
@@ -28,8 +28,8 @@ public class ResponseP2Triggers : NetworkResponse
 
     public override ExtendedEventArgs process()
     {
-        ResponseP2TriggersEventArgs args = null;
-        args = new ResponseP2TriggersEventArgs();
+        ResponseP2CorrectEventArgs args = null;
+        args = new ResponseP2CorrectEventArgs();
         args.trigger = trigger;
         Debug.Log("Puzzle 2 trigger is: " + trigger);
         return args;

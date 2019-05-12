@@ -47,8 +47,8 @@ public class Constants {
     public final static short CMSG_LIGHT= 144;
     public final static short SMSG_LIGHT = 244;
 
-    public final static short CMSG_P2TRIGGERS= 145;
-    public final static short SMSG_P2TRIGGERS = 245;
+    public final static short CMSG_P2CORRECT= 145;
+    public final static short SMSG_P2CORRECT = 245;
 
     // Other
     public static final String CLIENT_VERSION = "1.00";
