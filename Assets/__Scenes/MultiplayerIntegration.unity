@@ -4884,7 +4884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137583442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.11, y: 2.96, z: 18.7}
+  m_LocalPosition: {x: -7.67, y: 1.2, z: 22.6}
   m_LocalScale: {x: 1, y: 0.794, z: 1}
   m_Children:
   - {fileID: 1187006986}
@@ -8058,7 +8058,7 @@ PrefabInstance:
     - target: {fileID: 5180988402411106320, guid: f8b18f47c83ebc34c9d77da447c85d5f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5180988402411106320, guid: f8b18f47c83ebc34c9d77da447c85d5f,
         type: 3}
@@ -15290,7 +15290,7 @@ GameObject:
   - component: {fileID: 463604419}
   m_Layer: 0
   m_Name: Trig (G)
-  m_TagString: Untagged
+  m_TagString: green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19712,7 +19712,7 @@ GameObject:
   - component: {fileID: 571502954}
   m_Layer: 0
   m_Name: Trigger(583)
-  m_TagString: Untagged
+  m_TagString: trigger583
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19758,8 +19758,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7196474, y: 1, z: 1}
+  m_Center: {x: -0.3598237, y: 0, z: 0}
 --- !u!23 &571502951
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45592,7 +45592,7 @@ GameObject:
   - component: {fileID: 1334799070}
   m_Layer: 0
   m_Name: Trig (B)
-  m_TagString: Untagged
+  m_TagString: blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46732,7 +46732,7 @@ GameObject:
   - component: {fileID: 1369637462}
   m_Layer: 0
   m_Name: Trigger(538)
-  m_TagString: Untagged
+  m_TagString: trigger538
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46778,8 +46778,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.6241491, y: 1, z: 1}
+  m_Center: {x: -0.31207454, y: 0, z: 0}
 --- !u!23 &1369637459
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47097,7 +47097,7 @@ GameObject:
   - component: {fileID: 1388933703}
   m_Layer: 0
   m_Name: Trig (R)
-  m_TagString: Untagged
+  m_TagString: red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51676,7 +51676,7 @@ GameObject:
   - component: {fileID: 1526000847}
   m_Layer: 0
   m_Name: Trigger(385)
-  m_TagString: Untagged
+  m_TagString: trigger385
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51722,8 +51722,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.6508403, y: 1, z: 1}
+  m_Center: {x: -0.32542014, y: 0, z: 0}
 --- !u!23 &1526000844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57072,7 +57072,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667901465}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5bc236bd3ccc57428ac8e45479efc20, type: 3}
   m_Name: 

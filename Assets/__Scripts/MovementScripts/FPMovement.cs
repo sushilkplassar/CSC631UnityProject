@@ -48,20 +48,9 @@ public class FPMovement : MonoBehaviour
         // anyKey shows every step of the way of it moving.
         if (Input.anyKey)
         {
-            
-
                 manager.send(moving(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z));
-            
+        }
 
-            // Request movement after moving in Unity?
-            Debug.Log("Sending request to move.");
-        }
-        /*
-       else if (this.gameObject.tag == "Player2")
-        {
-            movePlayer("Vertical2", "Horizontal2");
-        }
-        */
         
 
     }

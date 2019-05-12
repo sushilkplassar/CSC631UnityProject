@@ -27,6 +27,8 @@ public class Constants {
     public static readonly short SMSG_CHAT = 433;
     public static readonly short CMSG_LIGHT = 144;
     public static readonly short SMSG_LIGHT= 244;
+    public static readonly short CMSG_P2TRIGGERS = 145; // For puzzle 2, trigger 538
+    public static readonly short SMSG_P2TRIGGERS = 245;
 
 
     // Other

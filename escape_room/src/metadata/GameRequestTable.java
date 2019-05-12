@@ -34,6 +34,7 @@ public class GameRequestTable {
         add(Constants.CMSG_UNREADY,"RequestUnready");
         add(Constants.CMSG_CHAT,"RequestChat");
         add(Constants.CMSG_LIGHT,"RequestLight");
+        add(Constants.CMSG_P2TRIGGERS,"RequestP2Triggers");
         }
 
     /**

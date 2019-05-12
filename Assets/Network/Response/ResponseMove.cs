@@ -46,7 +46,6 @@ public class ResponseMove : NetworkResponse
         args.posX = posX;
         args.posY = posY;
         args.posZ = posZ;
-        Debug.Log("Player moved to pos X: " + posX + "pos: Y " + posY +  " and pos Z: " + posZ);
         return args;
     }
 }

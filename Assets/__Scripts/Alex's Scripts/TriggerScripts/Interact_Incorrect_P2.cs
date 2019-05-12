@@ -7,7 +7,14 @@ public class Interact_Incorrect_P2 : MonoBehaviour
     public MoveDeathWall moveWall;
     public bool inZone = false;
     public bool ePressed = false;
-    
+
+    Main manager;
+
+    private void Start()
+    {
+        manager = GameObject.FindGameObjectWithTag("heartbeat").GetComponent<Main>();
+    }
+
     void Update()
     {
         if (inZone == true)
@@ -18,6 +25,7 @@ public class Interact_Incorrect_P2 : MonoBehaviour
                 moveWall.tileStepped = true;
                 //interact.destroyTorch();
                 inZone = false;
+                
             }
         }
     } 

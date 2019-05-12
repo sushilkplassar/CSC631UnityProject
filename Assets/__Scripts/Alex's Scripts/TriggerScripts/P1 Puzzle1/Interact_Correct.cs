@@ -9,9 +9,16 @@ public class Interact_Correct : MonoBehaviour
     bool inZone = false;
     
     public bool ePressed = false;
-    
+
     //public FadeText text;
-    
+
+    Main manager;
+
+    private void Start()
+    {
+        manager = GameObject.FindGameObjectWithTag("heartbeat").GetComponent<Main>();
+    }
+
     void Update()
     {
         if (inZone == true)
@@ -21,6 +28,16 @@ public class Interact_Correct : MonoBehaviour
                 ePressed = true;
                 slideStay.tileStepped = true;
                 inZone = false;
+                // Half way done
+                if(this.gameObject.tag == "Puzzle2")
+                {
+                    manager.RequestP2Triggers(1);
+                }
+                else if (this.gameObject.tag == "Puzzle2Finish")
+                {
+                    manager.RequestP2Triggers(2);
+                }
+
             }
         }
     } 

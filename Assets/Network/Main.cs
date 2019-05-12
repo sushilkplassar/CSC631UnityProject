@@ -42,6 +42,7 @@ public class Main : MonoBehaviour {
         msgQueue.AddCallback(Constants.SMSG_UNREADY, ResponseUnready);
         msgQueue.AddCallback(Constants.SMSG_CHAT, ResponseChat);
         msgQueue.AddCallback(Constants.SMSG_LIGHT, ResponseLight);
+        msgQueue.AddCallback(Constants.SMSG_P2TRIGGERS, ResponseP2Triggers);
 
         Debug.Log("Starting Coroutine");
 		StartCoroutine(RequestHeartbeat(1f));
@@ -177,7 +178,6 @@ public class Main : MonoBehaviour {
        
     }
 
-    
     public void RequestReady()
     {
         player = players[0];
@@ -263,6 +263,7 @@ public class Main : MonoBehaviour {
         cManager.send(light);
         Debug.Log("Sent light color request: " + lightColor);
     }
+
     // Turn on and off lights/wall mesh renderers
     public void ResponseLight(ExtendedEventArgs eventArgs)
     {
@@ -284,6 +285,7 @@ public class Main : MonoBehaviour {
             wall[i].renderObject.enabled = !wall[i].renderObject.enabled;
         }
     }
+
     public void RequestStart ()
     {
         player = players[0];
@@ -292,6 +294,7 @@ public class Main : MonoBehaviour {
         cManager.send(start);
         Debug.Log("Sent start request");
     }
+
     public void ResponseStart(ExtendedEventArgs eventArgs)
     {
         // Used for movement to to begin for both players. 
@@ -303,6 +306,40 @@ public class Main : MonoBehaviour {
         readyScreen.GetComponent<Animation>().Play();
         Debug.Log("Players Activated");
     }
+
+    public void RequestP2Triggers(int value)
+    {
+        RequestP2Triggers trigger = new RequestP2Triggers();
+        trigger.send(value);
+        cManager.send(trigger);
+        Debug.Log("Puzzle 2 trigger value request: " + value);
+    }
+
+    public void ResponseP2Triggers(ExtendedEventArgs eventArgs)
+    {
+        ResponseP2TriggersEventArgs args = eventArgs as ResponseP2TriggersEventArgs;
+        Debug.Log("Value is: " + args.trigger);
+        if(args.trigger == 1)
+        {
+            GameObject trigger = GameObject.FindGameObjectWithTag("Puzzle2");
+            // Moves podium for puzzle 2 in player 1 room
+            trigger.GetComponent<Interact_Correct>().slideStay.tileStepped = true;
+            EnableRender[] wall = trigger.GetComponent<ActivateRender>().rend;
+            trigger.GetComponent<Interact_Correct>().ePressed = true;
+
+            // Flip walls to be rendered for pulling the correct lever trigger
+            for (int i = 0; i < wall.Length; i++)
+            {
+                wall[i].renderObject.enabled = !wall[i].renderObject.enabled;
+            }
+
+        } else if(args.trigger == 2)
+        {
+            // Open both walls to continue to puzzle 3 for both players
+
+        }
+    }
+
     public IEnumerator RequestHeartbeat(float time) {
 
         Debug.Log("In Coroutine");
