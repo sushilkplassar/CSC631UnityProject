@@ -35,7 +35,8 @@ public class GameRequestTable {
         add(Constants.CMSG_CHAT,"RequestChat");
         add(Constants.CMSG_LIGHT,"RequestLight");
         add(Constants.CMSG_P2CORRECT,"RequestP2Correct");
-        }
+        add(Constants.CMSG_P2INCORRECT,"RequestP2Incorrect");
+    }
 
     /**
      * Map the request code number with its corresponding request class, derived

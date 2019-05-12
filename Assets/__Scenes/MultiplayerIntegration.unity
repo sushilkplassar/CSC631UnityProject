@@ -11376,7 +11376,7 @@ GameObject:
   - component: {fileID: 330619807}
   m_Layer: 0
   m_Name: Trigger (457)
-  m_TagString: Untagged
+  m_TagString: 457
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14890,7 +14890,7 @@ GameObject:
   - component: {fileID: 456979294}
   m_Layer: 0
   m_Name: Trigger (C-745)
-  m_TagString: Untagged
+  m_TagString: Puzzle2Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16741,7 +16741,7 @@ GameObject:
   - component: {fileID: 500658314}
   m_Layer: 0
   m_Name: Trigger (754)
-  m_TagString: Untagged
+  m_TagString: 754
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19712,7 +19712,7 @@ GameObject:
   - component: {fileID: 571502954}
   m_Layer: 0
   m_Name: Trigger(583)
-  m_TagString: trigger583
+  m_TagString: 583
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19725,7 +19725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571502947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.41499996, z: 0}
+  m_LocalPosition: {x: 1, y: -0.14, z: 0}
   m_LocalScale: {x: 1, y: 0.129, z: 1}
   m_Children: []
   m_Father: {fileID: 781937653}
@@ -46732,7 +46732,7 @@ GameObject:
   - component: {fileID: 1369637462}
   m_Layer: 0
   m_Name: Trigger(538)
-  m_TagString: trigger538
+  m_TagString: Puzzle2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46745,7 +46745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369637455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.41499996, z: 0}
+  m_LocalPosition: {x: 1, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 0.129, z: 1}
   m_Children: []
   m_Father: {fileID: 1956724023}
@@ -51676,7 +51676,7 @@ GameObject:
   - component: {fileID: 1526000847}
   m_Layer: 0
   m_Name: Trigger(385)
-  m_TagString: trigger385
+  m_TagString: 385
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51689,7 +51689,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526000840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.41499996, z: 0}
+  m_LocalPosition: {x: 1, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 0.129, z: 1}
   m_Children: []
   m_Father: {fileID: 578256930}

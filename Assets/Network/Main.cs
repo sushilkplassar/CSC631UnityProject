@@ -43,6 +43,7 @@ public class Main : MonoBehaviour {
         msgQueue.AddCallback(Constants.SMSG_CHAT, ResponseChat);
         msgQueue.AddCallback(Constants.SMSG_LIGHT, ResponseLight);
         msgQueue.AddCallback(Constants.SMSG_P2CORRECT, ResponseP2Correct);
+        msgQueue.AddCallback(Constants.SMSG_P2INCORRECT, ResponseP2Incorrect);
 
         Debug.Log("Starting Coroutine");
 		StartCoroutine(RequestHeartbeat(1f));
@@ -345,6 +346,28 @@ public class Main : MonoBehaviour {
                 puzzle2Walls[i].slideStay.tileStepped = true;
             }
         }
+    }
+
+    public void RequestP2Incorrect(int value)
+    {
+        RequestP2Incorrect trigger = new RequestP2Incorrect();
+        trigger.send(value);
+        cManager.send(trigger);
+        Debug.Log("Puzzle 2 INCORRECT value request: " + value);
+    }
+
+    public void ResponseP2Incorrect(ExtendedEventArgs eventArgs)
+    {
+        ResponseP2IncorrectEventArgs args = eventArgs as ResponseP2IncorrectEventArgs;
+        Debug.Log("INCORRECT TRIGGER IS: " + args.trigger);
+        GameObject trigger = GameObject.FindGameObjectWithTag(args.trigger.ToString());
+        Interact_Incorrect_P2[] deathWalls = trigger.GetComponents<Interact_Incorrect_P2>();
+        for(int i = 0; i < deathWalls.Length; i++)
+        {
+            deathWalls[i].ePressed = true;
+            deathWalls[i].moveWall.tileStepped = true;
+        }
+
     }
 
     public IEnumerator RequestHeartbeat(float time) {
