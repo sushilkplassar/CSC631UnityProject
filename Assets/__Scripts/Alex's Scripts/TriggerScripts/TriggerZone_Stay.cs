@@ -27,7 +27,7 @@ public class TriggerZone_Stay : MonoBehaviour
 
     void OnTriggerEnter (Collider col)
     {
-        if (col.gameObject.name == "Player 2")
+        if (col.gameObject.tag == "Player")
         {
             slideStay.tileStepped = true;
         }

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CorrectSound : MonoBehaviour
+public class DeathWallSound : MonoBehaviour
 {
-    public LeverAnimation cc;
+    public MoveDeathWall wall;
     void Update()
     {
-        if (cc.correctFloor.ePressed == true && GetComponent<AudioSource>().isPlaying == false)
+        if (wall.tileStepped == true && GetComponent<AudioSource>().isPlaying == false)
         {
 
             //GetComponent<AudioSource>().volume = Random.Range(0.4f, 0.6f);

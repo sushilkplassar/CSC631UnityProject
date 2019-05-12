@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActivateLight : MonoBehaviour
 {
     public bool inZone = false;
-    
+    public bool ePressed = false;
     public EnableLight[] lights;
     
     void Update()
@@ -14,6 +14,7 @@ public class ActivateLight : MonoBehaviour
         {
             if (Input.GetKeyDown("e"))
             {
+                ePressed = true;
                 // P1 Torch
                 lights[0].myLight.enabled = !lights[0].myLight.enabled;
                 // P1 WallLight
@@ -30,7 +31,7 @@ public class ActivateLight : MonoBehaviour
 
     void OnTriggerEnter (Collider col)
     {
-        if (col.gameObject.name == "Player 2")
+        if (col.gameObject.tag == "Player")
         {
             inZone = true;
         }

@@ -27,7 +27,7 @@ public class Interact_Correct : MonoBehaviour
 
     void OnTriggerEnter (Collider col)
     {
-        if (col.gameObject.name == "Player 2")
+        if (col.gameObject.tag == "Player")
         {
             inZone = true;
             //text.stepOn = true;

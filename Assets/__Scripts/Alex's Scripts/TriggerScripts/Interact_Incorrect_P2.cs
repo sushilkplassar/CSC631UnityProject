@@ -24,7 +24,7 @@ public class Interact_Incorrect_P2 : MonoBehaviour
 
     void OnTriggerEnter (Collider col)
     {
-        if (col.gameObject.name == "Player 2")
+        if (col.gameObject.tag == "Player")
         {
             inZone = true;
         }
@@ -33,5 +33,6 @@ public class Interact_Incorrect_P2 : MonoBehaviour
     void OnTriggerExit()
     {
         inZone = false;
+        ePressed = false;
     }
 }
