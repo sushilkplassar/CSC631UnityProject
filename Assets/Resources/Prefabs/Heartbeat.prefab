@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5180988402411106319}
   - component: {fileID: 6595586023190425702}
   - component: {fileID: 8777931078458522606}
+  - component: {fileID: 7926673348771889502}
   m_Layer: 0
   m_Name: Heartbeat
   m_TagString: Untagged
@@ -46,6 +47,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
+  maxMessages: 25
+  username: 
+  chatPanel: {fileID: 0}
+  textObject: {fileID: 0}
+  chatBox: {fileID: 0}
+  playerMessage: {r: 0, g: 0, b: 0, a: 0}
+  info: {r: 0, g: 0, b: 0, a: 0}
+  messageList: []
 --- !u!114 &6595586023190425702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,5 +77,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72915b2d031c1ba408118e0184e165df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7926673348771889502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5180988402411106318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed102a100c5fb243a7917e9984c3d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

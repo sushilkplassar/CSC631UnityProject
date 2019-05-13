@@ -12,6 +12,11 @@ public class TriggerWall : MonoBehaviour
     private void Awake()
     {
         //lerpWall = GameObject.FindGameObjectWithTag("deathwall").GetComponent<Lerp_Tile>();
+        
+    }
+
+    private void Start()
+    {
         slideWall[0] = GameObject.FindGameObjectWithTag("leftdoor").GetComponent<SlideWall>();
         slideWall[1] = GameObject.FindGameObjectWithTag("WallSlideL").GetComponent<SlideWall>();
         slideWall[2] = GameObject.FindGameObjectWithTag("rightdoor").GetComponent<SlideWall>();
