@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="" />
+    <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Alex.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Alex.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/TriggerLeftDoor (E).prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/TriggerLeftDoor (E).prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/TriggerLeftDoor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/TriggerLeftDoor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/endmarkerleftdoor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/endmarkerleftdoor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/leftdoor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/leftdoor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/WrongLever.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/WrongLever.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/SlideObject_Rev.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/SlideObject_Rev.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Sound/DeathWallSound.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Sound/DeathWallSound.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Sound/IncSoundPuzzle2.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Sound/IncSoundPuzzle2.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/TriggerZoneRev.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/TriggerZoneRev.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/DontDestroyPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/DontDestroyPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/InstantiateRuntime.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/InstantiateRuntime.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/SwitchPlayers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/SwitchPlayers.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP2Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP2Spawn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/_Sound/sfx_door_unlock_03.wav" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/_Sound/sfx_door_unlock_Correct.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/_Sound/sfx_door_unlock_03.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/_Sound/sfx_door_unlock_Correct.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Menu Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Menu Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/MazeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/MazeScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/MultiplayerIntegration.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/MultiplayerIntegration.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/MultiplayerIntegration.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/MultiplayerIntegration.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/ActivateLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/ActivateLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Interact_Incorrect_P2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Interact_Incorrect_P2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/LeverAnimIncP2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/LeverAnimIncP2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Sound/CorrectSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Sound/CorrectSound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/TriggerZone_Stay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/TriggerZone_Stay.cs" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +152,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="215" />
     <option name="y" value="155" />
     <option name="width" value="918" />
@@ -153,8 +193,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,7 +263,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20499243" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20801815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />

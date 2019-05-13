@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActivateLight : MonoBehaviour
 {
     public bool inZone = false;
-    
+    public bool ePressed = false;
     public EnableLight[] lights;
     Main manager;
 

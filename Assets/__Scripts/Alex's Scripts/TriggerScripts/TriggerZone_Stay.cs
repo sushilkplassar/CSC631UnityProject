@@ -23,7 +23,8 @@ using UnityEngine;
 public class TriggerZone_Stay : MonoBehaviour
 {
     // Object that is to be slide/moved
-    public SlideObject_Stay slideStay; 
+    public SlideObject_Stay slideStay;
+    //public SlideObject_Rev slideRev;
 
     void OnTriggerEnter (Collider col)
     {

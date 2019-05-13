@@ -43,5 +43,6 @@ public class Interact_Incorrect_P2 : MonoBehaviour
     void OnTriggerExit()
     {
         inZone = false;
+        ePressed = false;
     }
 }

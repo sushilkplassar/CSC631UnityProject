@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 700124430795219228}
   - component: {fileID: 3430158230987482299}
   - component: {fileID: 1130905931629584136}
-  - component: {fileID: 8634371912744275246}
   - component: {fileID: 3131131728300376633}
   - component: {fileID: 2486304413178247950}
   m_Layer: 0
@@ -143,7 +142,7 @@ CharacterController:
   m_GameObject: {fileID: 2825093442117896328}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -193,25 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   readyScreen: {fileID: 3577666477829264363}
   gameStart: 0
---- !u!114 &8634371912744275246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2825093442117896328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e61b3a266821b34cbba0aab911ae2fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slideWall:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!82 &3131131728300376633
 AudioSource:
   m_ObjectHideFlags: 0
@@ -389,7 +369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5921460896256456053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.97, y: 1.02, z: 11.9}
+  m_LocalPosition: {x: 4.9, y: -7.1, z: -40.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5361873049413274404}
@@ -691,16 +671,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5361873049413274404}
     m_Modifications:
-    - target: {fileID: 4769034548496480146, guid: 1794887e74cdbb940b4f98c5b7775ff1,
-        type: 3}
-      propertyPath: m_Name
-      value: ChatWindow
-      objectReference: {fileID: 0}
-    - target: {fileID: 4769034548496480146, guid: 1794887e74cdbb940b4f98c5b7775ff1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4769034548496480150, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -806,6 +776,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4769034548496480146, guid: 1794887e74cdbb940b4f98c5b7775ff1,
+        type: 3}
+      propertyPath: m_Name
+      value: ChatWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769034548496480146, guid: 1794887e74cdbb940b4f98c5b7775ff1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4769034549366938209, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -854,7 +834,7 @@ PrefabInstance:
     - target: {fileID: 4769034549918574838, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 114.18001
+      value: 114.179985
       objectReference: {fileID: 0}
     - target: {fileID: 4769034549775557367, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -864,7 +844,7 @@ PrefabInstance:
     - target: {fileID: 4769034548845263821, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4769034548845263821, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -921,11 +901,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2234592095307956760}
     m_Modifications:
-    - target: {fileID: 2817299738370906883, guid: bc2ac0b6c54b5f440944957e7a1b4520,
-        type: 3}
-      propertyPath: m_Name
-      value: Player light
-      objectReference: {fileID: 0}
     - target: {fileID: 2817299738370906880, guid: bc2ac0b6c54b5f440944957e7a1b4520,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -980,6 +955,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817299738370906883, guid: bc2ac0b6c54b5f440944957e7a1b4520,
+        type: 3}
+      propertyPath: m_Name
+      value: Player light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc2ac0b6c54b5f440944957e7a1b4520, type: 3}
