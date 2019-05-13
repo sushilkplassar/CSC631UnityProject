@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2425959180118529939}
   - component: {fileID: 2425959180118529940}
   - component: {fileID: 2425959180118529941}
-  - component: {fileID: 2425959180118529938}
   m_Layer: 0
   m_Name: TriggerLeftDoor
   m_TagString: WallSlideL
@@ -92,23 +91,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2425959180118529938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2425959180118529943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 643502f7d53315d4a93470d43209208c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originMarker: {fileID: 2425959180118529942, guid: b419e9527d8cd5b4dbf5354fd3c72bc5,
-    type: 3}
-  endMarker: {fileID: 1873712478978969514, guid: 04acb26b27b82234e894e8db5b30f5d8,
-    type: 3}
-  wallPos: {fileID: 2425959180118529943}
-  speed: 0.5
-  tileStepped: 0
-  playSound: 0

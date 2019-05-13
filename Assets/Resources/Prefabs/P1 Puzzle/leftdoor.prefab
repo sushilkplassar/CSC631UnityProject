@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1898914576}
   - component: {fileID: 1898914575}
   - component: {fileID: 1898914580}
-  - component: {fileID: 1898914574}
   - component: {fileID: 1898914579}
   m_Layer: 0
   m_Name: leftdoor
@@ -191,24 +190,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1898914574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898914573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 643502f7d53315d4a93470d43209208c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originMarker: {fileID: 1898914578, guid: 54fb2034586d16846a3cc90f82878ffa, type: 3}
-  endMarker: {fileID: 431636308, guid: deaef984323e52749b51d344d45f6db1, type: 3}
-  wallPos: {fileID: 1898914573}
-  speed: 1.1
-  tileStepped: 0
-  playSound: 0
 --- !u!114 &1898914579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aef6a6d79bc0e14c82947c70986eafd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 1898914574}
+  door: {fileID: 0}
   source: {fileID: 8300000, guid: 4a56eb330c0bd264ebe059ad79ef40de, type: 3}
 --- !u!1001 &578956613
 PrefabInstance:
@@ -230,6 +211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1898914578}
     m_Modifications:
+    - target: {fileID: 1898914573}
+      propertyPath: m_Name
+      value: leftdoor (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 1353387148900370, guid: 38d22e3b415a2574e920b8037167468a, type: 3}
       propertyPath: m_Name
       value: leftdoor (1)
@@ -268,14 +253,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 23240984601684338, guid: 38d22e3b415a2574e920b8037167468a,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 94b7e1c66fbb8c94db97ef3aa08fbe1f, type: 2}
-    - target: {fileID: 1898914573}
-      propertyPath: m_Name
-      value: leftdoor (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1898914576}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 94b7e1c66fbb8c94db97ef3aa08fbe1f, type: 2}
@@ -331,6 +308,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1898914576}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94b7e1c66fbb8c94db97ef3aa08fbe1f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38d22e3b415a2574e920b8037167468a, type: 3}
 --- !u!4 &4131706899040673 stripped
