@@ -8,6 +8,7 @@ public class ResponseMove extends GameResponse
 {
   // May not need to implement, player is already moving in Unity?
   private float posX;
+  private float posY;
   private float posZ;
   private GameClient client;
   public ResponseMove() {
@@ -21,6 +22,7 @@ public class ResponseMove extends GameResponse
 
     packet.addInt32(client.getPlayer().getID());
     packet.addFloat(posX);
+    packet.addFloat(posY);
     packet.addFloat(posZ);
     System.out.println("Creating packet of coordinates to move player: " + client.getPlayer().getID());
     return packet.getBytes();
@@ -28,6 +30,10 @@ public class ResponseMove extends GameResponse
   public void setPosX(float posX)
   {
     this.posX = posX;
+  }
+  public void setPosY(float posY)
+  {
+    this.posY = posY;
   }
   public void setPosZ(float posZ)
   {

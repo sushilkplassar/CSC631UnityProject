@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -11,6 +11,15 @@ public class Main : MonoBehaviour {
     public List<GameObject> players = new List<GameObject>();
     private GameObject player;
 
+    //Chat variables
+    public int maxMessages = 25;
+    public string username;
+    public GameObject chatPanel, textObject;
+    public InputField chatBox;
+    public Color playerMessage, info;
+    [SerializeField]
+    List<Message> messageList = new List<Message>();
+
     bool player1Ready = false;
     bool player2Ready = false;
 
@@ -18,10 +27,12 @@ public class Main : MonoBehaviour {
         //DontDestroyOnLoad(gameObject);
         NetworkRequestTable.init();
         NetworkResponseTable.init();
-	}
+    }
 	
 	// Use this for initialization
 	void Start () {
+
+        
         cManager = gameObject.GetComponent<ConnectionManager>();
         msgQueue = gameObject.GetComponent<MessageQueue>();
         msgQueue.AddCallback(Constants.SMSG_AUTH, ResponseCreate);
@@ -29,7 +40,7 @@ public class Main : MonoBehaviour {
         msgQueue.AddCallback(Constants.SMSG_READY, ResponseReady);
         msgQueue.AddCallback(Constants.SMSG_START, ResponseStart);
         msgQueue.AddCallback(Constants.SMSG_UNREADY, ResponseUnready);
-        //msgQueue.AddCallback(Constants.SMSG_TEST, responseTest);
+        msgQueue.AddCallback(Constants.SMSG_CHAT, ResponseChat);
 
         Debug.Log("Starting Coroutine");
 		StartCoroutine(RequestHeartbeat(1f));
@@ -38,8 +49,23 @@ public class Main : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        // For Chat
+        if (chatBox.text != "")
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SendMessagetoChat(chatBox.text, Message.MessageType.playerMessage);
+                chatBox.text = "";
+            }
+        }
+        else
+        {
+            if (!chatBox.isFocused && Input.GetKeyDown(KeyCode.Return))
+                chatBox.ActivateInputField();
+        }
+
+    }
 
     // Function to be called after processing a message.
     // Function callbacks used to show what is received or what happens to the client
@@ -64,9 +90,14 @@ public class Main : MonoBehaviour {
         {
             // Activates the ready screen for player
             GameObject readyScreen = player.transform.GetChild(1).gameObject;
-            readyScreen.transform.GetChild(3).gameObject.SetActive(true);
             readyScreen.transform.GetChild(4).gameObject.SetActive(true);
+            readyScreen.transform.GetChild(5).gameObject.SetActive(true);
 
+            // Assigning chat box field
+            chatBox = GameObject.FindGameObjectWithTag("inputfield").GetComponent<InputField>();
+
+            // Assigning chat panel field
+            chatPanel = GameObject.FindGameObjectWithTag("content");
             Debug.Log("Added first player in list.");
         }
         
@@ -78,12 +109,10 @@ public class Main : MonoBehaviour {
             // Player Object is a child of the Player Spawn Game Object.
             GameObject playerObject = player.transform.GetChild(0).gameObject;
 
-            // Turn off canvas of other player
-            player.transform.GetChild(1).gameObject.SetActive(false);
-
             // Turn off all children associated with the new player object that joins.
             for (int i = 0; i < playerObject.transform.childCount; i++)
             {
+                Debug.Log("Turning off camera");
                 // The rest of the children is within this player. 
                 GameObject child = playerObject.transform.GetChild(i).gameObject;
 
@@ -92,13 +121,13 @@ public class Main : MonoBehaviour {
                     child.SetActive(false);
             }
 
+            // Turn off canvas of other player
+            player.transform.GetChild(1).gameObject.SetActive(false);
         
             // Turn off all movement and camera objects so that one input doesn't move both player objects.
             playerObject.GetComponent<FPMovement>().enabled = false;
-            playerObject.GetComponent<CharacterController>().enabled = false;
+            //playerObject.GetComponent<CharacterController>().enabled = false;
             playerObject.GetComponent<MouseLook>().enabled = false;
-            
-
         }
         Debug.Log("Successfully created player in callback function.");
     }
@@ -111,12 +140,14 @@ public class Main : MonoBehaviour {
         ResponseCreateEventArgs argID = eventArgs as ResponseCreateEventArgs;
         if (argID.user_id == 1)
         {
-            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player1Spawn"));
-            
+            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/P1 Puzzle/AlexP1Spawn"));
+            //spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player1Spawn"));
+
         }
         if (argID.user_id == 2)
         {
-            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player2Spawn"));
+            spawn = Instantiate(Resources.Load<GameObject>("Prefabs/P1 Puzzle/AlexP2Spawn"));
+            //spawn = Instantiate(Resources.Load<GameObject>("Prefabs/Player2Spawn"));
         }
         return spawn;
     }
@@ -135,7 +166,7 @@ public class Main : MonoBehaviour {
 
                // Lerp for smoother player movement from the server.
                 eachPlayer.transform.position = Vector3.Lerp(previous.position, 
-                                                eachPlayer.transform.position = new Vector3(argTag.posX, 2, argTag.posZ), 
+                                                eachPlayer.transform.position = new Vector3(argTag.posX, argTag.posY, argTag.posZ), 
                                                 Time.deltaTime * 12);
             }
         }
@@ -166,20 +197,20 @@ public class Main : MonoBehaviour {
         if (args.readyPlayer == 1)
         {
             Debug.Log("Activating player 1 ready button");
-            readyScreen.transform.GetChild(5).gameObject.GetComponent<Toggle>().isOn = true;
+            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = true;
             player1Ready = true;
             // If both players ready then make start button interactive for player 1.
         }
         else if(args.readyPlayer == 2)
         {
             Debug.Log("Activating player 2 ready button");
-            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = true;
+            readyScreen.transform.GetChild(7).gameObject.GetComponent<Toggle>().isOn = true;
             player2Ready = true;
         }
 
         if (player1Ready == true && player2Ready == true)
         {
-            readyScreen.transform.GetChild(2).gameObject.GetComponent<Button>().interactable = true;
+            readyScreen.transform.GetChild(3).gameObject.GetComponent<Button>().interactable = true;
         }
 
     }
@@ -205,20 +236,20 @@ public class Main : MonoBehaviour {
         if (args.unreadyPlayer == 1)
         {
             Debug.Log("Deactivating player 1 ready button");
-            readyScreen.transform.GetChild(5).gameObject.GetComponent<Toggle>().isOn = false;
+            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = false;
             player1Ready = false;
             
         }
         else if (args.unreadyPlayer == 2)
         {
             Debug.Log("Deactivating player 2 ready button");
-            readyScreen.transform.GetChild(6).gameObject.GetComponent<Toggle>().isOn = false;
+            readyScreen.transform.GetChild(7).gameObject.GetComponent<Toggle>().isOn = false;
             player2Ready = false;
         }
 
         if (player1Ready == false || player2Ready == false)
         {
-            readyScreen.transform.GetChild(2).gameObject.GetComponent<Button>().interactable = false;
+            readyScreen.transform.GetChild(3).gameObject.GetComponent<Button>().interactable = false;
         }
 
     }
@@ -236,8 +267,10 @@ public class Main : MonoBehaviour {
         // Used for movement to to begin for both players. 
         // if eventargs returns 1
         player = players[0];
+        GameObject readyScreen = player.transform.GetChild(1).gameObject;
         GameObject playerObject = player.transform.GetChild(0).gameObject;
         playerObject.GetComponent<StartPlayerComponents>().gameStarted();
+        readyScreen.GetComponent<Animation>().Play();
         Debug.Log("Players Activated");
     }
     public IEnumerator RequestHeartbeat(float time) {
@@ -254,4 +287,90 @@ public class Main : MonoBehaviour {
         yield return new WaitForSeconds(time);
         StartCoroutine(RequestHeartbeat(1f));
 	}
+
+    /*Chat*/
+    public void SendMessagetoChat(String text, Message.MessageType messageType)
+    {
+        if (messageList.Count >= maxMessages)
+        {
+            Destroy(messageList[0].textObject.gameObject);
+            messageList.Remove(messageList[0]);
+        }
+        Message newMessage = new Message();
+
+        newMessage.text = text;
+
+        GameObject newText = Instantiate(textObject, chatPanel.transform);
+        newMessage.textObject = newText.GetComponent<Text>();
+        newMessage.textObject.text = newMessage.text;
+        newMessage.textObject.color = MessageTypeColor(messageType);
+        messageList.Add(newMessage);
+        RequestChat requestChat = new RequestChat();
+        // Check first player added to the list because this is the real client.
+        player = players[0];
+        int readyPlayer = int.Parse(player.tag);
+        if (player.tag == "1")
+        {
+            requestChat.send(1, newMessage.text);
+        }else if(player.tag == "2")
+        {
+            requestChat.send(2, newMessage.text);
+        }
+        
+        cManager.send(requestChat);
+        //cManager.send(ChatProtocol.Prepare(1, newMessage.text));
+    }
+
+    public void ResponseChat(ExtendedEventArgs eventArgs)
+    {
+        Debug.Log("Callback for MessageReceived");
+        ResponseChatEventArgs args = eventArgs as ResponseChatEventArgs;
+        //  GameObject readyScreen = player.transform.GetChild(1).gameObject;
+        if (messageList.Count >= maxMessages)
+        {
+            Destroy(messageList[0].textObject.gameObject);
+            messageList.Remove(messageList[0]);
+        }
+        Message newMessage = new Message();
+
+        newMessage.text = args.message;
+        Debug.Log("IN GameCHatManager: " + newMessage.text);
+        GameObject newText = Instantiate(textObject, chatPanel.transform);
+
+        newMessage.textObject = newText.GetComponent<Text>();
+
+        newMessage.textObject.text = newMessage.text;
+
+        //newMessage.textObject.color = MessageTypeColor(Message.MessageType.playerMessage);
+
+        messageList.Add(newMessage);
+    }
+
+    Color MessageTypeColor(Message.MessageType messageType)
+    {
+        Color color = info;
+        switch (messageType)
+        {
+            case Message.MessageType.playerMessage:
+                color = playerMessage;
+                break;
+        }
+        return color;
+    }
+
+    [System.Serializable]
+    public class Message
+    {
+        public string text;
+        public Text textObject;
+        public MessageType messageType;
+
+        public enum MessageType
+        {
+            playerMessage,
+            info,
+            //lootInfo
+        }
+
+    }
 }

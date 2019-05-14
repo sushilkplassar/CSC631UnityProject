@@ -21,8 +21,7 @@ public class ConnectionManager : MonoBehaviour {
 
 
     void Awake() {
-        //mainObject = GameObject.Find("Heartbeat");
-        mainObject = GameObject.Find("GameChatManager");
+		mainObject = GameObject.Find("Heartbeat");
 	}
 	
 	// Use this for initialization

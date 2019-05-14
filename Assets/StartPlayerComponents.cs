@@ -18,6 +18,9 @@ public class StartPlayerComponents : MonoBehaviour
         player.GetComponent<MouseLook>().enabled = true;
         player.GetComponentInChildren<Camera>().GetComponent<MouseLook>().enabled = true;
 
+        //In For AlexPlayerSpawns
+        player.GetComponentInChildren<Camera>().GetComponent<MouseLock>().enabled = true;
+
     }
 
     // Start game and remove UI ready screen for player that joined. 

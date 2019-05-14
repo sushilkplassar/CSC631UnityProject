@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class LobbyOptions : MonoBehaviour
 {
-    GameObject main;
+    public GameObject main;
     //public GameObject readyButton;
-    Main manager;
+    public Main manager;
+
 
     private void Awake()
     {
-        main = GameObject.Find("Heartbeat");
+        main = GameObject.FindGameObjectWithTag("heartbeat");
+    }
+    private void Start()
+    {
         manager = main.GetComponent<Main>();
     }
 

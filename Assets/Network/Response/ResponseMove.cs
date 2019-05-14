@@ -7,6 +7,7 @@ public class ResponseMoveEventArgs : ExtendedEventArgs
 {
     public int clientTag { get; set; }
     public float posX { get; set; }
+    public float posY { get; set; }
     public float posZ { get; set; }
     
     public ResponseMoveEventArgs()
@@ -19,6 +20,7 @@ public class ResponseMove : NetworkResponse
 {
     
     private float posX;
+    private float posY;
     private float posZ;
     private int clientTag;
 
@@ -31,6 +33,7 @@ public class ResponseMove : NetworkResponse
     {
         clientTag = DataReader.ReadInt(dataStream);
         posX = DataReader.ReadFloat(dataStream);
+        posY = DataReader.ReadFloat(dataStream);
         posZ = DataReader.ReadFloat(dataStream);
     }
 
@@ -41,8 +44,9 @@ public class ResponseMove : NetworkResponse
         // Player position
         args.clientTag = clientTag;
         args.posX = posX;
+        args.posY = posY;
         args.posZ = posZ;
-        Debug.Log("Player moved to pos X: " + posX + " and pos Z: " + posZ);
+        Debug.Log("Player moved to pos X: " + posX + "pos: Y " + posY +  " and pos Z: " + posZ);
         return args;
     }
 }

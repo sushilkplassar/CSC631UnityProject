@@ -49,10 +49,9 @@ public class FPMovement : MonoBehaviour
         if (Input.anyKey)
         {
             
-            if (gameObject.transform.localPosition.x != 0 && gameObject.transform.localPosition.x != 0)
-            {
-                manager.send(moving(gameObject.transform.position.x, gameObject.transform.position.z));
-            }
+
+                manager.send(moving(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z));
+            
 
             // Request movement after moving in Unity?
             Debug.Log("Sending request to move.");
@@ -68,10 +67,10 @@ public class FPMovement : MonoBehaviour
     }
 
     
-    public RequestMove moving(float posX, float posZ)
+    public RequestMove moving(float posX, float posY, float posZ)
     {
         RequestMove move = new RequestMove();
-        move.send(posX, posZ);
+        move.send(posX, posY, posZ);
         return move;
     }
     public void movePlayer()

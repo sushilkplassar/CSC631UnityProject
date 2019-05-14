@@ -105,6 +105,7 @@ public class GameClient implements Runnable {
                           {
                                 // Transform the response into bytes and pass it into the output
                                 // Sends to current client
+//                        	  System.out.println("final response: "+response);
                                send(response);
 
                                // Add response for other online players
