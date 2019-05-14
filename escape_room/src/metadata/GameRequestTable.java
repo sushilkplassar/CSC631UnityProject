@@ -33,7 +33,7 @@ public class GameRequestTable {
         add(Constants.CMSG_START,"RequestStart");
         add(Constants.CMSG_UNREADY,"RequestUnready");
         add(Constants.CMSG_CHAT,"RequestChat");
-//        add(Constants.CMSG_TIMER,"RequestSaveTopScore");
+        add(Constants.CMSG_SAVESCORE,"RequestSaveTopScore");
         add(Constants.CMSG_TIMER,"RequestGetTopScore");
         add(Constants.CMSG_LOGIN, "RequestAuthentication");
         }

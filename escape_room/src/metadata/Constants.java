@@ -44,6 +44,7 @@ public class Constants {
     public final static short CMSG_TIMER = 334;
     public final static short SMSG_TIMER = 434;
     
+    public final static short CMSG_SAVESCORE=335;
 
 	public final static short CMSG_LOGIN = 108;
     public final static short SMSG_LOGIN = 208;

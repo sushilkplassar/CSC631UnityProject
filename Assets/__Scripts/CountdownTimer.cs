@@ -26,7 +26,7 @@ public class CountdownTimer : MonoBehaviour
         cManager = gameObject.GetComponent<ConnectionManager>();
         msgQueue = gameObject.GetComponent<MessageQueue>();
         Debug.Log("Callback started");
-        msgQueue.AddCallback(Constants.SMSG_TIMER, ResponseTimer);
+        msgQueue.AddCallback(Constants.SMSG_TIMER, ResponseTopScore);
         Debug.Log("Callback called");
         Debug.Log("Starting Coroutine");
         //StartCoroutine(RequestHeartbeat(1f));
@@ -52,12 +52,20 @@ public class CountdownTimer : MonoBehaviour
         if (seconds > 10)
         {
             finished = true;
-            RequestTimer requestTimer = new RequestTimer();
-            requestTimer.send(1, seconds);
-            Debug.Log("reqTimer: " + requestTimer);
-            cManager.send(requestTimer);
 
-            Debug.Log("Sent");
+            /*RequestSaveScore requestSaveScore = new RequestSaveScore();
+            requestSaveScore.send(1, seconds);
+            Debug.Log("reqTimer: " + requestSaveScore);
+            cManager.send(requestSaveScore);
+
+            Debug.Log("Sent");*/
+
+             RequestTopScore requestTopScore = new RequestTopScore();
+             requestTopScore.send(1, seconds);
+             Debug.Log("reqTimer: " + requestTopScore);
+             cManager.send(requestTopScore);
+
+             Debug.Log("Sent"); 
         }
     }
     //public void Finish()
@@ -66,7 +74,7 @@ public class CountdownTimer : MonoBehaviour
     //}
 
 
-        public void ResponseTimer(ExtendedEventArgs eventArgs)
+        public void ResponseTopScore(ExtendedEventArgs eventArgs)
     {
         Debug.Log("Callback for MessageReceived");
         ResponseTimeEventArgs args = eventArgs as ResponseTimeEventArgs;
