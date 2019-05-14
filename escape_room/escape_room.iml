@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="commons-pool:commons-pool:1.6" level="application" />
+    <orderEntry type="library" name="commons-dbcp:commons-dbcp:1.4" level="application" />
   </component>
 </module>

@@ -12,6 +12,7 @@ public class NetworkResponseTable {
 		add(Constants.SMSG_AUTH, "ResponseCreate");//201
 		add(Constants.SMSG_PLAYERS, "ResponsePlayers");//203
 		add(Constants.SMSG_TEST, "ResponseTest");//204
+        add(Constants.SMSG_LOGIN, "ResponseLogin");//208
         add(Constants.SMSG_MOVE, "ResponseMove");//231
         add(Constants.SMSG_READY, "ResponseReady");//241
         add(Constants.SMSG_START, "ResponseStart");//242

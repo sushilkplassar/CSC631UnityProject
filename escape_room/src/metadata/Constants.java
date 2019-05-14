@@ -52,6 +52,8 @@ public class Constants {
 
     public final static short CMSG_P2INCORRECT= 146;
     public final static short SMSG_P2INCORRECT = 246;
+    public final static short CMSG_LOGIN = 108;
+    public final static short SMSG_LOGIN = 208;
 
     // Other
     public static final String CLIENT_VERSION = "1.00";
