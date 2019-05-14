@@ -19868,6 +19868,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5180988402411106319, guid: f8b18f47c83ebc34c9d77da447c85d5f,
+        type: 3}
+      propertyPath: textObject
+      value: 
+      objectReference: {fileID: 4474411278002013997, guid: d627ba8636dfce343a7661eb9750d5a7,
+        type: 3}
+    - target: {fileID: 5180988402411106319, guid: f8b18f47c83ebc34c9d77da447c85d5f,
+        type: 3}
+      propertyPath: playerMessage.r
+      value: 0.990566
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180988402411106319, guid: f8b18f47c83ebc34c9d77da447c85d5f,
+        type: 3}
+      propertyPath: playerMessage.g
+      value: 0.9672036
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180988402411106319, guid: f8b18f47c83ebc34c9d77da447c85d5f,
+        type: 3}
+      propertyPath: playerMessage.b
+      value: 0.9672036
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180988402411106319, guid: f8b18f47c83ebc34c9d77da447c85d5f,
+        type: 3}
+      propertyPath: playerMessage.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180988402411106319, guid: f8b18f47c83ebc34c9d77da447c85d5f,
+        type: 3}
+      propertyPath: info.r
+      value: 0.7514667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180988402411106319, guid: f8b18f47c83ebc34c9d77da447c85d5f,
+        type: 3}
+      propertyPath: info.g
+      value: 0.37121755
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180988402411106319, guid: f8b18f47c83ebc34c9d77da447c85d5f,
+        type: 3}
+      propertyPath: info.b
+      value: 0.8113208
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180988402411106319, guid: f8b18f47c83ebc34c9d77da447c85d5f,
+        type: 3}
+      propertyPath: info.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b18f47c83ebc34c9d77da447c85d5f, type: 3}
 --- !u!1001 &508763389
