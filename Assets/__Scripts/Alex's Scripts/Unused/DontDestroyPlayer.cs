@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DontDestroyPlayer : MonoBehaviour
-{
+{   
+    
     void Awake()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");

@@ -7,6 +7,7 @@ public class ActivateLight : MonoBehaviour
     public bool inZone = false;
     public bool ePressed = false;
     public EnableLight[] lights;
+    public AudioSource source;
     
     void Update()
     {
@@ -24,6 +25,7 @@ public class ActivateLight : MonoBehaviour
                 lights[2].myLight.enabled = !lights[2].myLight.enabled;
                 // P2 WallLight
                 lights[3].myLight.enabled = !lights[3].myLight.enabled;
+                source.GetComponent<AudioSource>().Play();
 
             }
         }

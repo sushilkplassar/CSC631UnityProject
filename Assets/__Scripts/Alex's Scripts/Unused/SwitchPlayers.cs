@@ -14,10 +14,10 @@ public class SwitchPlayers : MonoBehaviour
             playerCam.SetActive(false);
             player1Cam.SetActive(true);
             
-            GameObject.Find("Player 1").GetComponent<ClientSide_Movement>().speed = 0;
+            GameObject.Find("Player").GetComponent<ClientSide_Movement>().speed = 0;
             GameObject.Find("Player 2").GetComponent<ClientSide_Movement>().speed = 3;
 
-            GameObject.Find("Player 1").GetComponent<MouseLook>().enabled = false;
+            GameObject.Find("Player").GetComponent<MouseLook>().enabled = false;
             GameObject.Find("Player 2").GetComponent<MouseLook>().enabled = true;
         }
 
@@ -27,9 +27,9 @@ public class SwitchPlayers : MonoBehaviour
             playerCam.SetActive(true);
             
             GameObject.Find("Player 2").GetComponent<ClientSide_Movement>().speed = 0;
-            GameObject.Find("Player 1").GetComponent<ClientSide_Movement>().speed = 3;
+            GameObject.Find("Player").GetComponent<ClientSide_Movement>().speed = 3;
 
-            GameObject.Find("Player 1").GetComponent<MouseLook>().enabled = true;
+            GameObject.Find("Player").GetComponent<MouseLook>().enabled = true;
             GameObject.Find("Player 2").GetComponent<MouseLook>().enabled = false;
         }
     }
