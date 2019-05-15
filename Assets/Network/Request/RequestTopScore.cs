@@ -14,9 +14,9 @@ public class RequestTopScore : NetworkRequest
     {
         Debug.Log("I am in ReqTopScore");
         packet = new GamePacket(request_id);
-        packet.addInt32(playerId);
+        //packet.addInt32(playerId);
         //packet.addString(time);
-        packet.addInt32(time);
+        //packet.addInt32(time);
         Debug.Log("Sent time from ReqTopScore Protocol: " + time);
     }
 }
