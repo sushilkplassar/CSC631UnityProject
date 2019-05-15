@@ -12,11 +12,11 @@ public class RequestTopScore : NetworkRequest
 
     public void send(int playerId, int time)
     {
-        Debug.Log("I am in ReqChat");
+        Debug.Log("I am in ReqTopScore");
         packet = new GamePacket(request_id);
         packet.addInt32(playerId);
         //packet.addString(time);
         packet.addInt32(time);
-        Debug.Log("Sent time from ReqTimer Protocol: " + time);
+        Debug.Log("Sent time from ReqTopScore Protocol: " + time);
     }
 }

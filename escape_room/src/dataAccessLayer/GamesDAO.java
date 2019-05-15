@@ -15,9 +15,9 @@ public class GamesDAO {
     private GamesDAO() {
     }
 
-    public static Player insertGame(int playerId, int time ) throws  SQLException{
+    public static Player insertGame(String teamName, int time ) throws  SQLException{
         Player player = null;
-        String query = "INSERT INTO `Player_HighScore` (`player_id`,`highscore`) VALUES (?,?)";
+        String query = "INSERT INTO `Player_HighScore` (`TeamName`,`highscore`) VALUES (?,?)";
 
         Connection connection = null;
         PreparedStatement pstmt = null;
@@ -25,7 +25,7 @@ public class GamesDAO {
         try {
             connection = DAO.getDataSource().getConnection();
             pstmt = connection.prepareStatement(query);
-            pstmt.setInt(1, playerId);
+            pstmt.setString(1, teamName);
             pstmt.setInt(2, time);
             pstmt.executeUpdate();
             //pstmt.executeQuery();
@@ -44,7 +44,7 @@ public class GamesDAO {
     public static String[] getTopScorers() throws SQLException {
         
         ArrayList<Map<Integer, Integer>> list = new ArrayList<Map<Integer, Integer>>();
-        String query = "SELECT player_id,highscore FROM `Player_HighScore` ORDER BY `highscore` LIMIT 5";
+        String query = "SELECT TeamName,highscore FROM `Player_HighScore` ORDER BY `highscore` LIMIT 5";
 
         Connection connection = null;
         PreparedStatement pstmt = null;
@@ -56,7 +56,7 @@ public class GamesDAO {
             ResultSet rs = pstmt.executeQuery();
             
             while (rs.next()) {
-                int playerID = rs.getInt("player_id");
+                String playerID = rs.getString("TeamName");
                 int score = rs.getInt("highscore");
                 playerIds+=playerID+",";
                 scores+=score+",";

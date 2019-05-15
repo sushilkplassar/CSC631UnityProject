@@ -11,15 +11,15 @@ import utility.DataReader;
 
 public class RequestSaveTopScore extends GameRequest {
 
-	public int playerID;
+	public String teamName;
 	public int time;
 	
     private ResponseGetTopScore responseTimer;
 
 	@Override
 	public void parse() throws IOException {
-		System.out.println("***In RequestTimer Protocol***");
-		playerID = DataReader.readInt(dataInput);
+		System.out.println("***In RequestSaveTopScore Protocol***");
+		teamName = DataReader.readString(dataInput);
 		time=DataReader.readInt(dataInput);
 		System.out.println(time);
 	}
@@ -29,8 +29,8 @@ public class RequestSaveTopScore extends GameRequest {
 	public void doBusiness() throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("***Time received from Unity: " + time);
-		System.out.println("***playerID received: " + playerID);
-		Player player = GamesDAO.insertGame(playerID, time);
-		System.out.println("***Value inserted in db: "+playerID+", "+ time);
+		System.out.println("***playerID received: " + teamName);
+		Player player = GamesDAO.insertGame(teamName, time);
+		System.out.println("***Value inserted in db: "+teamName+", "+ time);
 	}
 }

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
@@ -8,6 +10,7 @@ public class CountdownTimer : MonoBehaviour
     ConnectionManager cManager;
     MessageQueue msgQueue;
     public List<GameObject> players = new List<GameObject>();
+    private GameObject player;
 
     float currentTime = 0;
     //float startTime = 10f;
@@ -25,11 +28,13 @@ public class CountdownTimer : MonoBehaviour
     {
         cManager = gameObject.GetComponent<ConnectionManager>();
         msgQueue = gameObject.GetComponent<MessageQueue>();
-        Debug.Log("Callback started");
         msgQueue.AddCallback(Constants.SMSG_TIMER, ResponseTopScore);
+       
+        Debug.Log("Callback started");
+
         Debug.Log("Callback called");
         Debug.Log("Starting Coroutine");
-        //StartCoroutine(RequestHeartbeat(1f));
+        StartCoroutine(RequestHeartbeat(1f));
     }
 
     // Update is called once per frame
@@ -39,53 +44,55 @@ public class CountdownTimer : MonoBehaviour
         {
             return;
         }
-        currentTime += Time.deltaTime;
-        int seconds = (int)(currentTime % 60);
+        //currentTime += Time.deltaTime;
+        currentTime += 1;
+        int seconds = (int)(currentTime);
         print(seconds);
         //int seconds = (int)(currentTime % 60);
         //int minutes = (int)(currentTime / 60) % 60;
         //int hours = (int)(currentTime / 3600) % 24;
         //string timeString = string.Format("{0:0}:{1:00}:{2:00 }", hours, minutes, seconds);
         ////print("Time left: " + currentTime);
-        //countDownText.text = seconds;
-
-        if (seconds > 10)
+        countDownText.text = seconds.ToString();
+        if (seconds == 1)
         {
             finished = true;
+            SendTimetoServer(seconds);
+        }
+    }
 
-            /*RequestSaveScore requestSaveScore = new RequestSaveScore();
-            requestSaveScore.send(1, seconds);
-            Debug.Log("reqTimer: " + requestSaveScore);
-            cManager.send(requestSaveScore);
+    public void SendTimetoServer(int seconds) { 
+            //finished = true;
 
-            Debug.Log("Sent");*/
+           //RequestSaveScore requestSaveScore = new RequestSaveScore();
+            //requestSaveScore.send("abc", seconds);
+            //Debug.Log("reqTimer: " + requestSaveScore);
+            //cManager.send(requestSaveScore);
+
+            //Debug.Log("Sent");
 
              RequestTopScore requestTopScore = new RequestTopScore();
              requestTopScore.send(1, seconds);
-             Debug.Log("reqTimer: " + requestTopScore);
              cManager.send(requestTopScore);
 
              Debug.Log("Sent"); 
         }
-    }
-    //public void Finish()
-    //{
-    //    finished = true;
-    //}
 
-
-        public void ResponseTopScore(ExtendedEventArgs eventArgs)
+    public void ResponseTopScore(ExtendedEventArgs eventArgs)
     {
         Debug.Log("Callback for MessageReceived");
-        ResponseTimeEventArgs args = eventArgs as ResponseTimeEventArgs;
+        ResponseTopScoreEventArgs args = eventArgs as ResponseTopScoreEventArgs;
         //  GameObject readyScreen = player.transform.GetChild(1).gameObject;
+        Debug.Log("I am here in CountdownTimer.cs Script");
+        string timeReceived = args.playerID;
+        countDownText.text = timeReceived;
 
     }
     public IEnumerator RequestHeartbeat(float time)
     {
 
         Debug.Log("In Coroutine");
-        ConnectionManager cManager = gameObject.GetComponent<ConnectionManager>();
+        cManager = gameObject.GetComponent<ConnectionManager>();
 
 
         RequestHeartbeat request = new RequestHeartbeat();

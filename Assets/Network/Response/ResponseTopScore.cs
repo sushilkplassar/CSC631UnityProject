@@ -3,13 +3,13 @@ using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine;
 
-public class ResponseTimeEventArgs : ExtendedEventArgs
+public class ResponseTopScoreEventArgs : ExtendedEventArgs
 {
     //public short status { get; set; }
     public String time { get; set; }
     public String playerID { get; set; }
 
-    public ResponseTimeEventArgs()
+    public ResponseTopScoreEventArgs()
     {
         event_id = Constants.SMSG_TIMER;
     }
@@ -29,12 +29,12 @@ public class ResponseTopScore : NetworkResponse
 
     public override ExtendedEventArgs process()
     {
-        ResponseTimeEventArgs args = null;
-        args = new ResponseTimeEventArgs();
+        ResponseTopScoreEventArgs args = null;
+        args = new ResponseTopScoreEventArgs();
         args.playerID = playerID;
         args.time = time;
-        Debug.Log("PlayerID current: " + playerID);
-        Debug.Log("TIme Message: " + time);
+        Debug.Log("PlayerID received from DB: " + playerID);
+        Debug.Log("TIme received from DB: " + time);
         return args;
     }
 }
