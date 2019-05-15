@@ -8,9 +8,7 @@ import utility.GamePacket;
 public class ResponseGetTopScore extends GameResponse {
 
 // Variables
-	public int playerID;
-	public int totalTime;
-	public String playerIds;
+	public String teamIds;
 	public String totalTimes;
 
 	public ResponseGetTopScore() {
@@ -23,16 +21,13 @@ public class ResponseGetTopScore extends GameResponse {
 		System.out.println("***in responseTimer protocol*** ");
 		GamePacket packet = new GamePacket(responseCode);
 		
-//		packet.addInt32(playerID);
-//		packet.addString(Arrays.toString(playerIds)); //"[1,2,3,4,5]"
-		// 1|123,2|222, 
-		packet.addString(playerIds);
+		packet.addString(teamIds);
 		packet.addString(totalTimes);
 		return packet.getBytes();
 	}
 
-	public void setplayerID(String playerID) {
-		this.playerIds = playerID;
+	public void setplayerID(String teamID) {
+		this.teamIds = teamID;
 	}
 
 	public void setTime(String time) {
