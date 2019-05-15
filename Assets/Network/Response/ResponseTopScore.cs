@@ -7,7 +7,7 @@ public class ResponseTopScoreEventArgs : ExtendedEventArgs
 {
     //public short status { get; set; }
     public String time { get; set; }
-    public String playerID { get; set; }
+    public String teamName { get; set; }
 
     public ResponseTopScoreEventArgs()
     {
@@ -18,12 +18,12 @@ public class ResponseTopScoreEventArgs : ExtendedEventArgs
 public class ResponseTopScore : NetworkResponse
 {
 
-    private String playerID;
+    private String teamName;
     private String time;
 
     public override void parse()
     {
-        playerID = DataReader.ReadString(dataStream);
+        teamName = DataReader.ReadString(dataStream);
         time = DataReader.ReadString(dataStream);
     }
 
@@ -31,9 +31,9 @@ public class ResponseTopScore : NetworkResponse
     {
         ResponseTopScoreEventArgs args = null;
         args = new ResponseTopScoreEventArgs();
-        args.playerID = playerID;
+        args.teamName = teamName;
         args.time = time;
-        Debug.Log("PlayerID received from DB: " + playerID);
+        Debug.Log("PlayerID received from DB: " + teamName);
         Debug.Log("TIme received from DB: " + time);
         return args;
     }

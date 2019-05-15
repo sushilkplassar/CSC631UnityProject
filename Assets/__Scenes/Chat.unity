@@ -260,12 +260,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1348789539 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4769034549918574833, guid: 1794887e74cdbb940b4f98c5b7775ff1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4769034548569886162}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1836118194
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,29 +288,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1836118194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebbafa2422ab34ad3935f5ecd68fa949, type: 3}
+  m_Script: {fileID: 11500000, guid: 43d674bca02d60b46b643aeff4458ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cManager: {fileID: 0}
-  msgQueue: {fileID: 0}
   players: []
-  player: {fileID: 0}
   maxMessages: 25
-  username: SuperTrooper
-  chatPanel: {fileID: 1348789539}
-  textObject: {fileID: 4474411278002013997, guid: 8bbc8f7be7840468c9b24921bc9dceb6,
-    type: 3}
-  chatBox: {fileID: 1866656434}
-  playerMessage:
-    r: 0.9811321
-    g: 0.9487362
-    b: 0.9487362
-    a: 1
-  info:
-    r: 0.6271757
-    g: 0.48776254
-    b: 0.9150943
-    a: 1
+  username: 
+  chatPanel: {fileID: 0}
+  textObject: {fileID: 0}
+  chatBox: {fileID: 0}
+  playerMessage: {r: 0, g: 0, b: 0, a: 0}
+  info: {r: 0, g: 0, b: 0, a: 0}
   messageList: []
 --- !u!4 &1836118196
 Transform:
@@ -354,18 +336,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b4375321ca9d415ebc7107cbf79cb80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1866656434 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4769034549999970144, guid: 1794887e74cdbb940b4f98c5b7775ff1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4769034548569886162}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1975690655

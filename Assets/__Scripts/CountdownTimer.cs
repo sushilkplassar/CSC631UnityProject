@@ -64,12 +64,12 @@ public class CountdownTimer : MonoBehaviour
     public void SendTimetoServer(int seconds) { 
             //finished = true;
 
-          /* RequestSaveScore requestSaveScore = new RequestSaveScore();
-            requestSaveScore.send("abc", seconds);
-            Debug.Log("reqTimer: " + requestSaveScore);
-            cManager.send(requestSaveScore);
+            //RequestSaveScore requestSaveScore = new RequestSaveScore();
+            //requestSaveScore.send("def", seconds);
+            //Debug.Log("reqTimer: " + requestSaveScore);
+            //cManager.send(requestSaveScore);
 
-            Debug.Log("Sent");*/
+            //Debug.Log("Sent");
 
              RequestTopScore requestTopScore = new RequestTopScore();
              requestTopScore.send();
@@ -84,8 +84,21 @@ public class CountdownTimer : MonoBehaviour
         ResponseTopScoreEventArgs args = eventArgs as ResponseTopScoreEventArgs;
         //  GameObject readyScreen = player.transform.GetChild(1).gameObject;
         Debug.Log("I am here in CountdownTimer.cs Script");
-        string timeReceived = args.playerID;
-        countDownText.text = timeReceived;
+        //string timeReceived = args.playerID;
+        string teamName = args.teamName;
+        string teamTime = args.time;
+        //countDownText.text = teamName + teamTime + " \n";
+        string[] teams = teamName.Split(',');
+        string[] timer = teamTime.Split(',');
+        countDownText.text = "";
+        //foreach (string team in teams)
+        for (int i=0;i<teams.Length;i++)
+        {
+            Debug.Log("Team: " + countDownText.text);
+            //countDownText.text = team + "\n";
+            countDownText.text = countDownText.text + teams[i] + "\t" + timer[i]+ "\n";
+        }
+        //countDownText.text = timeReceived;
 
     }
     public IEnumerator RequestHeartbeat(float time)
