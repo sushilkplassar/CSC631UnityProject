@@ -14,7 +14,7 @@ public class CountdownTimer : MonoBehaviour
 
     float currentTime = 0;
     //float startTime = 10f;
-    [SerializeField] Text countDownText;
+    [SerializeField] Text countDownText,countDownTeamName;
     public bool finished = false;
 
     void Awake()
@@ -91,12 +91,18 @@ public class CountdownTimer : MonoBehaviour
         string[] teams = teamName.Split(',');
         string[] timer = teamTime.Split(',');
         countDownText.text = "";
+        countDownTeamName.text = "";
         //foreach (string team in teams)
         for (int i=0;i<teams.Length;i++)
         {
             Debug.Log("Team: " + countDownText.text);
-            //countDownText.text = team + "\n";
-            countDownText.text = countDownText.text + teams[i] + "\t" + timer[i]+ "\n";
+            int seconds = (int.Parse(timer[i]) % 60);
+            int minutes = (int.Parse(timer[i]) / 60) % 60;
+            int hours = (int.Parse(timer[i]) / 3600) % 24;
+            string timeString = string.Format("{0:0}:{1:00}:{2:00 }", hours, minutes, seconds);
+            countDownTeamName.text = string.Format(countDownTeamName.text + teams[i] + "\n");
+            countDownText.text = string.Format(countDownText.text + timeString + "\n");
+
         }
         //countDownText.text = timeReceived;
 
