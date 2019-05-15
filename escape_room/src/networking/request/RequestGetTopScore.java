@@ -1,15 +1,8 @@
 package networking.request;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import dataAccessLayer.GamesDAO;
-import dataAccessLayer.UsersDAO;
-import model.Player;
 import networking.response.ResponseGetTopScore;
-import utility.DataReader;
 
 public class RequestGetTopScore extends GameRequest {
     private ResponseGetTopScore responseTimer;

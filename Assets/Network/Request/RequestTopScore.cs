@@ -10,13 +10,9 @@ public class RequestTopScore : NetworkRequest
         request_id = Constants.CMSG_TIMER;
     }
 
-    public void send(int playerId, int time)
+    public void send()
     {
         Debug.Log("I am in ReqTopScore");
         packet = new GamePacket(request_id);
-        //packet.addInt32(playerId);
-        //packet.addString(time);
-        //packet.addInt32(time);
-        Debug.Log("Sent time from ReqTopScore Protocol: " + time);
     }
 }

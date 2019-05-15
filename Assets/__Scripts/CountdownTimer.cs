@@ -64,18 +64,18 @@ public class CountdownTimer : MonoBehaviour
     public void SendTimetoServer(int seconds) { 
             //finished = true;
 
-           //RequestSaveScore requestSaveScore = new RequestSaveScore();
-            //requestSaveScore.send("abc", seconds);
-            //Debug.Log("reqTimer: " + requestSaveScore);
-            //cManager.send(requestSaveScore);
+          /* RequestSaveScore requestSaveScore = new RequestSaveScore();
+            requestSaveScore.send("abc", seconds);
+            Debug.Log("reqTimer: " + requestSaveScore);
+            cManager.send(requestSaveScore);
 
-            //Debug.Log("Sent");
+            Debug.Log("Sent");*/
 
              RequestTopScore requestTopScore = new RequestTopScore();
-             requestTopScore.send(1, seconds);
+             requestTopScore.send();
              cManager.send(requestTopScore);
 
-             Debug.Log("Sent"); 
+             Debug.Log("Sent");
         }
 
     public void ResponseTopScore(ExtendedEventArgs eventArgs)

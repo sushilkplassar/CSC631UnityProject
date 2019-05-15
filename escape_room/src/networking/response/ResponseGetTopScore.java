@@ -1,7 +1,5 @@
 package networking.response;
 
-import java.util.Arrays;
-
 import metadata.Constants;
 import utility.GamePacket;
 
@@ -20,7 +18,6 @@ public class ResponseGetTopScore extends GameResponse {
 
 		System.out.println("***in responseTimer protocol*** ");
 		GamePacket packet = new GamePacket(responseCode);
-		
 		packet.addString(teamIds);
 		packet.addString(totalTimes);
 		return packet.getBytes();
