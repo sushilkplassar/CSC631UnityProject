@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DontDestroyPlayer : MonoBehaviour
 {   
-    /*
+    
     void Awake()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
@@ -17,7 +17,7 @@ public class DontDestroyPlayer : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-    }*/
+    }
     
 
     void Update()
