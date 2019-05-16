@@ -25,7 +25,6 @@ public class GameRequestTable {
         add(Constants.CMSG_HEARTBEAT, "RequestHeartbeat");
         add(Constants.CMSG_PLAYERS, "RequestPlayers");
         add(Constants.CMSG_TEST, "RequestTest");
-        add(Constants.CMSG_TIMER,"RequestTimer");
         add(Constants.CMSG_WELCOME_PLAYER,"RequestWelcomePlayer");
         add(Constants.CMSG_PLAYER_JOIN,"RequestTwoPlayer");
         add(Constants.CMSG_MOVE,"RequestMove");
@@ -37,6 +36,8 @@ public class GameRequestTable {
         add(Constants.CMSG_P2CORRECT,"RequestP2Correct");
         add(Constants.CMSG_P2INCORRECT,"RequestP2Incorrect");
         add(Constants.CMSG_LOGIN, "RequestAuthentication");
+        add(Constants.CMSG_SAVESCORE,"RequestSaveTopScore");
+        add(Constants.CMSG_TIMER,"RequestGetTopScore");
     }
 
     /**

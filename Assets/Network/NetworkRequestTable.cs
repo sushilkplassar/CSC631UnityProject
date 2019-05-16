@@ -22,6 +22,8 @@ public class NetworkRequestTable {
         add(Constants.CMSG_LIGHT, "RequestLight");
         add(Constants.CMSG_P2CORRECT, "RequestP2Correct");
         add(Constants.CMSG_P2INCORRECT, "RequestP2Incorrect");
+        add(Constants.CMSG_TIMER, "RequestTopScore");
+        add(Constants.CMSG_SAVESCORE, "RequestSaveScore");
     }
 	
 	public static void add(short request_id, string name) {

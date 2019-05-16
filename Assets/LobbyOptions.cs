@@ -8,11 +8,13 @@ public class LobbyOptions : MonoBehaviour
     public GameObject main;
     //public GameObject readyButton;
     public Main manager;
+    public GameObject screen;
 
 
     private void Awake()
     {
         main = GameObject.FindGameObjectWithTag("heartbeat");
+        screen = GameObject.FindGameObjectWithTag("timeScreen");
     }
     private void Start()
     {
@@ -43,6 +45,13 @@ public class LobbyOptions : MonoBehaviour
         {
             notReady();
         }
+    }
+
+    public void getHighscore()
+    {
+        screen.SetActive(true);
+        manager.RequestGetScores();
+       
     }
 
     public void startGame()

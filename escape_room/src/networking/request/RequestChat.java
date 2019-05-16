@@ -3,6 +3,7 @@ package networking.request;
 import java.io.IOException;
 
 import core.NetworkManager;
+import dataAccessLayer.ChatsDAO;
 import networking.response.ResponseChat;
 import utility.DataReader;
 
@@ -26,6 +27,7 @@ public class RequestChat extends GameRequest {
 	public void doBusiness() throws Exception {
 		// TODO Auto-generated method stub
 		ResponseChat response = new ResponseChat();
+		ChatsDAO.insertChats(playerID,message);
 		System.out.println("***message: " + message);
 		System.out.println("***playerID: " + playerID);
 		response.setMessage(message);

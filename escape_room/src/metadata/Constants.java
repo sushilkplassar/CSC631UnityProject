@@ -20,9 +20,6 @@ public class Constants {
     public static final short CMSG_TEST = 104;
     public static final short SMSG_TEST = 204;
     
-    public static final short CMSG_TIMER = 105;
-    public static final short SMSG_TIMER = 205;
-    
     public static final short CMSG_WELCOME_PLAYER = 106;
     public static final short SMSG_WELCOME_PLAYER = 206;
     
@@ -54,6 +51,11 @@ public class Constants {
     public final static short SMSG_P2INCORRECT = 246;
     public final static short CMSG_LOGIN = 108;
     public final static short SMSG_LOGIN = 208;
+
+    public final static short CMSG_TIMER = 334;
+    public final static short SMSG_TIMER = 434;
+
+    public final static short CMSG_SAVESCORE = 335;
 
     // Other
     public static final String CLIENT_VERSION = "1.00";

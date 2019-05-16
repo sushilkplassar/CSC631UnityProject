@@ -33,6 +33,9 @@ public class Constants {
     public static readonly short SMSG_P2CORRECT = 245;
     public static readonly short CMSG_P2INCORRECT = 146;
     public static readonly short SMSG_P2INCORRECT = 246;
+    public static readonly short CMSG_SAVESCORE = 335;
+    public static readonly short CMSG_TIMER = 334;
+    public static readonly short SMSG_TIMER = 434;
 
 
     // Other
@@ -42,7 +45,8 @@ public class Constants {
 	
 	// GUI Window IDs
 	public enum GUI_ID {
-		Login
+		Login,
+        Team
 	};
 
 	public static int USER_ID = -1;

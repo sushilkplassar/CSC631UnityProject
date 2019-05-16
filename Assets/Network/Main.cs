@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Main : MonoBehaviour {
+    [SerializeField] Text countDownText, countDownTeamName;
     ConnectionManager cManager;
     MessageQueue msgQueue;
     public List<GameObject> players = new List<GameObject>();
@@ -369,6 +370,41 @@ public class Main : MonoBehaviour {
         }
 
     }
+
+    public void RequestGetScores()
+    {
+        RequestTopScore requestTopScore = new RequestTopScore();
+        requestTopScore.send();
+        cManager.send(requestTopScore);
+        Debug.Log("Getting high scores");
+    }
+
+    public void ResponseTopScore(ExtendedEventArgs eventArgs)
+    {
+        Debug.Log("Callback for MessageReceived");
+        ResponseTopScoreEventArgs args = eventArgs as ResponseTopScoreEventArgs;
+        //  GameObject readyScreen = player.transform.GetChild(1).gameObject;
+        Debug.Log("I am here in CountdownTimer.cs Script");
+        string teamName = args.teamName;
+        string teamTime = args.time;
+        //countDownText.text = teamName + teamTime + " \n";
+        string[] teams = teamName.Split(',');
+        string[] timer = teamTime.Split(',');
+        countDownText.text = "";
+        countDownTeamName.text = "";
+        for (int i = 0; i < teams.Length; i++)
+        {
+            Debug.Log("Team: " + countDownText.text);
+            int seconds = (int.Parse(timer[i]) % 60);
+            int minutes = (int.Parse(timer[i]) / 60) % 60;
+            int hours = (int.Parse(timer[i]) / 3600) % 24;
+            string timeString = string.Format("{0:0}:{1:00}:{2:00 }", hours, minutes, seconds);
+            countDownTeamName.text = string.Format(countDownTeamName.text + teams[i] + "\n");
+            countDownText.text = string.Format(countDownText.text + timeString + "\n");
+
+        }
+    }
+
 
     public IEnumerator RequestHeartbeat(float time) {
 

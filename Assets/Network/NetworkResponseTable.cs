@@ -21,6 +21,7 @@ public class NetworkResponseTable {
         add(Constants.SMSG_LIGHT, "ResponseLight");//244
         add(Constants.SMSG_P2CORRECT, "ResponseP2Correct");//245
         add(Constants.SMSG_P2INCORRECT, "ResponseP2Incorrect");//246
+        add(Constants.SMSG_TIMER, "ResponseTopScore");//434
 
     }
 	
