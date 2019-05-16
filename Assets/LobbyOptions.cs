@@ -57,7 +57,9 @@ public class LobbyOptions : MonoBehaviour
         // Turn off End menu screen
         GameObject.FindGameObjectWithTag("EndMenu").GetComponent<Canvas>().enabled = false;
         GameObject.FindGameObjectWithTag("TeamNameWindow").GetComponent<Upload>().enabled = false;
-        manager.RequestGetScores();
+
+        
+
     }
 
     public void returnToMenu()
