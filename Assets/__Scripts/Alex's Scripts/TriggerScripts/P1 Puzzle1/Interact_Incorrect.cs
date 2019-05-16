@@ -6,7 +6,7 @@ public class Interact_Incorrect : MonoBehaviour
 {
     // Object that is to be slide/moved
     public DestroyTorch interact;
-    public FadeText text;
+   // public FadeText text;
     
 
     public bool inZone = false;
@@ -31,10 +31,9 @@ public class Interact_Incorrect : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             inZone = true;
-            text.stepOn = true;
+            //text.stepOn = true;
         }
     }
-
 
 
     

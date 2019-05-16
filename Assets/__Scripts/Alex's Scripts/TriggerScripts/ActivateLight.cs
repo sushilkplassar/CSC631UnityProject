@@ -8,12 +8,15 @@ public class ActivateLight : MonoBehaviour
     public bool ePressed = false;
     public EnableLight[] lights;
     Main manager;
+    public AudioSource source;
 
     private void Start()
     {
         manager = GameObject.FindGameObjectWithTag("heartbeat").GetComponent<Main>();
     }
 
+
+    
     void Update()
     {
         if (inZone == true)

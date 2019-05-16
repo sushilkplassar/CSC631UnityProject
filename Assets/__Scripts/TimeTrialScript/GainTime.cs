@@ -15,7 +15,7 @@ public class GainTime : MonoBehaviour
         if (Col.tag == "Player")
         {
             timerScript.timer += 10;
-           // timerScript.guiShow = true;
+            //timerScript.guiShow = true;
             Destroy(gameObject);
         }
     }

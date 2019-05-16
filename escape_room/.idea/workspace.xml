@@ -1,7 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="" />
+    <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/MAZEPICTURE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/MAZEPICTURE.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/MAZEPICTURE.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/MAZEPICTURE.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror5.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror5.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror6.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror6.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_MirrorEX.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_MirrorEX.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_MirrorEX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_MirrorEX.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Maze.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Maze.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Ambience_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Ambience_1.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/CE_Level_01.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/CE_Level_01.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/CE_Level_02_v2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/CE_Level_02_v2.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_1.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_2.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_3.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_3.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Metal_Gate_2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Metal_Gate_2.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Metal_Gate_Short.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Metal_Gate_Short.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_3.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_3.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_5.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_5.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_7.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_7.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Step_miss_stinger_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Step_miss_stinger_1.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Torch_ color change_2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Torch_ color change_2.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Torch_color change_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Torch_color change_1.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Wrong_lever_1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Wrong_lever_1.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/stone_placement_v2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/stone_placement_v2.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/torch_loop_2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/torch_loop_2.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/CloseGateBehind.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/CloseGateBehind.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/DeathByWall.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/DeathByWall.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/GreenLight.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/GreenLight.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayAudio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayAudio.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayAudioEpressed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayAudioEpressed.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayLevelMusic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayLevelMusic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/RespawnAudio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/RespawnAudio.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/RandomFootsteps.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/RandomFootsteps.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/FloorMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/FloorMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeI.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeI.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeII.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeII.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeIII.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeIII.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_Footstep.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_Footstep.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/Floor_Clue5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/Floor_Clue5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Network/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Network/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/EndGameScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/EndGameScreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/EndGameScreen2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/EndGameScreen2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Menu Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Menu Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/MazeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/MazeScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/MultiplayerIntegration.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/MultiplayerIntegration.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/ActivateLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/ActivateLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Interact_Incorrect_P2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Interact_Incorrect_P2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/P1 Puzzle1/Interact_Incorrect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/P1 Puzzle1/Interact_Incorrect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/P1 Puzzle1/LeverAnimationInc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/P1 Puzzle1/LeverAnimationInc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/DontDestroyPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/DontDestroyPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/SwitchPlayers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/SwitchPlayers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/TimeTrialScript/GainTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/TimeTrialScript/GainTime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/TimeTrialScript/TimeControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/TimeTrialScript/TimeControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +119,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/ChatsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="139">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,7 +140,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/networking/request/RequestSaveTopScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
+            <state relative-caret-position="153">
               <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -57,7 +162,7 @@
         <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseGetTopScore.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,6 +197,7 @@
       <find>v</find>
       <find>Incorrect</find>
       <find>value</find>
+      <find>log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,7 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -152,7 +258,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -180,6 +285,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,10 +369,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24810892" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25189108" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -678,7 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/networking/request/RequestSaveTopScore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="153">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -689,7 +795,7 @@
     <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseGetTopScore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -769,8 +875,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/ChatsDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state relative-caret-position="139">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

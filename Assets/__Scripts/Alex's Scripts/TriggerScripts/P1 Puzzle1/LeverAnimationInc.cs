@@ -11,10 +11,12 @@ public class LeverAnimationInc : MonoBehaviour
     {
         if (wrongFloor.ePressed == true)
         {
-            Vector3 destination = new Vector3(30,0,0);
-            transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles,
-             destination, 
-             speed * Time.deltaTime);
+            if (transform.rotation.x > 0)
+            {
+                transform.Rotate(Vector3.left * speed * Time.deltaTime);
+            } else {
+                wrongFloor.ePressed = false;
+            }
         }
     }
         

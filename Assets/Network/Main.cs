@@ -274,6 +274,7 @@ public class Main : MonoBehaviour {
     {
         ResponseLightEventArgs args = eventArgs as ResponseLightEventArgs;
         GameObject lightTrigger = GameObject.FindGameObjectWithTag(args.light);
+        lightTrigger.GetComponent<ActivateLight>().source.GetComponent<AudioSource>().Play();
         // Grab all lights to render from the game object
         EnableLight[] light = lightTrigger.GetComponent<ActivateLight>().lights;
         // Grab all walls to render from the game object
@@ -365,11 +366,11 @@ public class Main : MonoBehaviour {
         ResponseP2IncorrectEventArgs args = eventArgs as ResponseP2IncorrectEventArgs;
         Debug.Log("INCORRECT TRIGGER IS: " + args.trigger);
         GameObject trigger = GameObject.FindGameObjectWithTag(args.trigger.ToString());
-        Interact_Incorrect_P2[] deathWalls = trigger.GetComponents<Interact_Incorrect_P2>();
-        for(int i = 0; i < deathWalls.Length; i++)
+        Interact_Incorrect_P2 deathWalls = trigger.GetComponent<Interact_Incorrect_P2>();
+        for(int i = 0; i < deathWalls.moveWall.Length; i++)
         {
-            deathWalls[i].ePressed = true;
-            deathWalls[i].moveWall.tileStepped = true;
+            deathWalls.ePressed = true;
+            deathWalls.moveWall[i].tileStepped = true;
         }
 
     }
