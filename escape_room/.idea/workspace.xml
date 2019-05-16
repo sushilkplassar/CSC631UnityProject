@@ -2,109 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="532cdf5c-7d84-4056-b04b-429e1af0522d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/MAZEPICTURE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/MAZEPICTURE.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/MAZEPICTURE.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/MAZEPICTURE.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror4.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror4.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror5.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror5.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror6.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_Mirror6.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_MirrorEX.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/WallColor_MirrorEX.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_Mirror6.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_MirrorEX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/WallColor_MirrorEX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Maze.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/Maze.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Ambience_1.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Ambience_1.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/CE_Level_01.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/CE_Level_01.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/CE_Level_02_v2.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/CE_Level_02_v2.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_1.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_1.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_2.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_2.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_3.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Light Switch_3.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Metal_Gate_2.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Metal_Gate_2.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Metal_Gate_Short.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Metal_Gate_Short.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_3.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_3.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_5.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_5.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_7.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Scholar_footstep_7.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Step_miss_stinger_1.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Step_miss_stinger_1.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Torch_ color change_2.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Torch_ color change_2.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Torch_color change_1.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Torch_color change_1.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Wrong_lever_1.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/Wrong_lever_1.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/stone_placement_v2.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/stone_placement_v2.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/torch_loop_2.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/_Sound/torch_loop_2.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/CloseGateBehind.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/CloseGateBehind.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/DeathByWall.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/DeathByWall.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/GreenLight.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/GreenLight.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayAudio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayAudio.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayAudioEpressed.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayAudioEpressed.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayLevelMusic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/PlayLevelMusic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/RespawnAudio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/FinalScripts/RespawnAudio.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/RandomFootsteps.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/RandomFootsteps.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/FloorMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/FloorMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeI.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeI.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeII.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeII.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeIII.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_EyeIII.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_Footstep.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/FloorColor_Footstep.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/Floor_Clue5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Dungeon Basics/Materials/Materials/Floor_Clue5.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Network/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Network/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/EndGameScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/EndGameScreen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/EndGameScreen2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/EndGameScreen2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Resources/Prefabs/P1 Puzzle/AlexP1Spawn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Menu Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/Alex's Menu Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/MazeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/MazeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scenes/MultiplayerIntegration.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scenes/MultiplayerIntegration.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/ActivateLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/ActivateLight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Interact_Incorrect_P2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/Interact_Incorrect_P2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/P1 Puzzle1/Interact_Incorrect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/P1 Puzzle1/Interact_Incorrect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/P1 Puzzle1/LeverAnimationInc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/TriggerScripts/P1 Puzzle1/LeverAnimationInc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/DontDestroyPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/DontDestroyPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/SwitchPlayers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/Alex's Scripts/Unused/SwitchPlayers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/TimeTrialScript/GainTime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/TimeTrialScript/GainTime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/__Scripts/TimeTrialScript/TimeControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/__Scripts/TimeTrialScript/TimeControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Constants.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -119,7 +17,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/ChatsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
+            <state relative-caret-position="170">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -129,10 +27,91 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/networking/request/RequestChat.java">
+        <entry file="file://$PROJECT_DIR$/src/core/GameClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="-978">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7275#7276#0" expanded="true" />
+                <element signature="e#7308#7309#0" expanded="true" />
+                <element signature="e#7333#7334#0" expanded="true" />
+                <element signature="e#7362#7363#0" expanded="true" />
+                <element signature="e#7392#7393#0" expanded="true" />
+                <element signature="e#7451#7452#0" expanded="true" />
+                <element signature="e#7484#7485#0" expanded="true" />
+                <element signature="e#7513#7514#0" expanded="true" />
+                <element signature="e#7559#7560#0" expanded="true" />
+                <element signature="e#7602#7603#0" expanded="true" />
+                <element signature="e#7668#7669#0" expanded="true" />
+                <element signature="e#7712#7713#0" expanded="true" />
+                <element signature="e#9167#9168#0" expanded="true" />
+                <element signature="e#9202#9203#0" expanded="true" />
+                <element signature="e#9302#9303#0" expanded="true" />
+                <element signature="e#9333#9334#0" expanded="true" />
+                <element signature="e#9362#9363#0" expanded="true" />
+                <element signature="e#9431#9432#0" expanded="true" />
+                <element signature="e#9610#9611#0" expanded="true" />
+                <element signature="e#9645#9646#0" expanded="true" />
+                <element signature="e#9679#9680#0" expanded="true" />
+                <element signature="e#9712#9713#0" expanded="true" />
+                <element signature="e#9761#9762#0" expanded="true" />
+                <element signature="e#9805#9806#0" expanded="true" />
+                <element signature="e#10324#10325#0" expanded="true" />
+                <element signature="e#10346#10347#0" expanded="true" />
+                <element signature="e#10391#10392#0" expanded="true" />
+                <element signature="e#10422#10423#0" expanded="true" />
+                <element signature="e#10462#10463#0" expanded="true" />
+                <element signature="e#10498#10499#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/configuration/DBConf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/db.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/ConnectionPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/UsersDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/gameServer.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -247,7 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -269,13 +248,36 @@
             <path>
               <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
               <item name="escape_room" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
+              <item name="escape_room" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
               <item name="escape_room" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
+              <item name="escape_room" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
+              <item name="escape_room" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dataAccessLayer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
+              <item name="escape_room" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="networking" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="escape_room" type="b2602c69:ProjectViewProjectNode" />
@@ -293,7 +295,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557980563537" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558030781527" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/conf" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -372,7 +374,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25189108" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25567323" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -652,27 +654,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/configuration/DBConf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/dataAccessLayer/ConnectionPool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/ConnectionPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,9 +682,124 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestAuthentication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/dataAccessLayer/UsersDAO.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/dataAccessLayer/GamesDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="40" column="18" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/networking/request/RequestSaveTopScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#431#458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/GamesDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="852">
+          <caret line="64" column="39" lean-forward="true" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/metadata/GameRequestTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metadata/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/metadata/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="46" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestSaveTopScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestGetTopScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseGetTopScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metadata/GameRequestTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-372">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/GameServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
+        <state relative-caret-position="-978">
           <caret line="100" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -737,24 +837,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
+    <entry file="file://$PROJECT_DIR$/src/configuration/DBConf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/db.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestAuthentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="136">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -765,117 +851,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/dataAccessLayer/UsersDAO.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/conf/db.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/UsersDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
+        <state relative-caret-position="297">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/dataAccessLayer/GamesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="40" column="18" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestSaveTopScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/response/ResponseGetTopScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestGetTopScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/networking/request/RequestSaveTopScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#431#458#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/GameServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/GamesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="852">
-          <caret line="64" column="39" lean-forward="true" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/metadata/GameRequestTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metadata/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../CSC631UnityProject/escape_room/src/metadata/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="46" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metadata/GameRequestTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/networking/request/RequestChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dataAccessLayer/ChatsDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
