@@ -45,6 +45,7 @@ public class Main : MonoBehaviour {
         msgQueue.AddCallback(Constants.SMSG_LIGHT, ResponseLight);
         msgQueue.AddCallback(Constants.SMSG_P2CORRECT, ResponseP2Correct);
         msgQueue.AddCallback(Constants.SMSG_P2INCORRECT, ResponseP2Incorrect);
+        msgQueue.AddCallback(Constants.SMSG_TIMER, ResponseTopScore);
 
         Debug.Log("Starting Coroutine");
 		StartCoroutine(RequestHeartbeat(1f));
@@ -114,6 +115,8 @@ public class Main : MonoBehaviour {
             // Player Object is a child of the Player Spawn Game Object.
             GameObject playerObject = player.transform.GetChild(0).gameObject;
 
+            // Turn off End menu screen for the other player
+            player.transform.GetChild(2).gameObject.SetActive(false);
             // Turn off all children associated with the new player object that joins.
             for (int i = 0; i < playerObject.transform.childCount; i++)
             {
@@ -394,12 +397,13 @@ public class Main : MonoBehaviour {
         countDownTeamName.text = "";
         for (int i = 0; i < teams.Length; i++)
         {
+            int count = i + 1;
             Debug.Log("Team: " + countDownText.text);
             int seconds = (int.Parse(timer[i]) % 60);
             int minutes = (int.Parse(timer[i]) / 60) % 60;
             int hours = (int.Parse(timer[i]) / 3600) % 24;
             string timeString = string.Format("{0:0}:{1:00}:{2:00 }", hours, minutes, seconds);
-            countDownTeamName.text = string.Format(countDownTeamName.text + teams[i] + "\n");
+            countDownTeamName.text = string.Format(countDownTeamName.text + count + ".   " + teams[i] + "\n");
             countDownText.text = string.Format(countDownText.text + timeString + "\n");
 
         }

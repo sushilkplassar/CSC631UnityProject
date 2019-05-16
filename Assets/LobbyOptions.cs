@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LobbyOptions : MonoBehaviour
@@ -9,6 +10,7 @@ public class LobbyOptions : MonoBehaviour
     //public GameObject readyButton;
     public Main manager;
     public GameObject screen;
+    public bool submitted = false;
 
 
     private void Awake()
@@ -49,9 +51,22 @@ public class LobbyOptions : MonoBehaviour
 
     public void getHighscore()
     {
-        screen.SetActive(true);
+        // Show Best Time Screen
         manager.RequestGetScores();
-       
+        screen.GetComponent<Canvas>().enabled = true;
+        // Turn off End menu screen
+        GameObject.FindGameObjectWithTag("EndMenu").GetComponent<Canvas>().enabled = false;
+        GameObject.FindGameObjectWithTag("TeamNameWindow").GetComponent<Upload>().enabled = false;
+        manager.RequestGetScores();
+    }
+
+    public void returnToMenu()
+    {
+        submitted = false;
+        GameObject.FindGameObjectWithTag("TeamNameWindow").GetComponent<Upload>().enabled = false;
+        GameObject.FindGameObjectWithTag("EndMenu").GetComponent<Canvas>().enabled = false;
+        screen.GetComponent<Canvas>().enabled = false;
+        SceneManager.LoadScene(1);
     }
 
     public void startGame()
@@ -59,13 +74,24 @@ public class LobbyOptions : MonoBehaviour
         manager.RequestStart();
     }
 
-    /* Player 2 clicks ready
-     * sends to server
-     * player 1 screen shows that player 2 is ready
-     * 
-     * player 1 clicks ready
-     * sends to server
-     * player 2 screen shows that player 1 is ready
-     */
+    public void QuitGame()
+    {
+        Debug.Log("QUIT");
+        Application.Quit();
+    }
+
+    public void backToEndMenu()
+    {
+        screen.GetComponent<Canvas>().enabled = false;
+        GameObject.FindGameObjectWithTag("EndMenu").GetComponent<Canvas>().enabled = true;
+        // Can't upload again if they didn't submit and return back after viewing high scores
+        if (submitted)
+        {
+            GameObject.FindGameObjectWithTag("TeamNameWindow").GetComponent<Upload>().enabled = false;
+        } else
+        {
+            GameObject.FindGameObjectWithTag("TeamNameWindow").GetComponent<Upload>().enabled = true;
+        }
+    }
 
 }

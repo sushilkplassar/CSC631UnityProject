@@ -26,6 +26,9 @@ public class GrabScore : MonoBehaviour
         {
             if (col.gameObject.tag == "Player")
             {
+                col.gameObject.GetComponentInChildren<MouseLock>().enabled = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 stopTime = true;
                 GrabTime();
                 alreadyEntered = true;
@@ -40,6 +43,8 @@ public class GrabScore : MonoBehaviour
             // store time in score 
             score = grab.timer;
             //stopTime = false;
+            GameObject.FindGameObjectWithTag("EndMenu").GetComponent<Canvas>().enabled = true;
+            GameObject.FindGameObjectWithTag("TeamNameWindow").GetComponent<Upload>().enabled = true;
         }
     }
 }

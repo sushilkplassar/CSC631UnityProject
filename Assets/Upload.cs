@@ -75,61 +75,24 @@ public class Upload : MonoBehaviour
         }
         else
         {
-            cManager.send(requestLogin(teamName));
+            // Turn off upload window after first submit
+            GameObject.FindGameObjectWithTag("TeamNameWindow").GetComponent<Upload>().enabled = false;
+            GameObject.FindGameObjectWithTag("EndMenu").GetComponent<LobbyOptions>().submitted = true;
+            GameObject.FindGameObjectWithTag("timeScreen").GetComponent<LobbyOptions>().submitted = true;
+            cManager.send(saveScore(teamName));
             Debug.Log("Sent team name and time");
         }
     }
 
-    public RequestSaveScore requestLogin(string teamName)
+    public RequestSaveScore saveScore(string teamName)
     {
+        
         RequestSaveScore request = new RequestSaveScore();
         GrabScore score = GameObject.FindGameObjectWithTag("Finish").GetComponent<GrabScore>();
         int time = (int)score.score;
         request.send(teamName, time);
         return request;
     }
-
-    //public void ResponseLogin(ExtendedEventArgs eventArgs)
-    //{
-    //    ResponseLoginEventArgs args = eventArgs as ResponseLoginEventArgs;
-    //    if (args.status == 0)
-    //    {
-    //        Constants.USER_ID = args.user_id;
-    //        Debug.Log("Successful Login response : " + args.ToString());
-    //        //EditorUtility.DisplayDialog ("Login Successful", "You have successfully logged in.\nClick Ok to continue execution and see responses on console", "Ok");
-    //        cManager.send(requestTest("*", 7));
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("Login Failed");
-    //    }
-    //}
-
-    //public RequestPlayers requestPlayers()
-    //{
-    //    RequestPlayers request = new RequestPlayers();
-    //    request.send();
-    //    return request;
-    //}
-
-    //public void responsePlayers(ExtendedEventArgs eventArgs)
-    //{
-    //    ResponsePlayersEventArgs args = eventArgs as ResponsePlayersEventArgs;
-    //    int numActivePlayers = args.numActivePlayers;
-    //    Debug.Log("Number of Connected Players : " + numActivePlayers);
-    //}
-
-    //public RequestTest requestTest(string arithmeticOperator, int testNum)
-    //{
-    //    RequestTest requestTest = new RequestTest();
-    //    requestTest.send(arithmeticOperator, testNum);
-    //    return requestTest;
-    //}
-
-    //public void responseTest(ExtendedEventArgs eventArgs)
-    //{
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    //}
 
     public void Show()
     {

@@ -17,26 +17,7 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField] Text countDownText, countDownTeamName;
     public bool finished = false;
 
-    void Awake()
-    {
-        //DontDestroyOnLoad(gameObject);
-        NetworkRequestTable.init();
-        NetworkResponseTable.init();
-    }
-
-    private void Start()
-    {
-        cManager = gameObject.GetComponent<ConnectionManager>();
-        msgQueue = gameObject.GetComponent<MessageQueue>();
-        msgQueue.AddCallback(Constants.SMSG_TIMER, ResponseTopScore);
-       
-        Debug.Log("Callback started");
-
-        Debug.Log("Callback called");
-        Debug.Log("Starting Coroutine");
-        StartCoroutine(RequestHeartbeat(1f));
-    }
-
+ 
     // Update is called once per frame
     void Update()
     {
