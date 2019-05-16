@@ -9,8 +9,7 @@ import java.util.Map;
 
 public class ChatsDAO {
 
-    private ChatsDAO() {
-    }
+    
 
     public static void insertChats(int playerId, String message) throws  SQLException{
         String query = "INSERT INTO `Chats` (`player_id`, `message` ) VALUES (?,?)";

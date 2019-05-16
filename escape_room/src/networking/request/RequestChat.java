@@ -1,11 +1,12 @@
 package networking.request;
 
 import java.io.IOException;
-
-import core.NetworkManager;
 import dataAccessLayer.ChatsDAO;
+import core.NetworkManager;
 import networking.response.ResponseChat;
 import utility.DataReader;
+
+
 
 // Other Imports
 
