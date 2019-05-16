@@ -779,7 +779,7 @@ PrefabInstance:
     - target: {fileID: 4769034548845263821, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4769034548845263821, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -846,6 +846,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3584066072512410857}
     m_Modifications:
+    - target: {fileID: 2817299738370906883, guid: bc2ac0b6c54b5f440944957e7a1b4520,
+        type: 3}
+      propertyPath: m_Name
+      value: Player light
+      objectReference: {fileID: 0}
     - target: {fileID: 2817299738370906880, guid: bc2ac0b6c54b5f440944957e7a1b4520,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -900,11 +905,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2817299738370906883, guid: bc2ac0b6c54b5f440944957e7a1b4520,
-        type: 3}
-      propertyPath: m_Name
-      value: Player light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc2ac0b6c54b5f440944957e7a1b4520, type: 3}
@@ -1212,10 +1212,15 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3688810485928378064, guid: 08551c17196d7ed49ac1fc1a2b3a0540,
+    - target: {fileID: 5123796234309300142, guid: 08551c17196d7ed49ac1fc1a2b3a0540,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4245444161160994894}
+    - target: {fileID: 5123796234309300142, guid: 08551c17196d7ed49ac1fc1a2b3a0540,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: getHighscore
       objectReference: {fileID: 0}
     - target: {fileID: 1549319574226891409, guid: 08551c17196d7ed49ac1fc1a2b3a0540,
         type: 3}
@@ -1277,15 +1282,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 5123796234309300142, guid: 08551c17196d7ed49ac1fc1a2b3a0540,
+    - target: {fileID: 3688810485928378064, guid: 08551c17196d7ed49ac1fc1a2b3a0540,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4245444161160994894}
-    - target: {fileID: 5123796234309300142, guid: 08551c17196d7ed49ac1fc1a2b3a0540,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: getHighscore
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1544199026539858542, guid: 08551c17196d7ed49ac1fc1a2b3a0540, type: 3}
