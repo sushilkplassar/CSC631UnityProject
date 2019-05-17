@@ -792,12 +792,12 @@ PrefabInstance:
     - target: {fileID: 4769034549918574838, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 34.98001
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 4769034549918574838, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 88.99998
+      value: 88.99999
       objectReference: {fileID: 0}
     - target: {fileID: 4769034548869725009, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -812,12 +812,12 @@ PrefabInstance:
     - target: {fileID: 4769034548845263821, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4769034548845263821, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
       propertyPath: m_Size
-      value: 0.00000017144707
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4769034549500601867, guid: 1794887e74cdbb940b4f98c5b7775ff1,
         type: 3}
@@ -854,6 +854,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: content
       objectReference: {fileID: 0}
+    - target: {fileID: 4769034549847177352, guid: 1794887e74cdbb940b4f98c5b7775ff1,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769034549847177352, guid: 1794887e74cdbb940b4f98c5b7775ff1,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769034549847177352, guid: 1794887e74cdbb940b4f98c5b7775ff1,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1794887e74cdbb940b4f98c5b7775ff1, type: 3}
 --- !u!224 &5220877706093275102 stripped
@@ -869,15 +884,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1636166624913932755}
     m_Modifications:
-    - target: {fileID: 3875950246538391403, guid: e4ad10b10ade5b443af1e35e2e579ce3,
+    - target: {fileID: 1156179666793033076, guid: e4ad10b10ade5b443af1e35e2e579ce3,
         type: 3}
-      propertyPath: m_Name
-      value: Ready Screen p2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3875950246538391403, guid: e4ad10b10ade5b443af1e35e2e579ce3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_SortingOrder
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1156179666793033083, guid: e4ad10b10ade5b443af1e35e2e579ce3,
         type: 3}
@@ -984,10 +994,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1156179666793033076, guid: e4ad10b10ade5b443af1e35e2e579ce3,
+    - target: {fileID: 3875950246538391403, guid: e4ad10b10ade5b443af1e35e2e579ce3,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 20
+      propertyPath: m_Name
+      value: Ready Screen p2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875950246538391403, guid: e4ad10b10ade5b443af1e35e2e579ce3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2125644753435279922, guid: e4ad10b10ade5b443af1e35e2e579ce3,
         type: 3}
